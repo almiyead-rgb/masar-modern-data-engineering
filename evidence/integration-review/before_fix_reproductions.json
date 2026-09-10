@@ -1,0 +1,6 @@
+{
+  "scope": "SYNTHETIC_NEGATIVE_TESTS_NOT_ENGINE_EXECUTION",
+  "failed_native_stage_was_accepted": true,
+  "bare_run_names_were_accepted": true,
+  "malformed_evidence_raised_unhandled": "AttributeError"
+}

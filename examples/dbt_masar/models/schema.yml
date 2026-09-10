@@ -1,0 +1,43 @@
+version: 2
+models:
+  - name: stg_trips
+    description: 'Receipt-grain staging; trip_id is deliberately not unique here.'
+    columns:
+      - name: trip_id
+        data_tests: [not_null]
+      - name: driver_id
+        data_tests: [not_null]
+      - name: start_utc
+        data_tests: [not_null]
+      - name: end_utc
+        data_tests: [not_null]
+  - name: stg_drivers
+    columns:
+      - name: driver_id
+        data_tests: [not_null, unique]
+  - name: stg_gps
+    columns:
+      - name: event_id
+        data_tests: [not_null, unique]
+  - name: silver_trips
+    description: 'One row per trip_id in an isolated dbt demonstration relation.'
+    columns:
+      - name: trip_id
+        data_tests: [not_null, unique]
+      - name: driver_id
+        data_tests: [not_null]
+      - name: fare_sar
+        data_tests: [not_null]
+
+  - name: int_trip_candidates
+    description: 'One highest-revision receipt per trip; source conflicts fail before ranking.'
+    columns:
+      - name: trip_id
+        data_tests: [not_null, unique]
+  - name: mart_city_daily
+    description: 'One city/business-date aggregate. Exact totals reconcile to Silver.'
+    columns:
+      - name: city
+        data_tests: [not_null]
+      - name: trip_date_local
+        data_tests: [not_null]

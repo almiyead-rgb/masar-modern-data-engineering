@@ -1,0 +1,16 @@
+version: 2
+sources:
+  - name: bronze
+    schema: "{{ env_var('MASAR_DBT_BRONZE_SCHEMA') }}"
+    description: 'Isolated copies of verified Day 1 Delta snapshots. Source times are preserved.'
+    loaded_at_field: _ingested_at
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+    tables:
+      - name: trips
+        description: 'Receipts: base/replay, late arrivals, and optional later-day correction validation.'
+      - name: drivers
+        description: 'Six unique synthetic drivers; copied without refreshing ingestion timestamps.'
+      - name: gps_events
+        description: '216 original JSON events, not a substitute for the Kafka lab.'

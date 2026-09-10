@@ -1,0 +1,4 @@
+# Stable dbt session adapter: same Spark/Delta environment, no remote credentials.
+-r requirements-runtime.txt
+dbt-core==1.9.8
+dbt-spark[session]==1.9.1

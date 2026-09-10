@@ -1,0 +1,75 @@
+# Full local workbench. The original host-only Kafka recipe remains available.
+# No cloud, GPU, privileged container, Docker socket, deploy or published image.
+x-course: &course
+  image: masar-course:local
+  pull_policy: never
+  environment:
+    MASAR_KAFKA_BOOTSTRAP: kafka:29092
+    MASAR_SOURCE_ROOT: /source-course
+    MASAR_WORK_ROOT: /workspace
+  security_opt:
+    - no-new-privileges:true
+  cap_drop:
+    - ALL
+  depends_on:
+    kafka:
+      condition: service_healthy
+services:
+  kafka:
+    image: apache/kafka:4.0.2
+    environment:
+      KAFKA_NODE_ID: "1"
+      KAFKA_PROCESS_ROLES: "broker,controller"
+      KAFKA_LISTENERS: "INTERNAL://:29092,CONTROLLER://:29093"
+      KAFKA_ADVERTISED_LISTENERS: "INTERNAL://kafka:29092"
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "INTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT"
+      KAFKA_INTER_BROKER_LISTENER_NAME: "INTERNAL"
+      KAFKA_CONTROLLER_LISTENER_NAMES: "CONTROLLER"
+      KAFKA_CONTROLLER_QUORUM_VOTERS: "1@kafka:29093"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: "1"
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: "1"
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      KAFKA_LOG_RETENTION_HOURS: "168"
+      KAFKA_LOG_DIRS: "/tmp/kraft-combined-logs"
+      KAFKA_HEAP_OPTS: "-Xms256m -Xmx512m"
+      CLUSTER_ID: "MkU3OEVBNTcwNTJENDM2Qk"
+    volumes:
+      - kafka-data:/tmp/kraft-combined-logs
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:29092 --list >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 20s
+  workbench:
+    <<: *course
+    build:
+      context: ../..
+      dockerfile: infrastructure/runtime/Dockerfile
+    ports:
+      - "127.0.0.1:8888:8888"
+    volumes:
+      - type: bind
+        source: ../..
+        target: /source-course
+        read_only: true
+      - learner-data:/workspace
+  verify:
+    <<: *course
+    profiles: ["verification"]
+    volumes:
+      - type: bind
+        source: ../..
+        target: /source-course
+        read_only: true
+      - verification-data:/workspace
+    command: ["python", "scripts/verify_native_runtime.py"]
+volumes:
+  kafka-data:
+  learner-data:
+  verification-data:
+networks:
+  default:
+    # Dependency downloads belong to image build, not the running classroom.
+    internal: true

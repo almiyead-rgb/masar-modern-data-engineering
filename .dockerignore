@@ -1,0 +1,25 @@
+# Never send private files, credentials, history or previous outputs to a build.
+.git
+**/__pycache__
+**/*.pyc
+**/.ipynb_checkpoints
+**/.venv
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+**/*PRIVATE*
+**/instructor_only
+**/authoring_private
+**/INSTRUCTOR_PACKAGE.md
+**/*.pptx
+outputs
+workspaces
+mini_lakehouse
+spark-warehouse
+metastore_db
+**/derby.log
+examples/dbt_masar/target
+examples/dbt_masar/logs
+examples/dbt_masar/dbt_packages
+examples/dbt_masar/profiles.yml

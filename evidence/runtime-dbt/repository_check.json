@@ -1,0 +1,29 @@
+{
+  "scope": "SOURCE_AUTHORING_AND_SAVED_HELPER_OUTPUTS_ONLY",
+  "passed": true,
+  "files": 278,
+  "markdown_pages": 89,
+  "relative_links_checked": 1234,
+  "notebooks": 16,
+  "python_files_parsed": 41,
+  "issues": [],
+  "warnings": [
+    "notebooks/day02/03_incremental_silver.ipynb: authored engine draft; NOT EXECUTED",
+    "notebooks/day02/02_staging_delta.ipynb: authored engine draft; NOT EXECUTED",
+    "notebooks/day03/02_delta_transactions.ipynb: authored engine draft; NOT EXECUTED",
+    "notebooks/day03/03_safe_maintenance.ipynb: authored engine draft; NOT EXECUTED",
+    "notebooks/day04/03_quality_gate_gx.ipynb: authored engine draft; NOT EXECUTED",
+    "notebooks/day04/02_kafka_delta_streaming.ipynb: authored engine draft; NOT EXECUTED",
+    "notebooks/day05/03_ai_bi_serving.ipynb: authored engine draft; NOT EXECUTED",
+    "notebooks/day05/02_gold_integration.ipynb: authored engine draft; NOT EXECUTED",
+    "notebooks/day01/04_spark_scan.ipynb: authored engine draft; NOT EXECUTED",
+    "notebooks/day01/03_bronze_delta.ipynb: authored engine draft; NOT EXECUTED"
+  ],
+  "does_not_prove": [
+    "engine execution",
+    "GitHub rendering",
+    "anonymous remote access",
+    "publication approval",
+    "complete course readiness"
+  ]
+}

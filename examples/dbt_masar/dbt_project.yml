@@ -1,0 +1,29 @@
+name: masar_day02_design
+version: '0.2.0'
+config-version: 2
+profile: masar_local
+model-paths: [models]
+test-paths: [tests]
+macro-paths: [macros]
+clean-targets: [target, dbt_packages]
+vars:
+  bronze_schema: "{{ env_var('MASAR_DBT_BRONZE_SCHEMA') }}"
+  reprocess_all: false
+models:
+  masar_day02_design:
+    +persist_docs:
+      relation: true
+      columns: true
+    staging:
+      +materialized: view
+      +tags: [premerge]
+    intermediate:
+      +materialized: view
+    silver:
+      +materialized: incremental
+      +file_format: delta
+      +incremental_strategy: merge
+      +unique_key: trip_id
+    marts:
+      +materialized: table
+      +file_format: delta

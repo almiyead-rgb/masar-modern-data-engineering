@@ -1,0 +1,58 @@
+{
+  "commands": [],
+  "complete_course_verified": false,
+  "dataset_manifest_sha256": "20a7e45bed2980b9394c10e8532da3b9f40f614366bb2df26a88610253e768e3",
+  "dbt_executed": false,
+  "engine_executed": false,
+  "environment": {
+    "dbt_executed": false,
+    "engine_executed": false,
+    "issues": [
+      "pyspark: required 3.5.8, observed None",
+      "delta-spark: required 3.3.2, observed None",
+      "py4j: required 0.10.9.9, observed None",
+      "This unified course runtime requires Java 17; Java 21 is not the course target",
+      "The unified native course environment requires Python 3.11 (helper-only QA may use a different Python)",
+      "dbt-core: required 1.9.8, observed None",
+      "dbt-spark: required 1.9.1, observed None"
+    ],
+    "java": "openjdk version \"21.0.11\" 2026-04-21",
+    "java_major": 21,
+    "packages": {
+      "dbt-core": {
+        "observed": null,
+        "required": "1.9.8"
+      },
+      "dbt-spark": {
+        "observed": null,
+        "required": "1.9.1"
+      },
+      "delta-spark": {
+        "observed": null,
+        "required": "3.3.2"
+      },
+      "py4j": {
+        "observed": null,
+        "required": "0.10.9.9"
+      },
+      "pyspark": {
+        "observed": null,
+        "required": "3.5.8"
+      }
+    },
+    "python": "3.13.5",
+    "scope": "DBT_DEPENDENCY_PREFLIGHT_ONLY",
+    "status": "BLOCKED_DEPENDENCIES"
+  },
+  "error": "pyspark: required 3.5.8, observed None; delta-spark: required 3.3.2, observed None; py4j: required 0.10.9.9, observed None; This unified course runtime requires Java 17; Java 21 is not the course target; The unified native course environment requires Python 3.11 (helper-only QA may use a different Python); dbt-core: required 1.9.8, observed None; dbt-spark: required 1.9.1, observed None",
+  "finished_at": "2026-09-10T08:49:29.629002+00:00",
+  "implementation_sha256": "884de7dd60772dbe600c6e609cbc14e87eadfbf323f24f7c9a38387fd9f948d6",
+  "include_correction": true,
+  "phases": [],
+  "process_id": 1458,
+  "reprocess_all": false,
+  "run_id": "4762836612cb44c18097350d857312e3",
+  "scope": "DBT_RUNTIME_ATTEMPT",
+  "started_at": "2026-09-10T08:49:29.585333+00:00",
+  "status": "BLOCKED_DEPENDENCIES"
+}

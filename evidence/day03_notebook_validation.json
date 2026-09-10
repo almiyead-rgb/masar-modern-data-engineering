@@ -1,0 +1,85 @@
+{
+  "scope": "FOUR_PYTHON_HELPERS_IN_TWO_INDEPENDENT_REPOSITORY_COPIES",
+  "status": "PASSED",
+  "fresh_kernels": 8,
+  "engine_executed": false,
+  "matching_results": true,
+  "runs": [
+    {
+      "run_id": "b6ba975b0bf54ef6985ec827b2773741",
+      "fresh_kernel_per_notebook": true,
+      "notebooks": [
+        {
+          "path": "notebooks/day01/01_source_inspection.ipynb",
+          "executed_code_cells": 4,
+          "result_file": "source_inspection.json",
+          "canonical_result_sha256": "a275d032a5c5a9775560c2bd3b59fa5a8bb59fe604b89c2023845286f50cf54c",
+          "status": "PASSED_HELPER_ONLY"
+        },
+        {
+          "path": "notebooks/day01/02_cost_model.ipynb",
+          "executed_code_cells": 5,
+          "result_file": "cost_model_result.json",
+          "canonical_result_sha256": "7d9c42f9dc926ec40fd94f3ca2fda83b2d01c2a4cb2e50c5044e814c8ee89b68",
+          "status": "PASSED_HELPER_ONLY"
+        },
+        {
+          "path": "notebooks/day02/01_silver_reference.ipynb",
+          "executed_code_cells": 7,
+          "result_file": "day02_reference.json",
+          "canonical_result_sha256": "9f904cf6217fca68b34ad9e8d5dbba5a1bcd8364270bad1c46d30471e72f7d72",
+          "status": "PASSED_HELPER_ONLY"
+        },
+        {
+          "path": "notebooks/day03/01_correction_reference.ipynb",
+          "executed_code_cells": 6,
+          "result_file": "day03_reference.json",
+          "canonical_result_sha256": "8f7aa0edc461ca884a39d12c8800de5584e5bbca4d2dcc8d52b2eb92a0c4122b",
+          "status": "PASSED_HELPER_ONLY"
+        }
+      ]
+    },
+    {
+      "run_id": "32cff6f11aa749e78d8dd62b1b5f9ca3",
+      "fresh_kernel_per_notebook": true,
+      "notebooks": [
+        {
+          "path": "notebooks/day01/01_source_inspection.ipynb",
+          "executed_code_cells": 4,
+          "result_file": "source_inspection.json",
+          "canonical_result_sha256": "a275d032a5c5a9775560c2bd3b59fa5a8bb59fe604b89c2023845286f50cf54c",
+          "status": "PASSED_HELPER_ONLY"
+        },
+        {
+          "path": "notebooks/day01/02_cost_model.ipynb",
+          "executed_code_cells": 5,
+          "result_file": "cost_model_result.json",
+          "canonical_result_sha256": "7d9c42f9dc926ec40fd94f3ca2fda83b2d01c2a4cb2e50c5044e814c8ee89b68",
+          "status": "PASSED_HELPER_ONLY"
+        },
+        {
+          "path": "notebooks/day02/01_silver_reference.ipynb",
+          "executed_code_cells": 7,
+          "result_file": "day02_reference.json",
+          "canonical_result_sha256": "9f904cf6217fca68b34ad9e8d5dbba5a1bcd8364270bad1c46d30471e72f7d72",
+          "status": "PASSED_HELPER_ONLY"
+        },
+        {
+          "path": "notebooks/day03/01_correction_reference.ipynb",
+          "executed_code_cells": 6,
+          "result_file": "day03_reference.json",
+          "canonical_result_sha256": "8f7aa0edc461ca884a39d12c8800de5584e5bbca4d2dcc8d52b2eb92a0c4122b",
+          "status": "PASSED_HELPER_ONLY"
+        }
+      ]
+    }
+  ],
+  "does_not_prove": [
+    "Spark/Delta execution",
+    "dbt",
+    "Kafka",
+    "GX",
+    "GitHub rendering",
+    "full course readiness"
+  ]
+}

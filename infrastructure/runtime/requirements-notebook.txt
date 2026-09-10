@@ -1,0 +1,6 @@
+# Notebook UI/executor only; not extra course tools or learner assignments.
+# These direct pins must pass the same build-time resolver and pip check.
+jupyterlab==4.4.7
+nbformat==5.10.4
+nbclient==0.10.2
+ipykernel==6.30.1

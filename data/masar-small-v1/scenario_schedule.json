@@ -1,0 +1,36 @@
+{
+  "note": "Fixed teaching delivery order, not a Kafka execution or watermark test.",
+  "phases": [
+    {
+      "available_at": "2026-06-04T06:00:00+03:00",
+      "file": "trips.csv",
+      "name": "initial",
+      "revision": 1
+    },
+    {
+      "available_at": "2026-06-04T06:01:00+03:00",
+      "file": "trips.csv",
+      "name": "replay",
+      "revision": 1
+    },
+    {
+      "available_at": "2026-06-04T06:02:00+03:00",
+      "file": "late_trips.csv",
+      "name": "late",
+      "revision": 1
+    },
+    {
+      "available_at": "2026-06-04T06:03:00+03:00",
+      "file": "correction.csv",
+      "name": "correction",
+      "revision": 2
+    },
+    {
+      "available_at": "2026-06-04T06:04:00+03:00",
+      "file": "quality_cases.csv",
+      "name": "quality",
+      "revision": 1
+    }
+  ],
+  "timezone": "Asia/Riyadh"
+}

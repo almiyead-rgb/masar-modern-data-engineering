@@ -1,0 +1,20 @@
+{
+  "scope": "DBT_AUTHORING_STATUS",
+  "status": "CONNECTION_CONFIGURED_NOT_EXECUTED",
+  "profile_configured": true,
+  "adapter": "spark",
+  "method": "session",
+  "adapter_version": "1.9.1",
+  "dbt_core_version": "1.9.8",
+  "models_authored": 6,
+  "singular_tests_authored": 7,
+  "incremental_lookback_days": 3,
+  "lookback_clock": "_ingested_at",
+  "source_freshness_authored": true,
+  "dbt_executed": false,
+  "spark_executed": false,
+  "sql_compiled_by_dbt": false,
+  "model_parity_verified": false,
+  "source_registration": "Runner copies real Day 1 Delta snapshots to a fresh isolated workspace. It never substitutes CSV or Python reference output.",
+  "open_blocker": "Install and validate the unified Python 3.11 / Java 17 environment, then execute the runner and retain its native artifacts."
+}

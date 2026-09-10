@@ -1,0 +1,2793 @@
+{
+  "scope": "LOCAL_HTML_REPOSITORY_PREVIEW_NOT_GITHUB_RENDERING",
+  "pages": 198,
+  "viewport_checks": 396,
+  "viewports": [
+    1366,
+    390
+  ],
+  "passed": true,
+  "layout_failures": [],
+  "javascript_errors": [],
+  "external_network_requests": [],
+  "missing_internal_article_targets": [],
+  "limits": [
+    "Not GitHub native rendering",
+    "Not Safari/Firefox/assistive-technology certification",
+    "No engine execution claim"
+  ],
+  "checks": [
+    {
+      "file": ".gitattributes",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": ".github/ISSUE_TEMPLATE/lab_issue.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": ".github/workflows/repository_checks.yml",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": ".gitignore",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "CHANGELOG.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "SECURITY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "STATUS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "TRAINING_CONTENT.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "config/day04_policy.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "course.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/DICTIONARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/masar-small-v1/correction.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/masar-small-v1/drivers.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/masar-small-v1/gps.ndjson",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/masar-small-v1/gps_late.ndjson",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/masar-small-v1/gps_replay.ndjson",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/masar-small-v1/late_trips.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/masar-small-v1/manifest.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/masar-small-v1/quality_cases.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/masar-small-v1/scenario_schedule.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/masar-small-v1/schema_change.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "data/masar-small-v1/trips.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day01/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day01/CONCEPTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day01/GLOSSARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day01/PRACTICE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day01/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day01/SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day02/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day02/CONCEPTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day02/DATA_CONTRACT.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day02/DBT_GUIDE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day02/GLOSSARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day02/PRACTICE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day02/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day02/SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day03/CHANGE_POLICY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day03/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day03/CONCEPTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day03/GLOSSARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day03/PRACTICE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day03/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day03/SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day04/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day04/CONCEPTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day04/GLOSSARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day04/GOVERNANCE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day04/OBSERVABILITY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day04/PRACTICE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day04/QUALITY_POLICY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day04/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day04/SETUP.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day04/SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day04/STREAM_CONTRACT.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day05/AI_BI_GUIDE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day05/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day05/CONCEPTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day05/DATA_PRODUCTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day05/GLOSSARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day05/INTEGRATION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day05/PRACTICE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day05/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "day05/SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "docs/ADMINISTRATION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "docs/ALIGNMENT.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "docs/GIT_WORKFLOW.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "docs/SETUP.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "docs/START_HERE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "docs/TROUBLESHOOTING.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/cost_model_result.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day02_engine_attempt.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day02_notebook_validation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day02_reference.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day03_engine_attempt.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day03_notebook_validation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day03_preservation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day03_reference.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day03_repository_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day03_unit_tests.txt",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day04_configuration_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day04_engine_attempt.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day04_notebook_validation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day04_preservation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day04_preview_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day04_reference.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day04_repository_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day04_unit_tests.txt",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day05_engine_attempt.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day05_integration_preflight.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day05_notebook_validation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day05_preservation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day05_preview_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day05_reference.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day05_release_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day05_repository_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/day05_unit_tests.txt",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/notebook_validation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/runtime_attempt.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "evidence/source_inspection.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/dbt_project.yml",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/design_status.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/models/schema.yml",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/models/silver/silver_trips.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/models/sources.yml",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/models/staging/stg_drivers.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/models/staging/stg_gps.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/models/staging/stg_trips.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/tests/assert_driver_relationship.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/tests/assert_no_same_revision_conflicts.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "examples/dbt_masar/tests/assert_stage_contract.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "infrastructure/kafka/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "infrastructure/kafka/compose.yaml",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab01/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab01/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab02/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab02/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab03/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab03/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab04/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab04/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab05/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab05/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab06/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab06/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab07/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab07/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab08/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "labs/lab08/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day01/01_source_inspection.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day01/02_cost_model.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day01/03_bronze_delta.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day01/04_spark_scan.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day02/01_silver_reference.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day02/02_staging_delta.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day02/03_incremental_silver.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day03/01_correction_reference.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day03/02_delta_transactions.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day03/03_safe_maintenance.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day04/01_stream_quality_reference.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day04/02_kafka_delta_streaming.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day04/03_quality_gate_gx.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day05/01_gold_serving_reference.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day05/02_gold_integration.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "notebooks/day05/03_ai_bi_serving.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "project/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "project/OPTIONAL.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "project/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "project/SUBMISSION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "requirements-day04.txt",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "requirements-runtime.txt",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "resources/Masar_Cost_Model.xlsx",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "scripts/check_repository.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "scripts/check_submission.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "scripts/cost_model.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "scripts/inspect_sources.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "scripts/run_day01.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "scripts/run_day02.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "scripts/run_day03.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "scripts/run_day04.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "scripts/run_day05.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "sql/day05/bi_zone_summary.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/__init__.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/benchmark.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/bronze.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/cost.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/delta_lab.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/delta_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/pipeline.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/quality_gate.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/runtime.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/serving.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/serving_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/silver.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/silver_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/sources.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/streaming.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/submission.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/trust_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "src/masar/workspace.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "templates/BENCHMARKS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "templates/DECISIONS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "templates/GOVERNANCE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "templates/LAB_NOTES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "templates/submission.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "tests/test_cost.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "tests/test_day01_helpers.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "tests/test_delta_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "tests/test_repository.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "tests/test_serving_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "tests/test_silver_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "tests/test_sources.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": "tests/test_trust_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 1366
+    },
+    {
+      "file": ".gitattributes",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": ".github/ISSUE_TEMPLATE/lab_issue.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": ".github/workflows/repository_checks.yml",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": ".gitignore",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "CHANGELOG.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "SECURITY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "STATUS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "TRAINING_CONTENT.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "config/day04_policy.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "course.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/DICTIONARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/masar-small-v1/correction.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/masar-small-v1/drivers.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/masar-small-v1/gps.ndjson",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/masar-small-v1/gps_late.ndjson",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/masar-small-v1/gps_replay.ndjson",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/masar-small-v1/late_trips.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/masar-small-v1/manifest.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/masar-small-v1/quality_cases.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/masar-small-v1/scenario_schedule.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/masar-small-v1/schema_change.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "data/masar-small-v1/trips.csv",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day01/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day01/CONCEPTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day01/GLOSSARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day01/PRACTICE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day01/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day01/SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day02/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day02/CONCEPTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day02/DATA_CONTRACT.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day02/DBT_GUIDE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day02/GLOSSARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day02/PRACTICE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day02/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day02/SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day03/CHANGE_POLICY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day03/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day03/CONCEPTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day03/GLOSSARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day03/PRACTICE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day03/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day03/SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day04/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day04/CONCEPTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day04/GLOSSARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day04/GOVERNANCE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day04/OBSERVABILITY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day04/PRACTICE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day04/QUALITY_POLICY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day04/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day04/SETUP.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day04/SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day04/STREAM_CONTRACT.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day05/AI_BI_GUIDE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day05/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day05/CONCEPTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day05/DATA_PRODUCTS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day05/GLOSSARY.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day05/INTEGRATION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day05/PRACTICE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day05/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "day05/SOURCES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "docs/ADMINISTRATION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "docs/ALIGNMENT.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "docs/GIT_WORKFLOW.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "docs/SETUP.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "docs/START_HERE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "docs/TROUBLESHOOTING.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/cost_model_result.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day02_engine_attempt.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day02_notebook_validation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day02_reference.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day03_engine_attempt.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day03_notebook_validation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day03_preservation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day03_reference.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day03_repository_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day03_unit_tests.txt",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day04_configuration_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day04_engine_attempt.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day04_notebook_validation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day04_preservation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day04_preview_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day04_reference.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day04_repository_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day04_unit_tests.txt",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day05_engine_attempt.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day05_integration_preflight.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day05_notebook_validation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day05_preservation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day05_preview_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day05_reference.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day05_release_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day05_repository_check.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/day05_unit_tests.txt",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/notebook_validation.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/runtime_attempt.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "evidence/source_inspection.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/dbt_project.yml",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/design_status.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/models/schema.yml",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/models/silver/silver_trips.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/models/sources.yml",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/models/staging/stg_drivers.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/models/staging/stg_gps.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/models/staging/stg_trips.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/tests/assert_driver_relationship.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/tests/assert_no_same_revision_conflicts.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "examples/dbt_masar/tests/assert_stage_contract.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "infrastructure/kafka/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "infrastructure/kafka/compose.yaml",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab01/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab01/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab02/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab02/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab03/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab03/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab04/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab04/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab05/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab05/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab06/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab06/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab07/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab07/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab08/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "labs/lab08/WALKTHROUGH.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day01/01_source_inspection.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day01/02_cost_model.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day01/03_bronze_delta.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day01/04_spark_scan.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day02/01_silver_reference.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day02/02_staging_delta.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day02/03_incremental_silver.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day03/01_correction_reference.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day03/02_delta_transactions.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day03/03_safe_maintenance.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day04/01_stream_quality_reference.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day04/02_kafka_delta_streaming.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day04/03_quality_gate_gx.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day05/01_gold_serving_reference.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day05/02_gold_integration.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "notebooks/day05/03_ai_bi_serving.ipynb",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "project/COMPLETION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "project/OPTIONAL.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "project/README.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "project/SUBMISSION.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "requirements-day04.txt",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "requirements-runtime.txt",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "resources/Masar_Cost_Model.xlsx",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "scripts/check_repository.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "scripts/check_submission.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "scripts/cost_model.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "scripts/inspect_sources.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "scripts/run_day01.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "scripts/run_day02.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "scripts/run_day03.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "scripts/run_day04.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "scripts/run_day05.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "sql/day05/bi_zone_summary.sql",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/__init__.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/benchmark.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/bronze.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/cost.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/delta_lab.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/delta_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/pipeline.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/quality_gate.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/runtime.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/serving.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/serving_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/silver.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/silver_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/sources.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/streaming.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/submission.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/trust_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "src/masar/workspace.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "templates/BENCHMARKS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "templates/DECISIONS.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "templates/GOVERNANCE.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "templates/LAB_NOTES.md",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "templates/submission.json",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "tests/test_cost.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "tests/test_day01_helpers.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "tests/test_delta_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "tests/test_repository.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "tests/test_serving_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "tests/test_silver_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "tests/test_sources.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    },
+    {
+      "file": "tests/test_trust_reference.py",
+      "visible": true,
+      "no_horizontal_overflow": true,
+      "bilingual_bad_pairs": 0,
+      "viewport": 390
+    }
+  ]
+}

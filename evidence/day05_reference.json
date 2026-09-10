@@ -1,0 +1,1774 @@
+{
+  "as_of_utc": "2026-06-04T03:05:00Z",
+  "checks": {
+    "ai.zone_hourly_features_schema_and_keys": true,
+    "ai.zone_hourly_labels_schema_and_keys": true,
+    "bi.dim_date_schema_and_keys": true,
+    "bi.dim_driver_schema_and_keys": true,
+    "bi.dim_zone_schema_and_keys": true,
+    "bi.fact_trips_schema_and_keys": true,
+    "events_aggregated_before_join": true,
+    "fact_grain_75": true,
+    "feature_allowlist": true,
+    "feature_availability_checked": true,
+    "feature_label_keys_aligned": true,
+    "foreign_keys_valid": true,
+    "gold.driver_daily_schema_and_keys": true,
+    "gold.zone_hourly_demand_schema_and_keys": true,
+    "gold_fact_totals_match": true,
+    "group_grains_reconcile": true,
+    "independent_sql_totals": true,
+    "labels_not_fabricated": true
+  },
+  "content_digests": {
+    "ai.zone_hourly_features": "e03e5508536ae24eb43d09b5dcbfb16b004e5272477b476511f7257c0d2d696e",
+    "ai.zone_hourly_labels": "cc558ea2004e25b4d2255e9dcc07c3eb4808c5bd4b3d546c02570634afe2dcba",
+    "bi.dim_date": "9d5fff63bbe816b9dc827e1739ed076c2c7d79a0f4df8126e92419d1c021f068",
+    "bi.dim_driver": "e28c842a5925b9a80c044337d31a97adb586269cfa38ba9675791f98770fea95",
+    "bi.dim_zone": "96b4e93f9f83266f55f0854a50a4fe584feead536efa1e808cec82a633fbb238",
+    "bi.fact_trips": "7bb537f7578b3c43a676d384795f34537496c578a904eb8c54c801bd33ac5104",
+    "gold.driver_daily": "3ec91b6fecc9359bbc54cb67384cba54420a94e85265a6f97879278e76e7f597",
+    "gold.zone_hourly_demand": "b382c3b49c61994849a7afbab8dea504f5ae801da70d83622938b8f9cc37dcdd"
+  },
+  "dataset_manifest_sha256": "20a7e45bed2980b9394c10e8532da3b9f40f614366bb2df26a88610253e768e3",
+  "engine_executed": false,
+  "feature_inputs": [
+    "zone_key",
+    "completed_trips_24h",
+    "avg_duration_seconds_24h",
+    "history_available"
+  ],
+  "label_status": "UNOBSERVED_FUTURE_NOT_ZERO",
+  "not_proven": [
+    "native Delta materialization",
+    "full pipeline execution",
+    "dbt adapter execution",
+    "live feature serving",
+    "model accuracy",
+    "Power BI connector execution",
+    "production scalability",
+    "publication approval"
+  ],
+  "reconciliation": {
+    "daily_group_reconciliation": true,
+    "duration_seconds": 95400,
+    "fare_minor": 188060,
+    "gps_events": 217,
+    "scope": "INDEPENDENT_SQL_RECONCILIATION_NOT_SPARK",
+    "trip_count": 75,
+    "zone_totals": [
+      {
+        "fare_minor": 67040,
+        "trip_count": 25,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "fare_minor": 62520,
+        "trip_count": 25,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "fare_minor": 58500,
+        "trip_count": 25,
+        "zone_key": "Z_RIYADH"
+      }
+    ]
+  },
+  "row_counts": {
+    "ai.zone_hourly_features": 3,
+    "ai.zone_hourly_labels": 3,
+    "bi.dim_date": 3,
+    "bi.dim_driver": 6,
+    "bi.dim_zone": 3,
+    "bi.fact_trips": 75,
+    "gold.driver_daily": 18,
+    "gold.zone_hourly_demand": 75
+  },
+  "scope": "DAY05_SOURCE_EXPECTATIONS_ONLY",
+  "tables": {
+    "ai.zone_hourly_features": [
+      {
+        "as_of_utc": "2026-06-04T03:05:00Z",
+        "avg_duration_seconds_24h": "1470.00",
+        "completed_trips_24h": 8,
+        "history_available": true,
+        "history_window_start_utc": "2026-06-03T03:05:00Z",
+        "max_source_available_at_utc": "2026-06-04T03:00:00Z",
+        "prediction_hour_utc": "2026-06-04T04:00:00Z",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "as_of_utc": "2026-06-04T03:05:00Z",
+        "avg_duration_seconds_24h": "1350.00",
+        "completed_trips_24h": 8,
+        "history_available": true,
+        "history_window_start_utc": "2026-06-03T03:05:00Z",
+        "max_source_available_at_utc": "2026-06-04T03:00:00Z",
+        "prediction_hour_utc": "2026-06-04T04:00:00Z",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "as_of_utc": "2026-06-04T03:05:00Z",
+        "avg_duration_seconds_24h": "1230.00",
+        "completed_trips_24h": 8,
+        "history_available": true,
+        "history_window_start_utc": "2026-06-03T03:05:00Z",
+        "max_source_available_at_utc": "2026-06-04T03:00:00Z",
+        "prediction_hour_utc": "2026-06-04T04:00:00Z",
+        "zone_key": "Z_RIYADH"
+      }
+    ],
+    "ai.zone_hourly_labels": [
+      {
+        "label_available_at_utc": null,
+        "label_status": "UNOBSERVED",
+        "prediction_hour_utc": "2026-06-04T04:00:00Z",
+        "target_trip_count": null,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "label_available_at_utc": null,
+        "label_status": "UNOBSERVED",
+        "prediction_hour_utc": "2026-06-04T04:00:00Z",
+        "target_trip_count": null,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "label_available_at_utc": null,
+        "label_status": "UNOBSERVED",
+        "prediction_hour_utc": "2026-06-04T04:00:00Z",
+        "target_trip_count": null,
+        "zone_key": "Z_RIYADH"
+      }
+    ],
+    "bi.dim_date": [
+      {
+        "date_key": 20260601,
+        "date_local": "2026-06-01",
+        "day": 1,
+        "month": 6,
+        "year": 2026
+      },
+      {
+        "date_key": 20260602,
+        "date_local": "2026-06-02",
+        "day": 2,
+        "month": 6,
+        "year": 2026
+      },
+      {
+        "date_key": 20260603,
+        "date_local": "2026-06-03",
+        "day": 3,
+        "month": 6,
+        "year": 2026
+      }
+    ],
+    "bi.dim_driver": [
+      {
+        "driver_id": "SYN_D001",
+        "driver_key": "SYN_D001",
+        "vehicle_type": "sedan"
+      },
+      {
+        "driver_id": "SYN_D002",
+        "driver_key": "SYN_D002",
+        "vehicle_type": "suv"
+      },
+      {
+        "driver_id": "SYN_D003",
+        "driver_key": "SYN_D003",
+        "vehicle_type": "sedan"
+      },
+      {
+        "driver_id": "SYN_D004",
+        "driver_key": "SYN_D004",
+        "vehicle_type": "suv"
+      },
+      {
+        "driver_id": "SYN_D005",
+        "driver_key": "SYN_D005",
+        "vehicle_type": "sedan"
+      },
+      {
+        "driver_id": "SYN_D006",
+        "driver_key": "SYN_D006",
+        "vehicle_type": "suv"
+      }
+    ],
+    "bi.dim_zone": [
+      {
+        "city": "Dammam",
+        "zone_key": "Z_DAMMAM",
+        "zone_resolution": "city_proxy"
+      },
+      {
+        "city": "Jeddah",
+        "zone_key": "Z_JEDDAH",
+        "zone_resolution": "city_proxy"
+      },
+      {
+        "city": "Riyadh",
+        "zone_key": "Z_RIYADH",
+        "zone_resolution": "city_proxy"
+      }
+    ],
+    "bi.fact_trips": [
+      {
+        "date_key": 20260601,
+        "distance_km": "5.00",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 780,
+        "fare_sar": "25.00",
+        "gps_event_count": 0,
+        "start_utc": "2026-06-01T20:55:00Z",
+        "trip_id": "SYN_LATE001",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "5.40",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 840,
+        "fare_sar": "27.00",
+        "gps_event_count": 0,
+        "start_utc": "2026-06-01T20:55:00Z",
+        "trip_id": "SYN_LATE002",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "5.80",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 900,
+        "fare_sar": "29.00",
+        "gps_event_count": 0,
+        "start_utc": "2026-06-01T20:55:00Z",
+        "trip_id": "SYN_LATE003",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "3.50",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 480,
+        "fare_sar": "23.00",
+        "gps_event_count": 4,
+        "start_utc": "2026-06-01T03:00:00Z",
+        "trip_id": "SYN_T0001",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "3.85",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 660,
+        "fare_sar": "19.25",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T05:00:00Z",
+        "trip_id": "SYN_T0002",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "4.20",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 840,
+        "fare_sar": "20.50",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T07:00:00Z",
+        "trip_id": "SYN_T0003",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "4.55",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 1020,
+        "fare_sar": "21.75",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T09:00:00Z",
+        "trip_id": "SYN_T0004",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "4.90",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 1200,
+        "fare_sar": "23.00",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T11:00:00Z",
+        "trip_id": "SYN_T0005",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "5.25",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 1380,
+        "fare_sar": "24.25",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T13:00:00Z",
+        "trip_id": "SYN_T0006",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "5.60",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 1560,
+        "fare_sar": "25.50",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T15:00:00Z",
+        "trip_id": "SYN_T0007",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "5.95",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 1740,
+        "fare_sar": "26.75",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T17:00:00Z",
+        "trip_id": "SYN_T0008",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "4.10",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 600,
+        "fare_sar": "19.80",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T03:05:00Z",
+        "trip_id": "SYN_T0009",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "4.45",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 780,
+        "fare_sar": "21.05",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T05:05:00Z",
+        "trip_id": "SYN_T0010",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "4.80",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 960,
+        "fare_sar": "22.30",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T07:05:00Z",
+        "trip_id": "SYN_T0011",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "5.15",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 1140,
+        "fare_sar": "23.55",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T09:05:00Z",
+        "trip_id": "SYN_T0012",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "5.50",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 1320,
+        "fare_sar": "24.80",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T11:05:00Z",
+        "trip_id": "SYN_T0013",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "5.85",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 1500,
+        "fare_sar": "26.05",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T13:05:00Z",
+        "trip_id": "SYN_T0014",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "6.20",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 1680,
+        "fare_sar": "27.30",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T15:05:00Z",
+        "trip_id": "SYN_T0015",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "6.55",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 1860,
+        "fare_sar": "28.55",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T17:05:00Z",
+        "trip_id": "SYN_T0016",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "4.70",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 720,
+        "fare_sar": "21.60",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T03:10:00Z",
+        "trip_id": "SYN_T0017",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "5.05",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 900,
+        "fare_sar": "22.85",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T05:10:00Z",
+        "trip_id": "SYN_T0018",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "5.40",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 1080,
+        "fare_sar": "24.10",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T07:10:00Z",
+        "trip_id": "SYN_T0019",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "5.75",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 1260,
+        "fare_sar": "25.35",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T09:10:00Z",
+        "trip_id": "SYN_T0020",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "6.10",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 1440,
+        "fare_sar": "26.60",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T11:10:00Z",
+        "trip_id": "SYN_T0021",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "6.45",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 1620,
+        "fare_sar": "27.85",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T13:10:00Z",
+        "trip_id": "SYN_T0022",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "6.80",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 1800,
+        "fare_sar": "29.10",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T15:10:00Z",
+        "trip_id": "SYN_T0023",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260601,
+        "distance_km": "7.15",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 1980,
+        "fare_sar": "30.35",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-01T17:10:00Z",
+        "trip_id": "SYN_T0024",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "3.60",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 540,
+        "fare_sar": "18.75",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T03:00:00Z",
+        "trip_id": "SYN_T0025",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "3.95",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 720,
+        "fare_sar": "20.00",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T05:00:00Z",
+        "trip_id": "SYN_T0026",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "4.30",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 900,
+        "fare_sar": "21.25",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T07:00:00Z",
+        "trip_id": "SYN_T0027",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "4.65",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 1080,
+        "fare_sar": "22.50",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T09:00:00Z",
+        "trip_id": "SYN_T0028",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "5.00",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 1260,
+        "fare_sar": "23.75",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T11:00:00Z",
+        "trip_id": "SYN_T0029",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "5.35",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 1440,
+        "fare_sar": "25.00",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T13:00:00Z",
+        "trip_id": "SYN_T0030",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "5.70",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 1620,
+        "fare_sar": "26.25",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T15:00:00Z",
+        "trip_id": "SYN_T0031",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "6.05",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 1800,
+        "fare_sar": "27.50",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T17:00:00Z",
+        "trip_id": "SYN_T0032",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "4.20",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 660,
+        "fare_sar": "20.55",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T03:05:00Z",
+        "trip_id": "SYN_T0033",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "4.55",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 840,
+        "fare_sar": "21.80",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T05:05:00Z",
+        "trip_id": "SYN_T0034",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "4.90",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 1020,
+        "fare_sar": "23.05",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T07:05:00Z",
+        "trip_id": "SYN_T0035",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "5.25",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 1200,
+        "fare_sar": "24.30",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T09:05:00Z",
+        "trip_id": "SYN_T0036",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "5.60",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 1380,
+        "fare_sar": "25.55",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T11:05:00Z",
+        "trip_id": "SYN_T0037",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "5.95",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 1560,
+        "fare_sar": "26.80",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T13:05:00Z",
+        "trip_id": "SYN_T0038",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "6.30",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 1740,
+        "fare_sar": "28.05",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T15:05:00Z",
+        "trip_id": "SYN_T0039",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "6.65",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 1920,
+        "fare_sar": "29.30",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T17:05:00Z",
+        "trip_id": "SYN_T0040",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "4.80",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 780,
+        "fare_sar": "22.35",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T03:10:00Z",
+        "trip_id": "SYN_T0041",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "5.15",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 960,
+        "fare_sar": "23.60",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T05:10:00Z",
+        "trip_id": "SYN_T0042",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "5.50",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 1140,
+        "fare_sar": "24.85",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T07:10:00Z",
+        "trip_id": "SYN_T0043",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "5.85",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 1320,
+        "fare_sar": "26.10",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T09:10:00Z",
+        "trip_id": "SYN_T0044",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "6.20",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 1500,
+        "fare_sar": "27.35",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T11:10:00Z",
+        "trip_id": "SYN_T0045",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "6.55",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 1680,
+        "fare_sar": "28.60",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T13:10:00Z",
+        "trip_id": "SYN_T0046",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "6.90",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 1860,
+        "fare_sar": "29.85",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T15:10:00Z",
+        "trip_id": "SYN_T0047",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260602,
+        "distance_km": "7.25",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 2040,
+        "fare_sar": "31.10",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-02T17:10:00Z",
+        "trip_id": "SYN_T0048",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "3.70",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 600,
+        "fare_sar": "19.50",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T03:00:00Z",
+        "trip_id": "SYN_T0049",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "4.05",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 780,
+        "fare_sar": "20.75",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T05:00:00Z",
+        "trip_id": "SYN_T0050",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "4.40",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 960,
+        "fare_sar": "22.00",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T07:00:00Z",
+        "trip_id": "SYN_T0051",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "4.75",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 1140,
+        "fare_sar": "23.25",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T09:00:00Z",
+        "trip_id": "SYN_T0052",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "5.10",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 1320,
+        "fare_sar": "24.50",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T11:00:00Z",
+        "trip_id": "SYN_T0053",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "5.45",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 1500,
+        "fare_sar": "25.75",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T13:00:00Z",
+        "trip_id": "SYN_T0054",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "5.80",
+        "driver_key": "SYN_D001",
+        "duration_seconds": 1680,
+        "fare_sar": "27.00",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T15:00:00Z",
+        "trip_id": "SYN_T0055",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "6.15",
+        "driver_key": "SYN_D002",
+        "duration_seconds": 1860,
+        "fare_sar": "28.25",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T17:00:00Z",
+        "trip_id": "SYN_T0056",
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "4.30",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 720,
+        "fare_sar": "21.30",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T03:05:00Z",
+        "trip_id": "SYN_T0057",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "4.65",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 900,
+        "fare_sar": "22.55",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T05:05:00Z",
+        "trip_id": "SYN_T0058",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "5.00",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 1080,
+        "fare_sar": "23.80",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T07:05:00Z",
+        "trip_id": "SYN_T0059",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "5.35",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 1260,
+        "fare_sar": "25.05",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T09:05:00Z",
+        "trip_id": "SYN_T0060",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "5.70",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 1440,
+        "fare_sar": "26.30",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T11:05:00Z",
+        "trip_id": "SYN_T0061",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "6.05",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 1620,
+        "fare_sar": "27.55",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T13:05:00Z",
+        "trip_id": "SYN_T0062",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "6.40",
+        "driver_key": "SYN_D003",
+        "duration_seconds": 1800,
+        "fare_sar": "28.80",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T15:05:00Z",
+        "trip_id": "SYN_T0063",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "6.75",
+        "driver_key": "SYN_D004",
+        "duration_seconds": 1980,
+        "fare_sar": "30.05",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T17:05:00Z",
+        "trip_id": "SYN_T0064",
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "4.90",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 840,
+        "fare_sar": "23.10",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T03:10:00Z",
+        "trip_id": "SYN_T0065",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "5.25",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 1020,
+        "fare_sar": "24.35",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T05:10:00Z",
+        "trip_id": "SYN_T0066",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "5.60",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 1200,
+        "fare_sar": "25.60",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T07:10:00Z",
+        "trip_id": "SYN_T0067",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "5.95",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 1380,
+        "fare_sar": "26.85",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T09:10:00Z",
+        "trip_id": "SYN_T0068",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "6.30",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 1560,
+        "fare_sar": "28.10",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T11:10:00Z",
+        "trip_id": "SYN_T0069",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "6.65",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 1740,
+        "fare_sar": "29.35",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T13:10:00Z",
+        "trip_id": "SYN_T0070",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "7.00",
+        "driver_key": "SYN_D005",
+        "duration_seconds": 1920,
+        "fare_sar": "30.60",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T15:10:00Z",
+        "trip_id": "SYN_T0071",
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "date_key": 20260603,
+        "distance_km": "7.35",
+        "driver_key": "SYN_D006",
+        "duration_seconds": 2100,
+        "fare_sar": "31.85",
+        "gps_event_count": 3,
+        "start_utc": "2026-06-03T17:10:00Z",
+        "trip_id": "SYN_T0072",
+        "zone_key": "Z_DAMMAM"
+      }
+    ],
+    "gold.driver_daily": [
+      {
+        "driver_key": "SYN_D001",
+        "total_duration_seconds": 4860,
+        "total_fare_sar": "117.00",
+        "trip_count": 5,
+        "trip_date_local": "2026-06-01"
+      },
+      {
+        "driver_key": "SYN_D001",
+        "total_duration_seconds": 4320,
+        "total_fare_sar": "90.00",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-02"
+      },
+      {
+        "driver_key": "SYN_D001",
+        "total_duration_seconds": 4560,
+        "total_fare_sar": "93.00",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-03"
+      },
+      {
+        "driver_key": "SYN_D002",
+        "total_duration_seconds": 4800,
+        "total_fare_sar": "92.00",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-01"
+      },
+      {
+        "driver_key": "SYN_D002",
+        "total_duration_seconds": 5040,
+        "total_fare_sar": "95.00",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-02"
+      },
+      {
+        "driver_key": "SYN_D002",
+        "total_duration_seconds": 5280,
+        "total_fare_sar": "98.00",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-03"
+      },
+      {
+        "driver_key": "SYN_D003",
+        "total_duration_seconds": 5400,
+        "total_fare_sar": "121.20",
+        "trip_count": 5,
+        "trip_date_local": "2026-06-01"
+      },
+      {
+        "driver_key": "SYN_D003",
+        "total_duration_seconds": 4800,
+        "total_fare_sar": "97.20",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-02"
+      },
+      {
+        "driver_key": "SYN_D003",
+        "total_duration_seconds": 5040,
+        "total_fare_sar": "100.20",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-03"
+      },
+      {
+        "driver_key": "SYN_D004",
+        "total_duration_seconds": 5280,
+        "total_fare_sar": "99.20",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-01"
+      },
+      {
+        "driver_key": "SYN_D004",
+        "total_duration_seconds": 5520,
+        "total_fare_sar": "102.20",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-02"
+      },
+      {
+        "driver_key": "SYN_D004",
+        "total_duration_seconds": 5760,
+        "total_fare_sar": "105.20",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-03"
+      },
+      {
+        "driver_key": "SYN_D005",
+        "total_duration_seconds": 5940,
+        "total_fare_sar": "130.40",
+        "trip_count": 5,
+        "trip_date_local": "2026-06-01"
+      },
+      {
+        "driver_key": "SYN_D005",
+        "total_duration_seconds": 5280,
+        "total_fare_sar": "104.40",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-02"
+      },
+      {
+        "driver_key": "SYN_D005",
+        "total_duration_seconds": 5520,
+        "total_fare_sar": "107.40",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-03"
+      },
+      {
+        "driver_key": "SYN_D006",
+        "total_duration_seconds": 5760,
+        "total_fare_sar": "106.40",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-01"
+      },
+      {
+        "driver_key": "SYN_D006",
+        "total_duration_seconds": 6000,
+        "total_fare_sar": "109.40",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-02"
+      },
+      {
+        "driver_key": "SYN_D006",
+        "total_duration_seconds": 6240,
+        "total_fare_sar": "112.40",
+        "trip_count": 4,
+        "trip_date_local": "2026-06-03"
+      }
+    ],
+    "gold.zone_hourly_demand": [
+      {
+        "hour_local": "2026-06-01T06:00:00+03:00",
+        "hour_utc": "2026-06-01T03:00:00Z",
+        "total_duration_seconds": 720,
+        "total_fare_sar": "21.60",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-01T08:00:00+03:00",
+        "hour_utc": "2026-06-01T05:00:00Z",
+        "total_duration_seconds": 900,
+        "total_fare_sar": "22.85",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-01T10:00:00+03:00",
+        "hour_utc": "2026-06-01T07:00:00Z",
+        "total_duration_seconds": 1080,
+        "total_fare_sar": "24.10",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-01T12:00:00+03:00",
+        "hour_utc": "2026-06-01T09:00:00Z",
+        "total_duration_seconds": 1260,
+        "total_fare_sar": "25.35",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-01T14:00:00+03:00",
+        "hour_utc": "2026-06-01T11:00:00Z",
+        "total_duration_seconds": 1440,
+        "total_fare_sar": "26.60",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-01T16:00:00+03:00",
+        "hour_utc": "2026-06-01T13:00:00Z",
+        "total_duration_seconds": 1620,
+        "total_fare_sar": "27.85",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-01T18:00:00+03:00",
+        "hour_utc": "2026-06-01T15:00:00Z",
+        "total_duration_seconds": 1800,
+        "total_fare_sar": "29.10",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-01T20:00:00+03:00",
+        "hour_utc": "2026-06-01T17:00:00Z",
+        "total_duration_seconds": 1980,
+        "total_fare_sar": "30.35",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-01T23:00:00+03:00",
+        "hour_utc": "2026-06-01T20:00:00Z",
+        "total_duration_seconds": 900,
+        "total_fare_sar": "29.00",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-02T06:00:00+03:00",
+        "hour_utc": "2026-06-02T03:00:00Z",
+        "total_duration_seconds": 780,
+        "total_fare_sar": "22.35",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-02T08:00:00+03:00",
+        "hour_utc": "2026-06-02T05:00:00Z",
+        "total_duration_seconds": 960,
+        "total_fare_sar": "23.60",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-02T10:00:00+03:00",
+        "hour_utc": "2026-06-02T07:00:00Z",
+        "total_duration_seconds": 1140,
+        "total_fare_sar": "24.85",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-02T12:00:00+03:00",
+        "hour_utc": "2026-06-02T09:00:00Z",
+        "total_duration_seconds": 1320,
+        "total_fare_sar": "26.10",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-02T14:00:00+03:00",
+        "hour_utc": "2026-06-02T11:00:00Z",
+        "total_duration_seconds": 1500,
+        "total_fare_sar": "27.35",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-02T16:00:00+03:00",
+        "hour_utc": "2026-06-02T13:00:00Z",
+        "total_duration_seconds": 1680,
+        "total_fare_sar": "28.60",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-02T18:00:00+03:00",
+        "hour_utc": "2026-06-02T15:00:00Z",
+        "total_duration_seconds": 1860,
+        "total_fare_sar": "29.85",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-02T20:00:00+03:00",
+        "hour_utc": "2026-06-02T17:00:00Z",
+        "total_duration_seconds": 2040,
+        "total_fare_sar": "31.10",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-03T06:00:00+03:00",
+        "hour_utc": "2026-06-03T03:00:00Z",
+        "total_duration_seconds": 840,
+        "total_fare_sar": "23.10",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-03T08:00:00+03:00",
+        "hour_utc": "2026-06-03T05:00:00Z",
+        "total_duration_seconds": 1020,
+        "total_fare_sar": "24.35",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-03T10:00:00+03:00",
+        "hour_utc": "2026-06-03T07:00:00Z",
+        "total_duration_seconds": 1200,
+        "total_fare_sar": "25.60",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-03T12:00:00+03:00",
+        "hour_utc": "2026-06-03T09:00:00Z",
+        "total_duration_seconds": 1380,
+        "total_fare_sar": "26.85",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-03T14:00:00+03:00",
+        "hour_utc": "2026-06-03T11:00:00Z",
+        "total_duration_seconds": 1560,
+        "total_fare_sar": "28.10",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-03T16:00:00+03:00",
+        "hour_utc": "2026-06-03T13:00:00Z",
+        "total_duration_seconds": 1740,
+        "total_fare_sar": "29.35",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-03T18:00:00+03:00",
+        "hour_utc": "2026-06-03T15:00:00Z",
+        "total_duration_seconds": 1920,
+        "total_fare_sar": "30.60",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-03T20:00:00+03:00",
+        "hour_utc": "2026-06-03T17:00:00Z",
+        "total_duration_seconds": 2100,
+        "total_fare_sar": "31.85",
+        "trip_count": 1,
+        "zone_key": "Z_DAMMAM"
+      },
+      {
+        "hour_local": "2026-06-01T06:00:00+03:00",
+        "hour_utc": "2026-06-01T03:00:00Z",
+        "total_duration_seconds": 600,
+        "total_fare_sar": "19.80",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-01T08:00:00+03:00",
+        "hour_utc": "2026-06-01T05:00:00Z",
+        "total_duration_seconds": 780,
+        "total_fare_sar": "21.05",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-01T10:00:00+03:00",
+        "hour_utc": "2026-06-01T07:00:00Z",
+        "total_duration_seconds": 960,
+        "total_fare_sar": "22.30",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-01T12:00:00+03:00",
+        "hour_utc": "2026-06-01T09:00:00Z",
+        "total_duration_seconds": 1140,
+        "total_fare_sar": "23.55",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-01T14:00:00+03:00",
+        "hour_utc": "2026-06-01T11:00:00Z",
+        "total_duration_seconds": 1320,
+        "total_fare_sar": "24.80",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-01T16:00:00+03:00",
+        "hour_utc": "2026-06-01T13:00:00Z",
+        "total_duration_seconds": 1500,
+        "total_fare_sar": "26.05",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-01T18:00:00+03:00",
+        "hour_utc": "2026-06-01T15:00:00Z",
+        "total_duration_seconds": 1680,
+        "total_fare_sar": "27.30",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-01T20:00:00+03:00",
+        "hour_utc": "2026-06-01T17:00:00Z",
+        "total_duration_seconds": 1860,
+        "total_fare_sar": "28.55",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-01T23:00:00+03:00",
+        "hour_utc": "2026-06-01T20:00:00Z",
+        "total_duration_seconds": 840,
+        "total_fare_sar": "27.00",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-02T06:00:00+03:00",
+        "hour_utc": "2026-06-02T03:00:00Z",
+        "total_duration_seconds": 660,
+        "total_fare_sar": "20.55",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-02T08:00:00+03:00",
+        "hour_utc": "2026-06-02T05:00:00Z",
+        "total_duration_seconds": 840,
+        "total_fare_sar": "21.80",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-02T10:00:00+03:00",
+        "hour_utc": "2026-06-02T07:00:00Z",
+        "total_duration_seconds": 1020,
+        "total_fare_sar": "23.05",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-02T12:00:00+03:00",
+        "hour_utc": "2026-06-02T09:00:00Z",
+        "total_duration_seconds": 1200,
+        "total_fare_sar": "24.30",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-02T14:00:00+03:00",
+        "hour_utc": "2026-06-02T11:00:00Z",
+        "total_duration_seconds": 1380,
+        "total_fare_sar": "25.55",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-02T16:00:00+03:00",
+        "hour_utc": "2026-06-02T13:00:00Z",
+        "total_duration_seconds": 1560,
+        "total_fare_sar": "26.80",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-02T18:00:00+03:00",
+        "hour_utc": "2026-06-02T15:00:00Z",
+        "total_duration_seconds": 1740,
+        "total_fare_sar": "28.05",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-02T20:00:00+03:00",
+        "hour_utc": "2026-06-02T17:00:00Z",
+        "total_duration_seconds": 1920,
+        "total_fare_sar": "29.30",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-03T06:00:00+03:00",
+        "hour_utc": "2026-06-03T03:00:00Z",
+        "total_duration_seconds": 720,
+        "total_fare_sar": "21.30",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-03T08:00:00+03:00",
+        "hour_utc": "2026-06-03T05:00:00Z",
+        "total_duration_seconds": 900,
+        "total_fare_sar": "22.55",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-03T10:00:00+03:00",
+        "hour_utc": "2026-06-03T07:00:00Z",
+        "total_duration_seconds": 1080,
+        "total_fare_sar": "23.80",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-03T12:00:00+03:00",
+        "hour_utc": "2026-06-03T09:00:00Z",
+        "total_duration_seconds": 1260,
+        "total_fare_sar": "25.05",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-03T14:00:00+03:00",
+        "hour_utc": "2026-06-03T11:00:00Z",
+        "total_duration_seconds": 1440,
+        "total_fare_sar": "26.30",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-03T16:00:00+03:00",
+        "hour_utc": "2026-06-03T13:00:00Z",
+        "total_duration_seconds": 1620,
+        "total_fare_sar": "27.55",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-03T18:00:00+03:00",
+        "hour_utc": "2026-06-03T15:00:00Z",
+        "total_duration_seconds": 1800,
+        "total_fare_sar": "28.80",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-03T20:00:00+03:00",
+        "hour_utc": "2026-06-03T17:00:00Z",
+        "total_duration_seconds": 1980,
+        "total_fare_sar": "30.05",
+        "trip_count": 1,
+        "zone_key": "Z_JEDDAH"
+      },
+      {
+        "hour_local": "2026-06-01T06:00:00+03:00",
+        "hour_utc": "2026-06-01T03:00:00Z",
+        "total_duration_seconds": 480,
+        "total_fare_sar": "23.00",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-01T08:00:00+03:00",
+        "hour_utc": "2026-06-01T05:00:00Z",
+        "total_duration_seconds": 660,
+        "total_fare_sar": "19.25",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-01T10:00:00+03:00",
+        "hour_utc": "2026-06-01T07:00:00Z",
+        "total_duration_seconds": 840,
+        "total_fare_sar": "20.50",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-01T12:00:00+03:00",
+        "hour_utc": "2026-06-01T09:00:00Z",
+        "total_duration_seconds": 1020,
+        "total_fare_sar": "21.75",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-01T14:00:00+03:00",
+        "hour_utc": "2026-06-01T11:00:00Z",
+        "total_duration_seconds": 1200,
+        "total_fare_sar": "23.00",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-01T16:00:00+03:00",
+        "hour_utc": "2026-06-01T13:00:00Z",
+        "total_duration_seconds": 1380,
+        "total_fare_sar": "24.25",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-01T18:00:00+03:00",
+        "hour_utc": "2026-06-01T15:00:00Z",
+        "total_duration_seconds": 1560,
+        "total_fare_sar": "25.50",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-01T20:00:00+03:00",
+        "hour_utc": "2026-06-01T17:00:00Z",
+        "total_duration_seconds": 1740,
+        "total_fare_sar": "26.75",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-01T23:00:00+03:00",
+        "hour_utc": "2026-06-01T20:00:00Z",
+        "total_duration_seconds": 780,
+        "total_fare_sar": "25.00",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-02T06:00:00+03:00",
+        "hour_utc": "2026-06-02T03:00:00Z",
+        "total_duration_seconds": 540,
+        "total_fare_sar": "18.75",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-02T08:00:00+03:00",
+        "hour_utc": "2026-06-02T05:00:00Z",
+        "total_duration_seconds": 720,
+        "total_fare_sar": "20.00",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-02T10:00:00+03:00",
+        "hour_utc": "2026-06-02T07:00:00Z",
+        "total_duration_seconds": 900,
+        "total_fare_sar": "21.25",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-02T12:00:00+03:00",
+        "hour_utc": "2026-06-02T09:00:00Z",
+        "total_duration_seconds": 1080,
+        "total_fare_sar": "22.50",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-02T14:00:00+03:00",
+        "hour_utc": "2026-06-02T11:00:00Z",
+        "total_duration_seconds": 1260,
+        "total_fare_sar": "23.75",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-02T16:00:00+03:00",
+        "hour_utc": "2026-06-02T13:00:00Z",
+        "total_duration_seconds": 1440,
+        "total_fare_sar": "25.00",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-02T18:00:00+03:00",
+        "hour_utc": "2026-06-02T15:00:00Z",
+        "total_duration_seconds": 1620,
+        "total_fare_sar": "26.25",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-02T20:00:00+03:00",
+        "hour_utc": "2026-06-02T17:00:00Z",
+        "total_duration_seconds": 1800,
+        "total_fare_sar": "27.50",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-03T06:00:00+03:00",
+        "hour_utc": "2026-06-03T03:00:00Z",
+        "total_duration_seconds": 600,
+        "total_fare_sar": "19.50",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-03T08:00:00+03:00",
+        "hour_utc": "2026-06-03T05:00:00Z",
+        "total_duration_seconds": 780,
+        "total_fare_sar": "20.75",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-03T10:00:00+03:00",
+        "hour_utc": "2026-06-03T07:00:00Z",
+        "total_duration_seconds": 960,
+        "total_fare_sar": "22.00",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-03T12:00:00+03:00",
+        "hour_utc": "2026-06-03T09:00:00Z",
+        "total_duration_seconds": 1140,
+        "total_fare_sar": "23.25",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-03T14:00:00+03:00",
+        "hour_utc": "2026-06-03T11:00:00Z",
+        "total_duration_seconds": 1320,
+        "total_fare_sar": "24.50",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-03T16:00:00+03:00",
+        "hour_utc": "2026-06-03T13:00:00Z",
+        "total_duration_seconds": 1500,
+        "total_fare_sar": "25.75",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-03T18:00:00+03:00",
+        "hour_utc": "2026-06-03T15:00:00Z",
+        "total_duration_seconds": 1680,
+        "total_fare_sar": "27.00",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      },
+      {
+        "hour_local": "2026-06-03T20:00:00+03:00",
+        "hour_utc": "2026-06-03T17:00:00Z",
+        "total_duration_seconds": 1860,
+        "total_fare_sar": "28.25",
+        "trip_count": 1,
+        "zone_key": "Z_RIYADH"
+      }
+    ]
+  }
+}

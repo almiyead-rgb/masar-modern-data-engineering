@@ -1,0 +1,26 @@
+{
+  "policy_version": "MASAR_QUALITY_V1",
+  "scope": "FIXED_SYNTHETIC_CLASSROOM_SCENARIO",
+  "expected_trip_rows": 75,
+  "maximum_gx_snapshot_rows": 500,
+  "promotion": "FAIL_WHOLE_CANDIDATE_THEN_REVALIDATE_NEW_CANDIDATE",
+  "scenario_as_of": "2026-06-04T03:04:00Z",
+  "event_freshness_limit_seconds": 43200,
+  "delivery_freshness_limit_seconds": 300,
+  "city_distribution_warning_tvd": 0.1,
+  "warning": "Teaching assumptions only; no official assessment or production SLO is asserted.",
+  "schema_fields": [
+    "trip_id",
+    "driver_id",
+    "city",
+    "start_utc",
+    "end_utc",
+    "trip_date_local",
+    "fare_sar",
+    "distance_km",
+    "duration_seconds",
+    "vehicle_type",
+    "driver_rating",
+    "source_revision"
+  ]
+}

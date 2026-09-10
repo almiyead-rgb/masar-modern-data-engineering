@@ -1,0 +1,14 @@
+masar_local:
+  target: local
+  outputs:
+    local:
+      type: spark
+      method: session
+      host: NA
+      schema: "{{ env_var('MASAR_DBT_SCHEMA') }}"
+      threads: 1
+      server_side_parameters:
+        spark.sql.catalogImplementation: in-memory
+        spark.sql.session.timeZone: UTC
+        spark.sql.ansi.enabled: 'true'
+        spark.sql.timestampType: TIMESTAMP_LTZ

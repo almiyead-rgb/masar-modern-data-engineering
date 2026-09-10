@@ -1,0 +1,52 @@
+{
+  "scope": "LOCAL_PREVIEW_BROWSER_QA_NOT_GITHUB_RENDERING",
+  "load_mode": "provided_HTML_content",
+  "file_url_navigation": "blocked by browser administrator; content rendered without file URL navigation",
+  "viewports": [
+    {
+      "width": 1366,
+      "total_available_pages": 277,
+      "pages_checked": [
+        "README.md",
+        "STATUS.md",
+        "day02/DBT_GUIDE.md",
+        "docs/LEARNER_ROUTE.md",
+        "docs/RUNTIME_ACCEPTANCE.md",
+        "docs/RUNTIME_DBT.md",
+        "docs/RUNTIME_DBT_REVIEW.md",
+        "docs/SETUP.md",
+        "examples/dbt_masar/README.md",
+        "examples/dbt_masar/profiles/profiles.yml",
+        "scripts/run_dbt.py",
+        "src/masar/dbt_lab.py"
+      ],
+      "bilingual_pairs": 180,
+      "issues": [],
+      "missing_internal_targets": []
+    },
+    {
+      "width": 390,
+      "total_available_pages": 277,
+      "pages_checked": [
+        "README.md",
+        "STATUS.md",
+        "day02/DBT_GUIDE.md",
+        "docs/LEARNER_ROUTE.md",
+        "docs/RUNTIME_ACCEPTANCE.md",
+        "docs/RUNTIME_DBT.md",
+        "docs/RUNTIME_DBT_REVIEW.md",
+        "docs/SETUP.md",
+        "examples/dbt_masar/README.md",
+        "examples/dbt_masar/profiles/profiles.yml",
+        "scripts/run_dbt.py",
+        "src/masar/dbt_lab.py"
+      ],
+      "bilingual_pairs": 180,
+      "issues": [],
+      "missing_internal_targets": []
+    }
+  ],
+  "javascript_errors": [],
+  "external_requests": [],
+  "passed": true
+}

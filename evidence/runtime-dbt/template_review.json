@@ -1,0 +1,239 @@
+{
+  "acyclic_model_graph": {
+    "int_trip_candidates": [
+      "stg_trips",
+      "stg_drivers"
+    ],
+    "mart_city_daily": [
+      "silver_trips"
+    ],
+    "silver_trips": [
+      "int_trip_candidates"
+    ],
+    "stg_drivers": [],
+    "stg_gps": [],
+    "stg_trips": []
+  },
+  "dbt_compile_executed": false,
+  "dbt_executed": false,
+  "jinja_branches_rendered": 39,
+  "renders": [
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/models/intermediate/int_trip_candidates.sql",
+      "source": "examples/dbt_masar/models/intermediate/int_trip_candidates.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/models/marts/mart_city_daily.sql",
+      "source": "examples/dbt_masar/models/marts/mart_city_daily.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/models/silver/silver_trips.sql",
+      "source": "examples/dbt_masar/models/silver/silver_trips.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/models/staging/stg_drivers.sql",
+      "source": "examples/dbt_masar/models/staging/stg_drivers.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/models/staging/stg_gps.sql",
+      "source": "examples/dbt_masar/models/staging/stg_gps.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/models/staging/stg_trips.sql",
+      "source": "examples/dbt_masar/models/staging/stg_trips.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/tests/assert_dimension_and_gps_contract.sql",
+      "source": "examples/dbt_masar/tests/assert_dimension_and_gps_contract.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/tests/assert_driver_relationship.sql",
+      "source": "examples/dbt_masar/tests/assert_driver_relationship.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/tests/assert_ingestion_contract.sql",
+      "source": "examples/dbt_masar/tests/assert_ingestion_contract.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/tests/assert_mart_key.sql",
+      "source": "examples/dbt_masar/tests/assert_mart_key.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/tests/assert_mart_reconciliation.sql",
+      "source": "examples/dbt_masar/tests/assert_mart_reconciliation.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/tests/assert_no_same_revision_conflicts.sql",
+      "source": "examples/dbt_masar/tests/assert_no_same_revision_conflicts.sql"
+    },
+    {
+      "branch": "initial",
+      "review_render": "evidence/runtime-dbt/review-only-sql/initial/tests/assert_stage_contract.sql",
+      "source": "examples/dbt_masar/tests/assert_stage_contract.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/models/intermediate/int_trip_candidates.sql",
+      "source": "examples/dbt_masar/models/intermediate/int_trip_candidates.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/models/marts/mart_city_daily.sql",
+      "source": "examples/dbt_masar/models/marts/mart_city_daily.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/models/silver/silver_trips.sql",
+      "source": "examples/dbt_masar/models/silver/silver_trips.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/models/staging/stg_drivers.sql",
+      "source": "examples/dbt_masar/models/staging/stg_drivers.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/models/staging/stg_gps.sql",
+      "source": "examples/dbt_masar/models/staging/stg_gps.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/models/staging/stg_trips.sql",
+      "source": "examples/dbt_masar/models/staging/stg_trips.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/tests/assert_dimension_and_gps_contract.sql",
+      "source": "examples/dbt_masar/tests/assert_dimension_and_gps_contract.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/tests/assert_driver_relationship.sql",
+      "source": "examples/dbt_masar/tests/assert_driver_relationship.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/tests/assert_ingestion_contract.sql",
+      "source": "examples/dbt_masar/tests/assert_ingestion_contract.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/tests/assert_mart_key.sql",
+      "source": "examples/dbt_masar/tests/assert_mart_key.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/tests/assert_mart_reconciliation.sql",
+      "source": "examples/dbt_masar/tests/assert_mart_reconciliation.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/tests/assert_no_same_revision_conflicts.sql",
+      "source": "examples/dbt_masar/tests/assert_no_same_revision_conflicts.sql"
+    },
+    {
+      "branch": "incremental",
+      "review_render": "evidence/runtime-dbt/review-only-sql/incremental/tests/assert_stage_contract.sql",
+      "source": "examples/dbt_masar/tests/assert_stage_contract.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/models/intermediate/int_trip_candidates.sql",
+      "source": "examples/dbt_masar/models/intermediate/int_trip_candidates.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/models/marts/mart_city_daily.sql",
+      "source": "examples/dbt_masar/models/marts/mart_city_daily.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/models/silver/silver_trips.sql",
+      "source": "examples/dbt_masar/models/silver/silver_trips.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/models/staging/stg_drivers.sql",
+      "source": "examples/dbt_masar/models/staging/stg_drivers.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/models/staging/stg_gps.sql",
+      "source": "examples/dbt_masar/models/staging/stg_gps.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/models/staging/stg_trips.sql",
+      "source": "examples/dbt_masar/models/staging/stg_trips.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/tests/assert_dimension_and_gps_contract.sql",
+      "source": "examples/dbt_masar/tests/assert_dimension_and_gps_contract.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/tests/assert_driver_relationship.sql",
+      "source": "examples/dbt_masar/tests/assert_driver_relationship.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/tests/assert_ingestion_contract.sql",
+      "source": "examples/dbt_masar/tests/assert_ingestion_contract.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/tests/assert_mart_key.sql",
+      "source": "examples/dbt_masar/tests/assert_mart_key.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/tests/assert_mart_reconciliation.sql",
+      "source": "examples/dbt_masar/tests/assert_mart_reconciliation.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/tests/assert_no_same_revision_conflicts.sql",
+      "source": "examples/dbt_masar/tests/assert_no_same_revision_conflicts.sql"
+    },
+    {
+      "branch": "backfill",
+      "review_render": "evidence/runtime-dbt/review-only-sql/backfill/tests/assert_stage_contract.sql",
+      "source": "examples/dbt_masar/tests/assert_stage_contract.sql"
+    }
+  ],
+  "scope": "STATIC_TEMPLATE_AND_YAML_REVIEW_ONLY",
+  "spark_executed": false,
+  "sql_syntax_validated_by_engine": false,
+  "yaml": [
+    {
+      "source": "examples/dbt_masar/dbt_project.yml",
+      "status": "YAML_SYNTAX_PARSED_NOT_DBT_VALIDATED"
+    },
+    {
+      "source": "examples/dbt_masar/models/schema.yml",
+      "status": "YAML_SYNTAX_PARSED_NOT_DBT_VALIDATED"
+    },
+    {
+      "source": "examples/dbt_masar/models/sources.yml",
+      "status": "YAML_SYNTAX_PARSED_NOT_DBT_VALIDATED"
+    },
+    {
+      "source": "examples/dbt_masar/profiles/profiles.yml",
+      "status": "YAML_SYNTAX_PARSED_NOT_DBT_VALIDATED"
+    }
+  ],
+  "yaml_files_parsed": 4
+}

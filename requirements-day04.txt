@@ -1,0 +1,5 @@
+# Candidate pins for the authored Day 4 native notebooks; runtime not verified.
+-r requirements-runtime.txt
+kafka-python==2.2.15
+great-expectations==1.7.0
+pandas==2.2.3

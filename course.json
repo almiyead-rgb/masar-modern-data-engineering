@@ -1,0 +1,616 @@
+{
+  "code": "SDA-DSC-214",
+  "title_en": "Modern Data Engineering for AI Systems",
+  "title_ar": "هندسة البيانات الحديثة لأنظمة الذكاء الاصطناعي",
+  "instructor_en": "Meaad Al-Marri",
+  "instructor_ar": "ميعاد المري",
+  "days": 5,
+  "hours_per_day": 6,
+  "hours_total": 30,
+  "mode": "in_person",
+  "max_learners": 20,
+  "level_in_supplied_reference": "Specialist",
+  "support": "beginner_scaffolding",
+  "prerequisites_in_supplied_reference": [
+    "SDA-FND-104",
+    "SDA-FND-103"
+  ],
+  "dataset": "MASAR_SMALL_V1",
+  "labs_are_final_project": true,
+  "separate_final_project": false,
+  "distinction_required": false,
+  "slides_current_scope": false,
+  "remote_repository": null,
+  "published": false,
+  "formal_assessment_policy": "PENDING_CONFIRMATION",
+  "outcome_numbering": "TRAINING_CONTENT.md",
+  "learning_outcomes": [
+    {
+      "id": "LO1",
+      "en": "Compare warehouses, lakes and lakehouse architectures for a stated use case.",
+      "ar": "المقارنة بين مستودعات البيانات والبحيرات ومعمارية Lakehouse لحالة استخدام محددة."
+    },
+    {
+      "id": "LO2",
+      "en": "Explain compute–storage separation and its cost, elasticity and scale implications.",
+      "ar": "شرح فصل الحوسبة عن التخزين وأثره على التكلفة والمرونة والتوسع."
+    },
+    {
+      "id": "LO3",
+      "en": "Design an ELT pipeline for a modern data environment.",
+      "ar": "تصميم خط ELT ملائم لبيئة بيانات حديثة."
+    },
+    {
+      "id": "LO4",
+      "en": "Implement Delta Lake tables with ACID transactions and schema enforcement.",
+      "ar": "تنفيذ جداول Delta Lake بمعاملات ACID وفرض المخطط."
+    },
+    {
+      "id": "LO5",
+      "en": "Develop streaming and event-driven ingestion patterns.",
+      "ar": "تطوير أنماط الاستيعاب المتدفق والمعتمد على الأحداث."
+    },
+    {
+      "id": "LO6",
+      "en": "Apply quality, observability and governance controls across the pipeline.",
+      "ar": "تطبيق ضوابط الجودة والمراقبة والحوكمة عبر خط المعالجة."
+    },
+    {
+      "id": "LO7",
+      "en": "Connect lakehouse components to AI, reporting and analytics consumers.",
+      "ar": "ربط مكونات Lakehouse بمستهلكي الذكاء الاصطناعي والتقارير والتحليلات."
+    },
+    {
+      "id": "LO8",
+      "en": "Build a working Mini-Lakehouse with Delta Lake and PySpark.",
+      "ar": "بناء Mini-Lakehouse متكامل وعامل باستخدام Delta Lake وPySpark."
+    }
+  ],
+  "day_plan": [
+    {
+      "day": 1,
+      "en": "Foundations and Bronze",
+      "ar": "الأساسيات والطبقة البرونزية",
+      "labs": [
+        "01",
+        "02"
+      ],
+      "los": [
+        "LO1",
+        "LO2"
+      ],
+      "question_en": "What arrived, why preserve it, and how should compute be operated?",
+      "question_ar": "ما البيانات التي وصلت؟ لماذا نحفظها؟ وكيف نختار طريقة تشغيل الحوسبة؟",
+      "output_en": "Raw source inspection, Bronze tables, architecture notes and cost evidence.",
+      "output_ar": "فحص المصادر، وجداول Bronze، وملاحظات القرار المعماري وأدلة التكلفة.",
+      "status": "PARTIAL"
+    },
+    {
+      "day": 2,
+      "en": "ELT and Silver",
+      "ar": "التحويل وطبقة Silver",
+      "labs": [
+        "03"
+      ],
+      "los": [
+        "LO3"
+      ],
+      "question_en": "How do repeated and late inputs become one trustworthy trip table?",
+      "question_ar": "كيف نحول المدخلات المكررة والمتأخرة إلى جدول رحلات واحد موثوق؟",
+      "output_en": "Typed staging data, conformed Silver and idempotency/backfill evidence.",
+      "output_ar": "بيانات مرحلية موحدة الأنواع، وSilver منقحة، وأدلة عدم التكرار والاستكمال المتأخر.",
+      "status": "PARTIAL"
+    },
+    {
+      "day": 3,
+      "en": "Reliable Delta tables",
+      "ar": "جداول Delta الموثوقة",
+      "labs": [
+        "04"
+      ],
+      "los": [
+        "LO4"
+      ],
+      "question_en": "How can a table change safely while preserving an auditable history?",
+      "question_ar": "كيف نغير جدولًا بأمان مع الاحتفاظ بتاريخ قابل للتدقيق؟",
+      "output_en": "Schema and constraint checks, MERGE evidence, version comparison and safe maintenance notes.",
+      "output_ar": "فحوص المخطط والقيود، وأدلة MERGE، ومقارنة النسخ، وتوثيق الصيانة الآمنة.",
+      "status": "PARTIAL"
+    },
+    {
+      "day": 4,
+      "en": "Streaming and trust",
+      "ar": "التدفق وموثوقية البيانات",
+      "labs": [
+        "05",
+        "06"
+      ],
+      "los": [
+        "LO5",
+        "LO6"
+      ],
+      "question_en": "How can events arrive continuously without silently corrupting trusted outputs?",
+      "question_ar": "كيف نستقبل الأحداث باستمرار دون إفساد المخرجات الموثوقة بصمت؟",
+      "output_en": "Kafka/Structured Streaming recovery evidence, quality gate, quarantine and governance documentation.",
+      "output_ar": "أدلة الاستئناف باستخدام Kafka وStructured Streaming، وبوابة جودة وعزل وتوثيق الحوكمة.",
+      "status": "PARTIAL"
+    },
+    {
+      "day": 5,
+      "en": "Integrate, serve and submit",
+      "ar": "التكامل والتقديم والتسليم",
+      "labs": [
+        "07",
+        "08"
+      ],
+      "los": [
+        "LO7",
+        "LO8"
+      ],
+      "question_en": "Can one reproducible pipeline supply consistent AI and BI outputs?",
+      "question_ar": "هل ينتج خط قابل لإعادة التشغيل مخرجات متسقة للذكاء الاصطناعي وذكاء الأعمال؟",
+      "output_en": "Integrated Mini-Lakehouse, Gold outputs, AI/BI reconciliation and the same cumulative project submission.",
+      "output_ar": "Mini-Lakehouse متكاملة، ومخرجات Gold، وتسوية AI وBI، وتسليم المشروع التراكمي نفسه.",
+      "status": "PARTIAL"
+    }
+  ],
+  "labs": [
+    {
+      "id": "01",
+      "day": 1,
+      "en": "Land and inspect raw feeds",
+      "ar": "استقبال المصادر وفحصها",
+      "concept": "day01/CONCEPTS.md",
+      "los": [
+        "LO1",
+        "LO8"
+      ],
+      "inputs": [
+        "trips.csv",
+        "drivers.csv",
+        "gps.ndjson"
+      ],
+      "output": [
+        "mini_lakehouse/bronze/",
+        "LAB01_NOTES.md"
+      ],
+      "checks_en": [
+        "Read the source manifest and verify file hashes before processing.",
+        "Create real Delta Bronze tables with source and ingestion metadata.",
+        "Replay trips without overwriting history and explain the intended Bronze growth.",
+        "Record at least three quality risks; distinguish observed defects from risks."
+      ],
+      "checks_ar": [
+        "اقرأ سجل البيانات وتحقق من بصمات الملفات قبل المعالجة.",
+        "أنشئ جداول Bronze فعلية بصيغة Delta مع معلومات المصدر والاستيعاب.",
+        "أعد استقبال الرحلات دون مسح التاريخ واشرح النمو المقصود في Bronze.",
+        "وثق ثلاثة مخاطر جودة على الأقل وميّز العيب المرصود من الخطر المحتمل."
+      ],
+      "available": "notebooks/day01/01_source_inspection.ipynb",
+      "missing_en": "The engine implementation and walkthrough are authored, but runtime execution has not been verified.",
+      "missing_ar": "كود المحرك والشرح المتدرج مكتوبان، لكن التنفيذ الفعلي لم يتحقق.",
+      "status": "PARTIAL",
+      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
+      "walkthrough": "labs/lab01/WALKTHROUGH.md",
+      "engine_notebook": "notebooks/day01/03_bronze_delta.ipynb"
+    },
+    {
+      "id": "02",
+      "day": 1,
+      "en": "Cost and local scan evidence",
+      "ar": "التكلفة وأدلة الفحص المحلي",
+      "concept": "day01/CONCEPTS.md",
+      "los": [
+        "LO2",
+        "LO8"
+      ],
+      "inputs": [
+        "trips.csv"
+      ],
+      "output": [
+        "BENCHMARKS.md",
+        "LAB02_NOTES.md"
+      ],
+      "checks_en": [
+        "State every assumption and separate hypothetical teaching units from currency.",
+        "Compare always-on and scheduled operation, including overhead and a counterexample.",
+        "Measure actual Spark scans with equal-result checks and query plans.",
+        "Report observed timings without promising a speed-up on a tiny dataset."
+      ],
+      "checks_ar": [
+        "حدد الافتراضات وافصل وحدات التعليم الافتراضية عن العملة.",
+        "قارن التشغيل المستمر والمجدول مع التكاليف الإضافية ومثال مضاد.",
+        "قس عمليات Spark الفعلية مع فحص تساوي النتائج وخطط الاستعلام.",
+        "سجل الأزمنة المرصودة دون ضمان تسارع على مجموعة صغيرة."
+      ],
+      "available": "notebooks/day01/02_cost_model.ipynb",
+      "missing_en": "The engine implementation and walkthrough are authored, but runtime execution has not been verified.",
+      "missing_ar": "كود المحرك والشرح المتدرج مكتوبان، لكن التنفيذ الفعلي لم يتحقق.",
+      "status": "PARTIAL",
+      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
+      "walkthrough": "labs/lab02/WALKTHROUGH.md",
+      "engine_notebook": "notebooks/day01/04_spark_scan.ipynb"
+    },
+    {
+      "id": "03",
+      "day": 2,
+      "en": "Build incremental Silver (3a + 3b)",
+      "ar": "بناء Silver التراكمية (3a و3b)",
+      "concept": "day02/CONCEPTS.md",
+      "los": [
+        "LO3",
+        "LO8"
+      ],
+      "inputs": [
+        "trips.csv",
+        "drivers.csv",
+        "late_trips.csv"
+      ],
+      "output": [
+        "mini_lakehouse/silver/",
+        "LAB03_NOTES.md"
+      ],
+      "checks_en": [
+        "Type columns and normalize timestamps consistently; preserve raw source files.",
+        "Normalize labels and validate driver relationships before publishing Silver.",
+        "Deduplicate on a documented business key and deterministic precedence rule.",
+        "Ingest the fixed late-trip batch and demonstrate that rerunning does not duplicate results."
+      ],
+      "checks_ar": [
+        "وحد أنواع الأعمدة والتوقيتات بصورة متسقة مع الحفاظ على ملفات المصدر.",
+        "وحد المسميات وتحقق من علاقة السائقين قبل تقديم Silver.",
+        "أزل التكرار بمفتاح أعمال وقاعدة أولوية حتمية موثقة.",
+        "استقبل دفعة الرحلات المتأخرة الثابتة وأثبت أن الإعادة لا تضاعف النتائج."
+      ],
+      "available": "notebooks/day02/01_silver_reference.ipynb",
+      "missing_en": "Native Spark/Delta execution and the dbt adapter demonstration remain unverified.",
+      "missing_ar": "تنفيذ Spark وDelta الأصلي وعرض موصل dbt ما زالا غير متحققين.",
+      "status": "PARTIAL",
+      "walkthrough": "labs/lab03/WALKTHROUGH.md",
+      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
+      "engine_notebook": "notebooks/day02/03_incremental_silver.ipynb"
+    },
+    {
+      "id": "04",
+      "day": 3,
+      "en": "Delta operations (4a + 4b)",
+      "ar": "عمليات Delta (4a و4b)",
+      "concept": "day03/CONCEPTS.md",
+      "los": [
+        "LO4",
+        "LO8"
+      ],
+      "inputs": [
+        "correction.csv",
+        "schema_change.csv",
+        "quality_cases.csv"
+      ],
+      "output": [
+        "LAB04_NOTES.md",
+        "BENCHMARKS.md"
+      ],
+      "checks_en": [
+        "Observe real Delta transaction-log commits and enforce the table schema.",
+        "Reject invalid writes without silently dropping failed checks.",
+        "Apply the correction twice and compare logical table contents.",
+        "Read earlier versions and run maintenance/delete exercises only on isolated training copies."
+      ],
+      "checks_ar": [
+        "افحص معاملات Delta الفعلية وطبق مخطط الجدول.",
+        "ارفض الكتابات غير الصالحة دون إسقاط الاختبارات المخفقة بصمت.",
+        "طبق التصحيح مرتين وقارن المحتوى المنطقي للجدول.",
+        "اقرأ النسخ السابقة ونفذ الصيانة والحذف على نسخ تدريبية معزولة فقط."
+      ],
+      "available": "notebooks/day03/01_correction_reference.ipynb",
+      "missing_en": "Native Delta transactions and maintenance are authored but not executed.",
+      "missing_ar": "كود معاملات Delta والصيانة مكتوب لكن لم ينفذ بالمحرك.",
+      "status": "PARTIAL",
+      "walkthrough": "labs/lab04/WALKTHROUGH.md",
+      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
+      "engine_notebooks": [
+        "notebooks/day03/02_delta_transactions.ipynb",
+        "notebooks/day03/03_safe_maintenance.ipynb"
+      ]
+    },
+    {
+      "id": "05",
+      "day": 4,
+      "en": "Stream events and resume safely",
+      "ar": "تدفق الأحداث والاستئناف الآمن",
+      "concept": "day04/CONCEPTS.md",
+      "los": [
+        "LO5",
+        "LO8"
+      ],
+      "inputs": [
+        "gps.ndjson",
+        "gps_replay.ndjson",
+        "gps_late.ndjson"
+      ],
+      "output": [
+        "LAB05_NOTES.md",
+        "mini_lakehouse/bronze/"
+      ],
+      "checks_en": [
+        "Demonstrate an actual Kafka producer/consumer and Spark streaming source.",
+        "Assign a separate persistent checkpoint to each streaming query.",
+        "Record the observed effect of stop/restart and duplicate event deliveries.",
+        "Explain event time, processing time and late-event handling from saved evidence."
+      ],
+      "checks_ar": [
+        "نفذ منتجًا ومستهلكًا فعليين في Kafka ومصدر تدفق في Spark.",
+        "خصص نقطة تحقق مستديمة منفصلة لكل استعلام متدفق.",
+        "سجل أثر الإيقاف والاستئناف وإعادة وصول الأحداث على النتائج.",
+        "اشرح وقت الحدث ووقت المعالجة والتعامل مع التأخر من الأدلة المحفوظة."
+      ],
+      "available": "notebooks/day04/01_stream_quality_reference.ipynb",
+      "missing_en": "Native Kafka/Spark/Delta or GX execution and generated engine evidence remain unverified.",
+      "missing_ar": "التنفيذ الأصلي لـKafka وSpark وDelta أوGX وأدلته المولدة ما يزال غير متحقق.",
+      "status": "PARTIAL",
+      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
+      "walkthrough": "labs/lab05/WALKTHROUGH.md",
+      "engine_notebook": "notebooks/day04/02_kafka_delta_streaming.ipynb"
+    },
+    {
+      "id": "06",
+      "day": 4,
+      "en": "Quality gate and governance",
+      "ar": "بوابة الجودة والحوكمة",
+      "concept": "day04/CONCEPTS.md",
+      "los": [
+        "LO6",
+        "LO8"
+      ],
+      "inputs": [
+        "quality_cases.csv"
+      ],
+      "output": [
+        "LAB06_NOTES.md",
+        "GOVERNANCE.md",
+        "reports/quality/"
+      ],
+      "checks_en": [
+        "Run an actual Great Expectations suite on the intended table.",
+        "Quarantine invalid records with reasons and stop unsafe promotion.",
+        "Record quality, freshness and run-health observations against fixed scenario times.",
+        "Document lineage, ownership, intended access and retention; use synthetic data only."
+      ],
+      "checks_ar": [
+        "شغل مجموعة فحوص فعلية باستخدام Great Expectations على الجدول المقصود.",
+        "اعزل السجلات المعيبة مع أسبابها وامنع الترقية غير الآمنة.",
+        "وثق الجودة والحداثة وسلامة التشغيل بالاستناد إلى أوقات السيناريو الثابتة.",
+        "وثق تتبع البيانات وملكيتها والوصول والاحتفاظ؛ واستخدم البيانات الاصطناعية فقط."
+      ],
+      "available": "notebooks/day04/01_stream_quality_reference.ipynb",
+      "missing_en": "Native Kafka/Spark/Delta or GX execution and generated engine evidence remain unverified.",
+      "missing_ar": "التنفيذ الأصلي لـKafka وSpark وDelta أوGX وأدلته المولدة ما يزال غير متحقق.",
+      "status": "PARTIAL",
+      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
+      "walkthrough": "labs/lab06/WALKTHROUGH.md",
+      "engine_notebook": "notebooks/day04/03_quality_gate_gx.ipynb"
+    },
+    {
+      "id": "07",
+      "day": 5,
+      "en": "Integrate the Mini-Lakehouse",
+      "ar": "تكامل Mini-Lakehouse",
+      "concept": "day05/CONCEPTS.md",
+      "los": [
+        "LO8"
+      ],
+      "inputs": [
+        "Validated Day 4 Delta trips",
+        "Distinct Day 4 Delta events",
+        "scenario_schedule.json"
+      ],
+      "output": [
+        "mini_lakehouse/",
+        "LAB07_NOTES.md",
+        "DECISIONS.md"
+      ],
+      "checks_en": [
+        "Run the dependency-ordered Bronze → Silver → Gold flow.",
+        "Prove that failures prevent unsafe downstream publication.",
+        "Rerun the same logical input and reconcile content, not volatile run timestamps.",
+        "Record one recovery attempt and preserve daily evidence rather than rebuilding undocumented work."
+      ],
+      "checks_ar": [
+        "شغل Bronze ثم Silver ثم Gold بترتيب الاعتماد.",
+        "أثبت أن الإخفاق يمنع تقديم مخرجات لاحقة غير آمنة.",
+        "أعد المدخل المنطقي نفسه وسوّ المحتوى لا توقيتات التشغيل المتغيرة.",
+        "وثق محاولة تعافٍ واحتفظ بأدلة الأيام بدل إعادة بناء عمل غير موثق."
+      ],
+      "available": "notebooks/day05/01_gold_serving_reference.ipynb",
+      "missing_en": "Native execution, integrated runtime validation and final course acceptance remain unverified.",
+      "missing_ar": "التنفيذ الأصلي والتحقق التشغيلي المتكامل والقبول النهائي للدورة ما زالت غير متحققة.",
+      "status": "PARTIAL",
+      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
+      "walkthrough": "labs/lab07/WALKTHROUGH.md",
+      "engine_notebook": "notebooks/day05/02_gold_integration.ipynb"
+    },
+    {
+      "id": "08",
+      "day": 5,
+      "en": "Serve AI and BI; submit the same project",
+      "ar": "تقديم AI وBI وتسليم المشروع نفسه",
+      "concept": "day05/CONCEPTS.md",
+      "los": [
+        "LO7",
+        "LO8"
+      ],
+      "inputs": [
+        "Committed Day 5 release manifest",
+        "Pinned Gold/AI/BI Delta tables"
+      ],
+      "output": [
+        "reports/serving/",
+        "LAB08_NOTES.md",
+        "README.md"
+      ],
+      "checks_en": [
+        "Prepare feature and reporting outputs with explicit grains and definitions.",
+        "Exclude information unavailable at the stated prediction time from features.",
+        "Reconcile trip and fare totals between the trusted table and BI output.",
+        "Submit the accumulated repository and evidence, not a separate final assignment."
+      ],
+      "checks_ar": [
+        "جهز مخرجات الخصائص والتقارير مع تعريف مستوى الصف والمقاييس.",
+        "استبعد من الخصائص المعلومات غير المتاحة وقت التنبؤ المحدد.",
+        "سوّ أعداد الرحلات والأجور بين الجدول الموثوق ومخرج BI.",
+        "سلم المستودع والأدلة المتراكمة وليس تكليفًا نهائيًا منفصلًا."
+      ],
+      "available": "notebooks/day05/01_gold_serving_reference.ipynb",
+      "missing_en": "Native execution, integrated runtime validation and final course acceptance remain unverified.",
+      "missing_ar": "التنفيذ الأصلي والتحقق التشغيلي المتكامل والقبول النهائي للدورة ما زالت غير متحققة.",
+      "status": "PARTIAL",
+      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
+      "walkthrough": "labs/lab08/WALKTHROUGH.md",
+      "engine_notebook": "notebooks/day05/03_ai_bi_serving.ipynb"
+    }
+  ],
+  "build_focus": "DAY05_GOLD_AI_BI_AND_INTEGRATION_AUTHORING",
+  "notebooks": [
+    {
+      "path": "notebooks/day01/01_source_inspection.ipynb",
+      "kind": "preparatory",
+      "execution_status": "EXECUTED_HELPER",
+      "engine_verified": false,
+      "lab_id": "01"
+    },
+    {
+      "path": "notebooks/day01/02_cost_model.ipynb",
+      "kind": "preparatory",
+      "execution_status": "EXECUTED_HELPER",
+      "engine_verified": false,
+      "lab_id": "02"
+    },
+    {
+      "path": "notebooks/day01/03_bronze_delta.ipynb",
+      "kind": "engine",
+      "execution_status": "ENGINE_NOT_EXECUTED",
+      "engine_verified": false,
+      "lab_id": "01"
+    },
+    {
+      "path": "notebooks/day01/04_spark_scan.ipynb",
+      "kind": "engine",
+      "execution_status": "ENGINE_NOT_EXECUTED",
+      "engine_verified": false,
+      "lab_id": "02"
+    },
+    {
+      "path": "notebooks/day02/01_silver_reference.ipynb",
+      "kind": "preparatory",
+      "execution_status": "EXECUTED_HELPER",
+      "engine_verified": false,
+      "lab_id": "03"
+    },
+    {
+      "path": "notebooks/day02/02_staging_delta.ipynb",
+      "kind": "engine",
+      "execution_status": "ENGINE_NOT_EXECUTED",
+      "engine_verified": false,
+      "lab_id": "03"
+    },
+    {
+      "path": "notebooks/day02/03_incremental_silver.ipynb",
+      "kind": "engine",
+      "execution_status": "ENGINE_NOT_EXECUTED",
+      "engine_verified": false,
+      "lab_id": "03"
+    },
+    {
+      "path": "notebooks/day03/01_correction_reference.ipynb",
+      "kind": "preparatory",
+      "execution_status": "EXECUTED_HELPER",
+      "engine_verified": false,
+      "lab_id": "04"
+    },
+    {
+      "path": "notebooks/day03/02_delta_transactions.ipynb",
+      "kind": "engine",
+      "execution_status": "ENGINE_NOT_EXECUTED",
+      "engine_verified": false,
+      "lab_id": "04"
+    },
+    {
+      "path": "notebooks/day03/03_safe_maintenance.ipynb",
+      "kind": "engine",
+      "execution_status": "ENGINE_NOT_EXECUTED",
+      "engine_verified": false,
+      "lab_id": "04"
+    },
+    {
+      "path": "notebooks/day04/01_stream_quality_reference.ipynb",
+      "kind": "preparatory",
+      "execution_status": "EXECUTED_HELPER",
+      "engine_verified": false,
+      "lab_id": "05+06"
+    },
+    {
+      "path": "notebooks/day04/02_kafka_delta_streaming.ipynb",
+      "kind": "engine",
+      "execution_status": "ENGINE_NOT_EXECUTED",
+      "engine_verified": false,
+      "lab_id": "05"
+    },
+    {
+      "path": "notebooks/day04/03_quality_gate_gx.ipynb",
+      "kind": "engine",
+      "execution_status": "ENGINE_NOT_EXECUTED",
+      "engine_verified": false,
+      "lab_id": "06"
+    },
+    {
+      "path": "notebooks/day05/01_gold_serving_reference.ipynb",
+      "lab_id": "07+08",
+      "kind": "preparatory",
+      "execution_status": "EXECUTED_HELPER",
+      "engine_verified": false
+    },
+    {
+      "path": "notebooks/day05/02_gold_integration.ipynb",
+      "lab_id": "07",
+      "kind": "engine",
+      "execution_status": "ENGINE_NOT_EXECUTED",
+      "engine_verified": false
+    },
+    {
+      "path": "notebooks/day05/03_ai_bi_serving.ipynb",
+      "lab_id": "08",
+      "kind": "engine",
+      "execution_status": "ENGINE_NOT_EXECUTED",
+      "engine_verified": false
+    },
+    {
+      "path": "MASAR_STUDENT.ipynb",
+      "lab_id": "01-08",
+      "kind": "engine",
+      "execution_status": "ENGINE_NOT_EXECUTED",
+      "engine_verified": false,
+      "entrypoint_only": true
+    }
+  ],
+  "dataset_manifest_sha256": "20a7e45bed2980b9394c10e8532da3b9f40f614366bb2df26a88610253e768e3",
+  "publication_authorized": false,
+  "day02_dbt_status": "CONNECTION_CONFIGURED_NATIVE_NOT_EXECUTED",
+  "trainer_materials_current_scope": false,
+  "day04_kafka_status": "AUTHORED_NOT_EXECUTED",
+  "day04_gx_status": "AUTHORED_NOT_EXECUTED",
+  "day05_serving_status": "AUTHORED_NATIVE_NOT_EXECUTED",
+  "day05_integration_status": "AUTHORED_NATIVE_NOT_EXECUTED",
+  "integrated_review": {
+    "date": "2026-09-10",
+    "scope": "SOURCE_AND_HELPER_REVIEW",
+    "native_runtime_verified": false,
+    "dbt_runtime_verified": false,
+    "publication_authorized": false,
+    "learner_route": "docs/LEARNER_ROUTE.md",
+    "review": "docs/INTEGRATION_REVIEW.md"
+  },
+  "runtime_target_file": "runtime-target.json",
+  "runtime_validation_status": "UNIFIED_CANDIDATE_NOT_EXECUTED",
+  "runtime_workbench_status": "AUTHORED_NOT_BUILT",
+  "native_verification_coordinator": "scripts/verify_native_runtime.py",
+  "student_entrypoint": "MASAR_STUDENT.ipynb"
+}

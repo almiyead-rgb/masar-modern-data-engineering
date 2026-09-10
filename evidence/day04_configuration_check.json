@@ -1,0 +1,13 @@
+{
+  "scope": "YAML_PARSE_AND_CLASSROOM_CONTRACT_ONLY",
+  "passed": true,
+  "yaml_parser_version": "6.0.3",
+  "host_ports": [
+    "127.0.0.1:9092:9092"
+  ],
+  "image": "apache/kafka:4.0.2",
+  "named_volume": "kafka-data",
+  "docker_executed": false,
+  "broker_executed": false,
+  "security_boundary": "Loopback-only, unauthenticated classroom broker; not production"
+}

@@ -1,0 +1,58 @@
+{
+  "scope": "DAY03_NATIVE_EXECUTION_ATTEMPTS",
+  "engine_executed": false,
+  "status": "BLOCKED_DEPENDENCIES",
+  "notebooks": [
+    {
+      "path": "notebooks/day03/02_delta_transactions.ipynb",
+      "engine_executed": false,
+      "status": "BLOCKED_DEPENDENCIES",
+      "error_type": "EnvironmentUnavailable",
+      "error": "pyspark: required 4.0.1, observed None; delta-spark: required 4.0.1, observed None; py4j: required 0.10.9.9, observed None. See docs/SETUP.md. No Spark job has run.",
+      "completed_code_cells": 1
+    },
+    {
+      "path": "notebooks/day03/03_safe_maintenance.ipynb",
+      "engine_executed": false,
+      "status": "BLOCKED_DEPENDENCIES",
+      "error_type": "EnvironmentUnavailable",
+      "error": "pyspark: required 4.0.1, observed None; delta-spark: required 4.0.1, observed None; py4j: required 0.10.9.9, observed None. See docs/SETUP.md. No Spark job has run.",
+      "completed_code_cells": 1
+    }
+  ],
+  "cli": {
+    "scope": "DAY03_NATIVE_ATTEMPT",
+    "status": "BLOCKED_DEPENDENCIES",
+    "engine_executed": false,
+    "error": "pyspark: required 4.0.1, observed None; delta-spark: required 4.0.1, observed None; py4j: required 0.10.9.9, observed None. See docs/SETUP.md. No Spark job has run.",
+    "environment": {
+      "scope": "DEPENDENCY_PREFLIGHT_ONLY",
+      "python": "3.13.5",
+      "java": "openjdk version \"21.0.11\" 2026-04-21",
+      "java_major": 21,
+      "packages": {
+        "pyspark": {
+          "required": "4.0.1",
+          "observed": null
+        },
+        "delta-spark": {
+          "required": "4.0.1",
+          "observed": null
+        },
+        "py4j": {
+          "required": "0.10.9.9",
+          "observed": null
+        }
+      },
+      "status": "BLOCKED_DEPENDENCIES",
+      "issues": [
+        "pyspark: required 4.0.1, observed None",
+        "delta-spark: required 4.0.1, observed None",
+        "py4j: required 0.10.9.9, observed None"
+      ],
+      "engine_executed": false
+    }
+  },
+  "cli_exit_code": 2,
+  "native_outputs_fabricated": false
+}

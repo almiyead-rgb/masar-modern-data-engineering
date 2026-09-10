@@ -1,0 +1,72 @@
+{
+  "course_dataset": true,
+  "dates": "2026-06-01 through 2026-06-03; fixed deliveries on 2026-06-04",
+  "files": [
+    {
+      "bytes": 149,
+      "path": "correction.csv",
+      "rows": 1,
+      "sha256": "841dafc472c82d9eb7ae9a00223652355ad6d09fbc1cd19840eeb8568ad1408b"
+    },
+    {
+      "bytes": 145,
+      "path": "drivers.csv",
+      "rows": 6,
+      "sha256": "0f5f5d32eafad309c437986c65df578f50abc147923153fa7e831ac532f7f8e0"
+    },
+    {
+      "bytes": 36720,
+      "path": "gps.ndjson",
+      "rows": 216,
+      "sha256": "5f9c4c39558681d3cec62189721e95526d7c61f757851a9ef1e2d8c1fc2af288"
+    },
+    {
+      "bytes": 172,
+      "path": "gps_late.ndjson",
+      "rows": 1,
+      "sha256": "511de48578a8caf7ce5613c150ca052a069bbadd1e4ea444cc6cc5136ffa1d91"
+    },
+    {
+      "bytes": 340,
+      "path": "gps_replay.ndjson",
+      "rows": 2,
+      "sha256": "0a1cfa80c4aaf6f48beb08a97677f50da670f71b9e592c0a9a02431a31f65a89"
+    },
+    {
+      "bytes": 333,
+      "path": "late_trips.csv",
+      "rows": 3,
+      "sha256": "37ebe4c6ef4ac7f542eae290dc91cc5ffdd194e33d845d7c5b8a6b188df43dbf"
+    },
+    {
+      "bytes": 675,
+      "path": "quality_cases.csv",
+      "rows": 7,
+      "sha256": "2224c37a95ea1d015e91aedc3c747f6324ffeaa9c9dcf6e782801b9d328e3e19"
+    },
+    {
+      "bytes": 832,
+      "path": "scenario_schedule.json",
+      "rows": null,
+      "sha256": "aaec8d84920ddd48c7e41e9473b1c98911b9220b56e90657d9a093c8d1a2ba18"
+    },
+    {
+      "bytes": 168,
+      "path": "schema_change.csv",
+      "rows": 1,
+      "sha256": "2c10f12f7777a999d48c50f4e411bd65128e2af14fd38bfc81f2e9f940989beb"
+    },
+    {
+      "bytes": 6488,
+      "path": "trips.csv",
+      "rows": 72,
+      "sha256": "2f3aa3dafe78028e3ce15506af10129091ce8a11aa46b590a5b237c0fecc6f04"
+    }
+  ],
+  "generation": "Deterministic arithmetic; no random generator or current-time inputs.",
+  "generator_version": "1.0.0",
+  "label": "MASAR_SMALL_V1",
+  "real_personal_data": false,
+  "seed": null,
+  "synthetic": true
+}

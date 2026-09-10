@@ -1,0 +1,7 @@
+{
+  "scope": "UNIT_TESTS_NOT_NATIVE_EXECUTION",
+  "passed": true,
+  "tests": 314,
+  "seconds": 4.818,
+  "new_review_tests": 40
+}

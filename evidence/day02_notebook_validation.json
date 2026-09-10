@@ -1,0 +1,60 @@
+{
+  "scope": "FRESH_KERNEL_HELPER_REPLAY_ONLY",
+  "runs": [
+    {
+      "copy": "a",
+      "notebook": "notebooks/day01/01_source_inspection.ipynb",
+      "status": "EXECUTED_HELPER",
+      "code_cells": 4,
+      "result_sha256": "0ffd6326270d10ea56f1eebb71f9335308ea02238fc965da2a6564aab48d6556",
+      "engine_executed": false
+    },
+    {
+      "copy": "a",
+      "notebook": "notebooks/day01/02_cost_model.ipynb",
+      "status": "EXECUTED_HELPER",
+      "code_cells": 5,
+      "result_sha256": "48283d804552f50d8f1cf8a72433def4efc97a1ccbe1115b42f04a8267947d74",
+      "engine_executed": false
+    },
+    {
+      "copy": "a",
+      "notebook": "notebooks/day02/01_silver_reference.ipynb",
+      "status": "EXECUTED_HELPER",
+      "code_cells": 7,
+      "result_sha256": "df3b7a24d4f31adfe8ebaf5cb27194a4a1cfce2809fa29cf3e8f0c01ae4ec91a",
+      "engine_executed": false,
+      "dbt_executed": false
+    },
+    {
+      "copy": "b",
+      "notebook": "notebooks/day01/01_source_inspection.ipynb",
+      "status": "EXECUTED_HELPER",
+      "code_cells": 4,
+      "result_sha256": "0ffd6326270d10ea56f1eebb71f9335308ea02238fc965da2a6564aab48d6556",
+      "engine_executed": false
+    },
+    {
+      "copy": "b",
+      "notebook": "notebooks/day01/02_cost_model.ipynb",
+      "status": "EXECUTED_HELPER",
+      "code_cells": 5,
+      "result_sha256": "48283d804552f50d8f1cf8a72433def4efc97a1ccbe1115b42f04a8267947d74",
+      "engine_executed": false
+    },
+    {
+      "copy": "b",
+      "notebook": "notebooks/day02/01_silver_reference.ipynb",
+      "status": "EXECUTED_HELPER",
+      "code_cells": 7,
+      "result_sha256": "df3b7a24d4f31adfe8ebaf5cb27194a4a1cfce2809fa29cf3e8f0c01ae4ec91a",
+      "engine_executed": false,
+      "dbt_executed": false
+    }
+  ],
+  "independent_copies": 2,
+  "fresh_kernels": 6,
+  "matching_results": true,
+  "engine_executed": false,
+  "dbt_executed": false
+}

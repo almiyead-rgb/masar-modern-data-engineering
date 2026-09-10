@@ -1,0 +1,107 @@
+{
+  "assumptions": {
+    "always_on_extra_monthly": "0",
+    "cores": "4",
+    "days": "30",
+    "hours_per_day": "24",
+    "price_per_core_hour": "0.50",
+    "scheduled_extra_monthly": "30",
+    "startup_hours_per_day": "0.25",
+    "storage_gib": "100",
+    "storage_price_per_gib_month": "0.20",
+    "work_hours_per_day": "2"
+  },
+  "base": {
+    "always_on_compute": "1440.00",
+    "always_on_hours": "720",
+    "always_on_total": "1460.00",
+    "break_even_work_hours_per_day": "23.25",
+    "difference": "1275.0000",
+    "reduction_fraction": "0.8732876712328767123287671233",
+    "scheduled_compute": "135.0000",
+    "scheduled_hours": "67.50",
+    "scheduled_total": "185.0000",
+    "storage_each": "20.00",
+    "unit": "TU (hypothetical teaching units; not currency)"
+  },
+  "checks": {
+    "base_totals": true,
+    "break_even": true,
+    "counterexample": true,
+    "negative_input_rejected": true,
+    "zero_rate": true
+  },
+  "exclusions": [
+    "provider prices",
+    "tax",
+    "egress",
+    "request fees",
+    "latency SLA",
+    "real Spark benchmark",
+    "production sizing"
+  ],
+  "scope": "ILLUSTRATIVE_COST_ARITHMETIC_ONLY",
+  "sensitivity": [
+    {
+      "always_on_total": "1460.00",
+      "difference": "1410.00",
+      "scheduled_total": "50.00",
+      "work_hours_per_day": "0"
+    },
+    {
+      "always_on_total": "1460.00",
+      "difference": "1335.0000",
+      "scheduled_total": "125.0000",
+      "work_hours_per_day": "1"
+    },
+    {
+      "always_on_total": "1460.00",
+      "difference": "1275.0000",
+      "scheduled_total": "185.0000",
+      "work_hours_per_day": "2"
+    },
+    {
+      "always_on_total": "1460.00",
+      "difference": "1155.0000",
+      "scheduled_total": "305.0000",
+      "work_hours_per_day": "4"
+    },
+    {
+      "always_on_total": "1460.00",
+      "difference": "915.0000",
+      "scheduled_total": "545.0000",
+      "work_hours_per_day": "8"
+    },
+    {
+      "always_on_total": "1460.00",
+      "difference": "675.0000",
+      "scheduled_total": "785.0000",
+      "work_hours_per_day": "12"
+    },
+    {
+      "always_on_total": "1460.00",
+      "difference": "315.0000",
+      "scheduled_total": "1145.0000",
+      "work_hours_per_day": "18"
+    },
+    {
+      "always_on_total": "1460.00",
+      "difference": "15.0000",
+      "scheduled_total": "1445.0000",
+      "work_hours_per_day": "23"
+    },
+    {
+      "always_on_total": "1460.00",
+      "difference": "0.0000",
+      "scheduled_total": "1460.0000",
+      "work_hours_per_day": "23.25"
+    },
+    {
+      "always_on_total": "1460.00",
+      "difference": "-30.0000",
+      "scheduled_total": "1490.0000",
+      "work_hours_per_day": "23.75"
+    }
+  ],
+  "spark_benchmark_executed": false
+}

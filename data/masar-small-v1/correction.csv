@@ -1,0 +1,2 @@
+trip_id,driver_id,city,start_ts,end_ts,fare_sar,distance_km
+SYN_T0001,SYN_D001,Riyadh,2026-06-01T06:00:00+03:00,2026-06-01T06:08:00+03:00,23.00,3.50
