@@ -1,54 +1,19 @@
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h1>Day 4 · Explain the evidence</h1></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h1>اليوم الرابع · فسّر الأدلة</h1></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h1>Day 4 · Explain your evidence</h1><p><a href="README.md">Day 4</a> · <a href="STUDENT.ipynb">Notebook</a> · <a href="COMPLETION.md">Completion</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h1>اليوم الرابع · فسّر أدلتك</h1><p><a href="README.md">اليوم الرابع</a> · <a href="STUDENT.ipynb">الدفتر</a> · <a href="COMPLETION.md">الاكتمال</a></p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p><a href="../README.md">Course home</a> · <a href="../STATUS.md">Execution record</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">سجل التنفيذ</a></p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Use your existing lab notes</h2><p>Answer questions 1–4 in <code>LAB05_NOTES.md</code> and 5–8 in <code>LAB06_NOTES.md</code>. Reference an observed check, value or report. Link to your governance note where relevant rather than repeating it. These questions belong to the two existing labs; no extra project is required.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>استخدم ملاحظات اللابين القائمة</h2><p>أجب عن الأسئلة 1–4 في <code>LAB05_NOTES.md</code>، وعن 5–8 في <code>LAB06_NOTES.md</code>. استشهد بفحص أو قيمة أو تقرير مرصود. أشر إلى ملاحظة الحوكمة عند الحاجة بدل تكرارها. تنتمي الأسئلة إلى اللابين القائمين، دون مشروع إضافي.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Integrated in Labs 05 and 06</h2><p>Answer briefly in the same lab notes and refer to an observed output or a clearly labeled reference expectation. These questions do not add a separate project, graded assignment or required distinction task.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>مدمج في اللابين 05 و06</h2><p>أجب باختصار في ملاحظات اللابين مع الإشارة إلى مخرج مرصود أو توقع مرجعي موسوم بوضوح. لا تضيف الأسئلة مشروعًا مستقلًا أو واجبًا إضافيًا بدرجات أو شرط تميز.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>1. Resume or start again?</h2><p>Why do transport rows remain 216 in the restart phase? Compare <code>query_id</code> and <code>query_run_id</code>. Would rerunning the whole notebook cell resume that same query, or create a different experiment?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>١. استئناف أم بداية جديدة؟</h2><p>لماذا تبقى صفوف الوصول 216 في مرحلة الاستئناف؟ قارن <code>query_id</code> و<code>query_run_id</code>. هل تعيد الخلية الكاملة استئناف الاستعلام نفسه أم تُنشئ تجربة مختلفة؟</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Q1</h2><p>After restart, why should transport rows remain 216? Which two identities distinguish the query from an execution?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>Q1</h2><p>لماذا يفترض بقاء عدد النقل 216 بعد الاستئناف؟ وما الهويتان اللتان تميزان الاستعلام عن تنفيذه؟</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>2. Two counts, two keys</h2><p>Why does replay produce 218 transport rows but only 216 distinct events? State the transport key and business key, and explain why producer idempotence does not remove these deliberate new sends.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٢. عددان ومفتاحان</h2><p>لماذا تعطي إعادة الإرسال 218 صف وصول و216 حدثًا مختلفًا فقط؟ حدد مفتاح الوصول ومفتاح الأعمال، وفسّر لماذا لا تزيل حماية إعادة محاولة المنتج هذه الإرسالات الجديدة المقصودة.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Q2</h2><p>Why can replay produce 218 transport rows but 216 events? State both keys.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>Q2</h2><p>لماذا تنتج الإعادة 218 صف نقل و216 حدثًا؟ حدد المفتاحين.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>3. A late new observation</h2><p>The late event has an old timestamp and a new ID. Why is it retained? Does this lab's result prove watermark behavior? Refer to the late-event and content checks.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٣. ملاحظة جديدة متأخرة</h2><p>للحدث المتأخر توقيت قديم ومعرف جديد. لماذا يُحتفظ به؟ وهل تثبت نتيجة اللاب سلوك Watermark؟ ارجع إلى فحص الحدث المتأخر وفحوص المحتوى.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Q3</h2><p>The late event has an old timestamp and a new key. Is it automatically invalid? Explain the Bronze decision.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>Q3</h2><p>لحدث متأخر وقت قديم ومفتاح جديد؛ هل هو معيب تلقائيًا؟ فسر قرار Bronze.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>4. Conflict before deduplication</h2><p>Two records share an <code>event_id</code> but disagree on location. Why is choosing either one with <code>dropDuplicates</code> unsafe? Identify where the implementation checks content before forming the final snapshot.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٤. التعارض قبل إزالة التكرار</h2><p>يشترك سجلان في <code>event_id</code> ويختلفان في الموقع. لماذا لا يكفي اختيار أحدهما بـ<code>dropDuplicates</code>؟ حدد موضع فحص المحتوى قبل تكوين اللقطة النهائية.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Q4</h2><p>Two rows share an event_id but disagree on location. Why is arbitrary dropDuplicates unsafe?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>Q4</h2><p>صفان لهما event_id واحد وموقعان مختلفان؛ لماذا لا يكفي حذف التكرار عشوائيًا؟</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>5. Individually valid but incomplete</h2><p>A run produces 60 valid trips instead of 75. Which check prevents approval? Why is a low rejection rate not enough to establish completeness?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٥. صفوف صالحة ودفعة ناقصة</h2><p>أنتج التشغيل 60 رحلة صالحة بدل 75. أي فحص يمنع الاعتماد؟ ولماذا لا تثبت نسبة رفض منخفضة اكتمال الدفعة؟</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Q5</h2><p>A process finishes without an exception but outputs only 60 valid trips. Which contract check stops promotion?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>Q5</h2><p>انتهت العملية بلا استثناء وأنتجت 60 رحلة سليمة فقط؛ أي فحص يمنع الترقية؟</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>6. An expected failure is still a failed candidate</h2><p>Why must the 82-row candidate fail? Reconcile accepted and quarantined counts, identify one root defect, and explain what must pass before the clean 75-row subset can be used downstream.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٦. الفشل المتوقع لا يجعل المرشح ناجحًا</h2><p>لماذا يجب فشل المرشح ذي الـ82 صفًا؟ طابق المقبول والمعزول، وحدد عيبًا جذريًا، واشرح ما يجب اجتيازه قبل استخدام الصفوف النظيفة الـ75 في المرحلة التالية.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Q6</h2><p>Why is a failing mixed-candidate Checkpoint the expected result? What must happen before using the clean subset?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>Q6</h2><p>لماذا يعد فشل نقطة تنفيذ المرشح المختلط نتيجة متوقعة؟ وما المطلوب قبل استخدام المجموعة المنقحة؟</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>7. Name the clock and baseline</h2><p>Using <a href="OBSERVABILITY.md">the scenario clock</a>, explain 240 seconds of delivery age versus 33,540 seconds of event age. Are either of these live network latency? What does zero city-distribution distance mean, and what does it not establish?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٧. حدد الساعة وخط المقارنة</h2><p>باستخدام <a href="OBSERVABILITY.md">ساعة السيناريو</a>، فسّر عمر الوصول 240 ثانية مقابل عمر الحدث 33,540 ثانية. هل يقيس أي منهما زمن الشبكة الحي؟ وماذا يعني صفر مسافة توزيع المدن، وماذا لا يثبت؟</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Q7</h2><p>Use the scenario clock to explain 240 seconds of delivery age versus 33540 seconds of event age.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>Q7</h2><p>اشرح بساعة السيناريو الفرق بين عمر الوصول 240 ثانية وعمر الحدث 33540 ثانية.</p></td></tr></tbody>
-</table>
-
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Q8</h2><p>Can a folder name or a successful GX report prove access control or PDPL compliance? State what is actually implemented.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>Q8</h2><p>هل تثبت تسمية مجلد أو نتيجة GX ناجحة صلاحيات الوصول أو الالتزام بالنظام؟ حدد ما نُفذ بالفعل.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>8. Transfer data, not unsupported guarantees</h2><p>Can the handoff ZIP recreate Kafka broker storage on a new machine? Can a folder name or successful GX result prove access control or legal compliance? Identify what is actually saved or implemented, and link to your governance decisions.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٨. انقل البيانات دون ادعاءات غير مثبتة</h2><p>هل يعيد ملف الانتقال تخزين وسيط Kafka على جهاز جديد؟ وهل يثبت اسم مجلد أو نجاح GX فرض صلاحيات أو امتثالًا نظاميًا؟ حدد ما يُحفظ أو يُنفذ فعلًا وأشر إلى قرارات الحوكمة.</p></td></tr></table>
