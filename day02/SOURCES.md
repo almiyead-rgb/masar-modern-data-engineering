@@ -1,49 +1,22 @@
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h1>Day 2 · Technical sources</h1></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h1>اليوم الثاني · المصادر التقنية</h1></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h1>Day 2 · Primary references</h1><p><a href="README.md">Day 2</a> · <a href="DBT_GUIDE.md">dbt guide</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h1>اليوم الثاني · المراجع الأصلية</h1><p><a href="README.md">اليوم الثاني</a> · <a href="DBT_GUIDE.md">دليل dbt</a></p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><a href="../README.md">Course home</a> · <a href="../STATUS.md">Execution record</a></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">سجل التنفيذ</a></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>Use these references to explain the transformations. Use <a href="../docs/VERIFICATION.md">the execution record</a> for the tested versions, and <a href="DATA_CONTRACT.md">the data contract</a> for Masar field rules. The figures in the <a href="STUDENT.ipynb">notebook</a> come from the supplied synthetic dataset, not an external operational system.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>استخدم هذه المراجع لتفسير التحويلات. ارجع إلى <a href="../docs/VERIFICATION.md">سجل التنفيذ</a> لمعرفة الإصدارات المختبرة، وإلى <a href="DATA_CONTRACT.md">عقد البيانات</a> لقواعد حقول مسار. تأتي أرقام <a href="STUDENT.ipynb">الدفتر</a> من البيانات الاصطناعية المرفقة، لا من نظام تشغيلي خارجي.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Reference boundary</h2><p>Official documentation checked on September 10, 2026. APIs are selected for the existing Spark 3.5.8 / Delta 3.3.3 candidate pair; documentation compatibility does not prove execution. Teaching examples, field rules and expected figures come from the unchanged synthetic course fixture and our own reference calculation.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>حدود الاستناد</h2><p>رُوجع التوثيق الرسمي في 10 سبتمبر 2026. اختيرت الواجهات لمرشح Spark 3.5.8 وDelta 3.3.3 السابق؛ توافق التوثيق لا يثبت التنفيذ. الأمثلة وقواعد الحقول والأرقام المتوقعة مشتقة من بيانات الدورة الاصطناعية الثابتة وحسابنا المرجعي.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>D2-1 · <a href="https://spark.apache.org/docs/3.5.8/sql-ref-functions-builtin.html">Spark 3.5.8 built-in functions</a></h2><p>Type conversion, timestamps and window functions.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>D2-1 · <a href="https://spark.apache.org/docs/3.5.8/sql-ref-functions-builtin.html">دوال Spark 3.5.8</a></h2><p>تحويل الأنواع والتوقيتات ودوال النوافذ.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2><a href="https://spark.apache.org/docs/3.5.8/sql-ref-functions-builtin.html">Spark 3.5.8 built-in functions</a></h2><p>Type/time conversion and window functions.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2><a href="https://spark.apache.org/docs/3.5.8/sql-ref-functions-builtin.html">Spark 3.5.8 built-in functions</a></h2><p>تحويل الأنواع والتوقيت ودوال النوافذ.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>D2-2 · <a href="https://spark.apache.org/docs/3.5.8/sql-ref-ansi-compliance.html">Spark ANSI behavior and TRY_CAST</a></h2><p>Casting failures and explicit validation of null results.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>D2-2 · <a href="https://spark.apache.org/docs/3.5.8/sql-ref-ansi-compliance.html">سلوك ANSI وTRY_CAST في Spark</a></h2><p>فشل تحويل النوع والفحص الصريح للقيم المفقودة الناتجة.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2><a href="https://spark.apache.org/docs/3.5.8/sql-ref-ansi-compliance.html">Spark SQL TRY_CAST</a></h2><p>Null on failed supported casts; check nulls before writing.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2><a href="https://spark.apache.org/docs/3.5.8/sql-ref-ansi-compliance.html">Spark SQL TRY_CAST</a></h2><p>تحويل آمن يعيد null عند فشل التحويلات المدعومة، ثم تفحص النتيجة.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>D2-3 · <a href="https://docs.delta.io/delta-update/">Delta MERGE</a></h2><p>Source deduplication and matching rows before a merge.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>D2-3 · <a href="https://docs.delta.io/delta-update/">الدمج MERGE في Delta</a></h2><p>إزالة تكرار المصدر ومطابقة الصفوف قبل الدمج.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2><a href="https://docs.delta.io/delta-update/">Delta MERGE semantics</a></h2><p>Merge and source deduplication, not a proof of our engine execution.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2><a href="https://docs.delta.io/delta-update/">Delta MERGE semantics</a></h2><p>الدمج وإزالة تكرار المصدر، وليس إثباتًا لتشغيل محركنا.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>D2-4 · <a href="https://docs.getdbt.com/reference/dbt-jinja-functions/ref">dbt ref</a></h2><p>Model dependencies and relation resolution.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>D2-4 · <a href="https://docs.getdbt.com/reference/dbt-jinja-functions/ref">دالة ref في dbt</a></h2><p>اعتماد النماذج وتحديد الجداول أو العروض الناتجة.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2><a href="https://docs.getdbt.com/reference/dbt-jinja-functions/ref">dbt ref</a></h2><p>Model dependencies and relation resolution.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2><a href="https://docs.getdbt.com/reference/dbt-jinja-functions/ref">dbt ref</a></h2><p>علاقات الاعتماد بين النماذج وحل أسماء الجداول.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>D2-5 · <a href="https://docs.getdbt.com/reference/dbt-jinja-functions/source">dbt source</a></h2><p>Referencing declared existing sources, not ingesting files.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>D2-5 · <a href="https://docs.getdbt.com/reference/dbt-jinja-functions/source">دالة source في dbt</a></h2><p>الإشارة إلى مصادر موجودة ومعلنة، لا استقبال الملفات.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2><a href="https://docs.getdbt.com/reference/dbt-jinja-functions/source">dbt source</a></h2><p>Declare existing data sources; not an ingestion command.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2><a href="https://docs.getdbt.com/reference/dbt-jinja-functions/source">dbt source</a></h2><p>تعريف المصادر الموجودة وليس أمرًا لاستقبالها.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>D2-6 · <a href="https://docs.getdbt.com/docs/build/incremental-models">dbt incremental models</a></h2><p>Incremental filters, keys and the distinction from full refresh.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>D2-6 · <a href="https://docs.getdbt.com/docs/build/incremental-models">النماذج التزايدية في dbt</a></h2><p>تصفية التحديثات والمفاتيح والفرق عن إعادة البناء الكامل.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2><a href="https://docs.getdbt.com/docs/build/incremental-models">dbt incremental models</a></h2><p>Incremental modeling, filters and keys.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2><a href="https://docs.getdbt.com/docs/build/incremental-models">dbt incremental models</a></h2><p>النماذج التزايدية والتصفية والمفاتيح.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>D2-7 · <a href="https://docs.getdbt.com/reference/resource-properties/freshness">dbt source freshness</a></h2><p>Arrival-clock configuration and warning/error thresholds.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>D2-7 · <a href="https://docs.getdbt.com/reference/resource-properties/freshness">حداثة مصادر dbt</a></h2><p>إعداد ساعة الوصول وحدود التحذير والخطأ.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2><a href="https://docs.getdbt.com/reference/resource-properties/freshness">dbt freshness</a></h2><p>Arrival-time freshness configuration and limits.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2><a href="https://docs.getdbt.com/reference/resource-properties/freshness">dbt freshness</a></h2><p>إعداد حداثة الوصول وحدوده.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>D2-8 · <a href="https://docs.getdbt.com/reference/commands/build">dbt build</a></h2><p>Building and testing in dependency order; freshness is a separate command.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>D2-8 · <a href="https://docs.getdbt.com/reference/commands/build">أمر dbt build</a></h2><p>البناء والاختبار بحسب الاعتماد؛ وفحص الحداثة أمر مستقل.</p></td></tr></table>
+
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>dbt documentation may show newer version syntax. The course uses dbt Core 1.9.8 and dbt-spark 1.9.1 with the supplied project files; do not upgrade packages or copy newer configuration blocks into the exercise without retesting.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>قد تعرض وثائق dbt صياغة لإصدارات أحدث. تستخدم الدورة dbt Core 1.9.8 وdbt-spark 1.9.1 مع ملفات المشروع المرفقة؛ لا تحدّث الحزم أو تنسخ إعدادات إصدار أحدث إلى التمرين دون إعادة الاختبار.</p></td></tr></table>
+
