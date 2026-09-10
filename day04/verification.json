@@ -1,0 +1,48 @@
+{
+  "day": 4,
+  "status": "PASSED",
+  "independent_course_runs": 2,
+  "verified_at_utc": "2026-09-10T14:54:39.652686+00:00",
+  "workflow_url": "https://github.com/almiyead-rgb/masar-modern-data-engineering/actions/runs/34490330684",
+  "dataset_manifest_sha256": "20a7e45bed2980b9394c10e8532da3b9f40f614366bb2df26a88610253e768e3",
+  "checks": {
+    "day": 4,
+    "status": "PASSED",
+    "stages": [
+      "lab05_streaming",
+      "lab06_quality"
+    ],
+    "checks": {
+      "lab05_streaming": {
+        "actual_checkpoint_files_present": true,
+        "all_events_link_to_trusted_trips": true,
+        "checkpoint_same_for_all_phases": true,
+        "event_content_matches_source": true,
+        "late_event_retained": true,
+        "phase_event_counts": true,
+        "phase_transport_counts": true,
+        "producer_consumer_offsets_reconcile": true,
+        "restart_new_execution_ids": true,
+        "restart_same_query_identity": true,
+        "source_json_text_preserved": true,
+        "transport_keys_always_unique": true,
+        "unique_events_delta_readback": true
+      },
+      "lab06_quality": {
+        "approved_readback_same_business_contents": true,
+        "data_docs_exist_for_all_three_cases": true,
+        "failed_candidate_not_promoted": true,
+        "mixed_candidate_fails_gx": true,
+        "native_mixed_counts": true,
+        "native_reasons_match_reference": true,
+        "quarantine_delta_readback": true,
+        "source_silver_untouched": true,
+        "trusted_and_rechecked_pass_gx": true
+      }
+    },
+    "code_cells_executed": 4,
+    "handoff_zip_verified": true
+  },
+  "colab_host_tested": false,
+  "code_sha256": "ddbcc3f151e870eefd13c6bcf530031eacd3932790b60dad242288e2d5b6800e"
+}

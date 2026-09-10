@@ -1,0 +1,46 @@
+{
+  "day": 5,
+  "status": "PASSED",
+  "independent_course_runs": 2,
+  "verified_at_utc": "2026-09-10T14:54:39.652686+00:00",
+  "workflow_url": "https://github.com/almiyead-rgb/masar-modern-data-engineering/actions/runs/34490330684",
+  "dataset_manifest_sha256": "20a7e45bed2980b9394c10e8532da3b9f40f614366bb2df26a88610253e768e3",
+  "checks": {
+    "day": 5,
+    "status": "PASSED",
+    "stages": [
+      "lab07_gold_recovery",
+      "lab08_serving"
+    ],
+    "checks": {
+      "lab07_gold_recovery": {
+        "content_equal": true,
+        "injected_failure_observed": true,
+        "previous_release_preserved": true,
+        "rebuild_has_new_identity": true
+      },
+      "lab08_serving": {
+        "ai.zone_hourly_features_schema_and_keys": true,
+        "ai.zone_hourly_labels_schema_and_keys": true,
+        "bi.dim_date_schema_and_keys": true,
+        "bi.dim_driver_schema_and_keys": true,
+        "bi.dim_zone_schema_and_keys": true,
+        "bi.fact_trips_schema_and_keys": true,
+        "events_aggregated_before_join": true,
+        "fact_grain_75": true,
+        "feature_availability_checked": true,
+        "feature_label_keys_aligned": true,
+        "foreign_keys_valid": true,
+        "gold.driver_daily_schema_and_keys": true,
+        "gold.zone_hourly_demand_schema_and_keys": true,
+        "gold_fact_totals_match": true,
+        "group_grains_reconcile": true,
+        "labels_not_fabricated": true
+      }
+    },
+    "code_cells_executed": 4,
+    "handoff_zip_verified": true
+  },
+  "colab_host_tested": false,
+  "code_sha256": "c9ce1b649a5f01cda883d740f173791fedc9ecb949a54fd1f6cd26dddbe3368e"
+}

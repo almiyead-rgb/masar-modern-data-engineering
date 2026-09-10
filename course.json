@@ -77,7 +77,7 @@
       "question_ar": "ما البيانات التي وصلت؟ لماذا نحفظها؟ وكيف نختار طريقة تشغيل الحوسبة؟",
       "output_en": "Raw source inspection, Bronze tables, architecture notes and cost evidence.",
       "output_ar": "فحص المصادر، وجداول Bronze، وملاحظات القرار المعماري وأدلة التكلفة.",
-      "status": "PUBLISHED",
+      "status": "PUBLISHED_NATIVE_VERIFIED",
       "notebook": "day01/STUDENT.ipynb"
     },
     {
@@ -94,7 +94,7 @@
       "question_ar": "كيف نحول المدخلات المكررة والمتأخرة إلى جدول رحلات واحد موثوق؟",
       "output_en": "Typed staging data, conformed Silver and idempotency/backfill evidence.",
       "output_ar": "بيانات مرحلية موحدة الأنواع، وSilver منقحة، وأدلة عدم التكرار والاستكمال المتأخر.",
-      "status": "PUBLISHED",
+      "status": "PUBLISHED_NATIVE_VERIFIED",
       "notebook": "day02/STUDENT.ipynb"
     },
     {
@@ -111,7 +111,7 @@
       "question_ar": "كيف نغير جدولًا بأمان مع الاحتفاظ بتاريخ قابل للتدقيق؟",
       "output_en": "Schema and constraint checks, MERGE evidence, version comparison and safe maintenance notes.",
       "output_ar": "فحوص المخطط والقيود، وأدلة MERGE، ومقارنة النسخ، وتوثيق الصيانة الآمنة.",
-      "status": "PUBLISHED",
+      "status": "PUBLISHED_NATIVE_VERIFIED",
       "notebook": "day03/STUDENT.ipynb"
     },
     {
@@ -130,7 +130,7 @@
       "question_ar": "كيف نستقبل الأحداث باستمرار دون إفساد المخرجات الموثوقة بصمت؟",
       "output_en": "Kafka/Structured Streaming recovery evidence, quality gate, quarantine and governance documentation.",
       "output_ar": "أدلة الاستئناف باستخدام Kafka وStructured Streaming، وبوابة جودة وعزل وتوثيق الحوكمة.",
-      "status": "PUBLISHED",
+      "status": "PUBLISHED_NATIVE_VERIFIED",
       "notebook": "day04/STUDENT.ipynb"
     },
     {
@@ -149,7 +149,7 @@
       "question_ar": "هل ينتج خط قابل لإعادة التشغيل مخرجات متسقة للذكاء الاصطناعي وذكاء الأعمال؟",
       "output_en": "Integrated Mini-Lakehouse, Gold outputs, AI/BI reconciliation and the same cumulative project submission.",
       "output_ar": "Mini-Lakehouse متكاملة، ومخرجات Gold، وتسوية AI وBI، وتسليم المشروع التراكمي نفسه.",
-      "status": "PUBLISHED",
+      "status": "PUBLISHED_NATIVE_VERIFIED",
       "notebook": "day05/STUDENT.ipynb"
     }
   ],

@@ -1,0 +1,37 @@
+{
+  "day": 2,
+  "status": "PASSED",
+  "independent_course_runs": 2,
+  "verified_at_utc": "2026-09-10T14:54:39.652686+00:00",
+  "workflow_url": "https://github.com/almiyead-rgb/masar-modern-data-engineering/actions/runs/34490330684",
+  "dataset_manifest_sha256": "20a7e45bed2980b9394c10e8532da3b9f40f614366bb2df26a88610253e768e3",
+  "checks": {
+    "day": 2,
+    "status": "PASSED",
+    "stages": [
+      "lab03a_staging",
+      "lab03b_silver"
+    ],
+    "checks": {
+      "lab03a_staging": {
+        "counts_verified": true,
+        "delta_readback": true,
+        "drivers_unique_and_join_safe": true,
+        "gps_valid": true,
+        "typed_values_match_source_oracle": true
+      },
+      "lab03b_silver": {
+        "actual_delta_files": true,
+        "all_scenarios_match_independent_oracle": true,
+        "business_keys_unique": true,
+        "late_rows_retained": true,
+        "replay_preserves_business_content": true
+      }
+    },
+    "code_cells_executed": 5,
+    "dbt_commands": 17,
+    "handoff_zip_verified": true
+  },
+  "colab_host_tested": false,
+  "code_sha256": "f71c22f04b4f13dd0d3b6f237ca08345c5c2395956280abd10013747ec190d57"
+}

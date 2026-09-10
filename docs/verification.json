@@ -1,0 +1,452 @@
+{
+  "status": "PASSED",
+  "scope": "FIVE_STUDENT_NOTEBOOKS_WITH_NATIVE_ENGINES_AND_DBT",
+  "independent_course_runs": 2,
+  "notebook_executions": 10,
+  "workflow_url": "https://github.com/almiyead-rgb/masar-modern-data-engineering/actions/runs/34490330684",
+  "verified_at_utc": "2026-09-10T14:54:39.652686+00:00",
+  "python": "3.11.16",
+  "dataset_manifest_sha256": "20a7e45bed2980b9394c10e8532da3b9f40f614366bb2df26a88610253e768e3",
+  "colab_host_tested": false,
+  "production_scale_tested": false,
+  "results": [
+    {
+      "attempt": 1,
+      "status": "PASSED",
+      "days": [
+        {
+          "day": 1,
+          "status": "PASSED",
+          "stages": [
+            "lab01_bronze",
+            "lab02_scan"
+          ],
+          "checks": {
+            "lab01_bronze": {
+              "base_csv_columns_are_strings": true,
+              "business_trip_count_unchanged": true,
+              "expected_totals": true,
+              "initial_snapshot_retained": true,
+              "payloads_and_source_hashes_preserved": true,
+              "real_delta_files_present": true,
+              "two_trip_deliveries": true
+            },
+            "lab02_scan": {
+              "equal_source_populations": true,
+              "positive_measured_samples": true,
+              "query_plans_saved": true,
+              "query_results_match_oracle": true
+            }
+          },
+          "code_cells_executed": 18,
+          "handoff_zip_verified": true
+        },
+        {
+          "day": 2,
+          "status": "PASSED",
+          "stages": [
+            "lab03a_staging",
+            "lab03b_silver"
+          ],
+          "checks": {
+            "lab03a_staging": {
+              "counts_verified": true,
+              "delta_readback": true,
+              "drivers_unique_and_join_safe": true,
+              "gps_valid": true,
+              "typed_values_match_source_oracle": true
+            },
+            "lab03b_silver": {
+              "actual_delta_files": true,
+              "all_scenarios_match_independent_oracle": true,
+              "business_keys_unique": true,
+              "late_rows_retained": true,
+              "replay_preserves_business_content": true
+            }
+          },
+          "code_cells_executed": 5,
+          "dbt_commands": 17,
+          "handoff_zip_verified": true
+        },
+        {
+          "day": 3,
+          "status": "PASSED",
+          "stages": [
+            "lab04a_transactions",
+            "lab04b_maintenance"
+          ],
+          "checks": {
+            "lab04a_transactions": {
+              "actual_prior_version_read": true,
+              "business_rows_stay_75": true,
+              "mixed_valid_invalid_batch_rejected_atomically": true,
+              "native_correction_matches_source_expectation": true,
+              "replay_and_stale_delivery_preserve_values": true,
+              "same_revision_conflict_rejected": true
+            },
+            "lab04b_maintenance": {
+              "approved_evolution_preserves_business_values": true,
+              "compaction_preserves_values": true,
+              "delete_affects_copy_only": true,
+              "restore_creates_new_commit": true,
+              "trusted_silver_unchanged": true,
+              "unexpected_column_rejected": true,
+              "vacuum_is_non_destructive_dry_run": true
+            }
+          },
+          "code_cells_executed": 4,
+          "handoff_zip_verified": true
+        },
+        {
+          "day": 4,
+          "status": "PASSED",
+          "stages": [
+            "lab05_streaming",
+            "lab06_quality"
+          ],
+          "checks": {
+            "lab05_streaming": {
+              "actual_checkpoint_files_present": true,
+              "all_events_link_to_trusted_trips": true,
+              "checkpoint_same_for_all_phases": true,
+              "event_content_matches_source": true,
+              "late_event_retained": true,
+              "phase_event_counts": true,
+              "phase_transport_counts": true,
+              "producer_consumer_offsets_reconcile": true,
+              "restart_new_execution_ids": true,
+              "restart_same_query_identity": true,
+              "source_json_text_preserved": true,
+              "transport_keys_always_unique": true,
+              "unique_events_delta_readback": true
+            },
+            "lab06_quality": {
+              "approved_readback_same_business_contents": true,
+              "data_docs_exist_for_all_three_cases": true,
+              "failed_candidate_not_promoted": true,
+              "mixed_candidate_fails_gx": true,
+              "native_mixed_counts": true,
+              "native_reasons_match_reference": true,
+              "quarantine_delta_readback": true,
+              "source_silver_untouched": true,
+              "trusted_and_rechecked_pass_gx": true
+            }
+          },
+          "code_cells_executed": 4,
+          "handoff_zip_verified": true
+        },
+        {
+          "day": 5,
+          "status": "PASSED",
+          "stages": [
+            "lab07_gold_recovery",
+            "lab08_serving"
+          ],
+          "checks": {
+            "lab07_gold_recovery": {
+              "content_equal": true,
+              "injected_failure_observed": true,
+              "previous_release_preserved": true,
+              "rebuild_has_new_identity": true
+            },
+            "lab08_serving": {
+              "ai.zone_hourly_features_schema_and_keys": true,
+              "ai.zone_hourly_labels_schema_and_keys": true,
+              "bi.dim_date_schema_and_keys": true,
+              "bi.dim_driver_schema_and_keys": true,
+              "bi.dim_zone_schema_and_keys": true,
+              "bi.fact_trips_schema_and_keys": true,
+              "events_aggregated_before_join": true,
+              "fact_grain_75": true,
+              "feature_availability_checked": true,
+              "feature_label_keys_aligned": true,
+              "foreign_keys_valid": true,
+              "gold.driver_daily_schema_and_keys": true,
+              "gold.zone_hourly_demand_schema_and_keys": true,
+              "gold_fact_totals_match": true,
+              "group_grains_reconcile": true,
+              "labels_not_fabricated": true
+            }
+          },
+          "code_cells_executed": 4,
+          "handoff_zip_verified": true
+        }
+      ],
+      "workflow_url": "https://github.com/almiyead-rgb/masar-modern-data-engineering/actions/runs/34490330684",
+      "run_id": "421ddd59c641420d9d9dca5620a99281",
+      "bronze_counts": {
+        "drivers": 6,
+        "gps_events": 216,
+        "trips": 144
+      },
+      "base_aggregate": {
+        "fare_total": "1794.60",
+        "nonnull_fares": 72,
+        "rows": 72
+      },
+      "dbt_phases": [
+        {
+          "phase": "base",
+          "rows": 72,
+          "total_fare_sar": "1794.60",
+          "business_digest": "436a9e8c4f7b17834b9170a77284f99176d913092d73d69d03e457100e6f423e"
+        },
+        {
+          "phase": "rerun",
+          "rows": 72,
+          "total_fare_sar": "1794.60",
+          "business_digest": "436a9e8c4f7b17834b9170a77284f99176d913092d73d69d03e457100e6f423e"
+        },
+        {
+          "phase": "late",
+          "rows": 75,
+          "total_fare_sar": "1875.60",
+          "business_digest": "0d16e2795620ae0c0f54d3fcd52a5b13fb2c2a47cd4d0c42c8ddb195f19bc6e0"
+        },
+        {
+          "phase": "late_replay",
+          "rows": 75,
+          "total_fare_sar": "1875.60",
+          "business_digest": "0d16e2795620ae0c0f54d3fcd52a5b13fb2c2a47cd4d0c42c8ddb195f19bc6e0"
+        }
+      ],
+      "serving_checks": {
+        "ai.zone_hourly_features_schema_and_keys": true,
+        "ai.zone_hourly_labels_schema_and_keys": true,
+        "bi.dim_date_schema_and_keys": true,
+        "bi.dim_driver_schema_and_keys": true,
+        "bi.dim_zone_schema_and_keys": true,
+        "bi.fact_trips_schema_and_keys": true,
+        "events_aggregated_before_join": true,
+        "fact_grain_75": true,
+        "feature_availability_checked": true,
+        "feature_label_keys_aligned": true,
+        "foreign_keys_valid": true,
+        "gold.driver_daily_schema_and_keys": true,
+        "gold.zone_hourly_demand_schema_and_keys": true,
+        "gold_fact_totals_match": true,
+        "group_grains_reconcile": true,
+        "labels_not_fabricated": true
+      }
+    },
+    {
+      "attempt": 2,
+      "status": "PASSED",
+      "days": [
+        {
+          "day": 1,
+          "status": "PASSED",
+          "stages": [
+            "lab01_bronze",
+            "lab02_scan"
+          ],
+          "checks": {
+            "lab01_bronze": {
+              "base_csv_columns_are_strings": true,
+              "business_trip_count_unchanged": true,
+              "expected_totals": true,
+              "initial_snapshot_retained": true,
+              "payloads_and_source_hashes_preserved": true,
+              "real_delta_files_present": true,
+              "two_trip_deliveries": true
+            },
+            "lab02_scan": {
+              "equal_source_populations": true,
+              "positive_measured_samples": true,
+              "query_plans_saved": true,
+              "query_results_match_oracle": true
+            }
+          },
+          "code_cells_executed": 18,
+          "handoff_zip_verified": true
+        },
+        {
+          "day": 2,
+          "status": "PASSED",
+          "stages": [
+            "lab03a_staging",
+            "lab03b_silver"
+          ],
+          "checks": {
+            "lab03a_staging": {
+              "counts_verified": true,
+              "delta_readback": true,
+              "drivers_unique_and_join_safe": true,
+              "gps_valid": true,
+              "typed_values_match_source_oracle": true
+            },
+            "lab03b_silver": {
+              "actual_delta_files": true,
+              "all_scenarios_match_independent_oracle": true,
+              "business_keys_unique": true,
+              "late_rows_retained": true,
+              "replay_preserves_business_content": true
+            }
+          },
+          "code_cells_executed": 5,
+          "dbt_commands": 17,
+          "handoff_zip_verified": true
+        },
+        {
+          "day": 3,
+          "status": "PASSED",
+          "stages": [
+            "lab04a_transactions",
+            "lab04b_maintenance"
+          ],
+          "checks": {
+            "lab04a_transactions": {
+              "actual_prior_version_read": true,
+              "business_rows_stay_75": true,
+              "mixed_valid_invalid_batch_rejected_atomically": true,
+              "native_correction_matches_source_expectation": true,
+              "replay_and_stale_delivery_preserve_values": true,
+              "same_revision_conflict_rejected": true
+            },
+            "lab04b_maintenance": {
+              "approved_evolution_preserves_business_values": true,
+              "compaction_preserves_values": true,
+              "delete_affects_copy_only": true,
+              "restore_creates_new_commit": true,
+              "trusted_silver_unchanged": true,
+              "unexpected_column_rejected": true,
+              "vacuum_is_non_destructive_dry_run": true
+            }
+          },
+          "code_cells_executed": 4,
+          "handoff_zip_verified": true
+        },
+        {
+          "day": 4,
+          "status": "PASSED",
+          "stages": [
+            "lab05_streaming",
+            "lab06_quality"
+          ],
+          "checks": {
+            "lab05_streaming": {
+              "actual_checkpoint_files_present": true,
+              "all_events_link_to_trusted_trips": true,
+              "checkpoint_same_for_all_phases": true,
+              "event_content_matches_source": true,
+              "late_event_retained": true,
+              "phase_event_counts": true,
+              "phase_transport_counts": true,
+              "producer_consumer_offsets_reconcile": true,
+              "restart_new_execution_ids": true,
+              "restart_same_query_identity": true,
+              "source_json_text_preserved": true,
+              "transport_keys_always_unique": true,
+              "unique_events_delta_readback": true
+            },
+            "lab06_quality": {
+              "approved_readback_same_business_contents": true,
+              "data_docs_exist_for_all_three_cases": true,
+              "failed_candidate_not_promoted": true,
+              "mixed_candidate_fails_gx": true,
+              "native_mixed_counts": true,
+              "native_reasons_match_reference": true,
+              "quarantine_delta_readback": true,
+              "source_silver_untouched": true,
+              "trusted_and_rechecked_pass_gx": true
+            }
+          },
+          "code_cells_executed": 4,
+          "handoff_zip_verified": true
+        },
+        {
+          "day": 5,
+          "status": "PASSED",
+          "stages": [
+            "lab07_gold_recovery",
+            "lab08_serving"
+          ],
+          "checks": {
+            "lab07_gold_recovery": {
+              "content_equal": true,
+              "injected_failure_observed": true,
+              "previous_release_preserved": true,
+              "rebuild_has_new_identity": true
+            },
+            "lab08_serving": {
+              "ai.zone_hourly_features_schema_and_keys": true,
+              "ai.zone_hourly_labels_schema_and_keys": true,
+              "bi.dim_date_schema_and_keys": true,
+              "bi.dim_driver_schema_and_keys": true,
+              "bi.dim_zone_schema_and_keys": true,
+              "bi.fact_trips_schema_and_keys": true,
+              "events_aggregated_before_join": true,
+              "fact_grain_75": true,
+              "feature_availability_checked": true,
+              "feature_label_keys_aligned": true,
+              "foreign_keys_valid": true,
+              "gold.driver_daily_schema_and_keys": true,
+              "gold.zone_hourly_demand_schema_and_keys": true,
+              "gold_fact_totals_match": true,
+              "group_grains_reconcile": true,
+              "labels_not_fabricated": true
+            }
+          },
+          "code_cells_executed": 4,
+          "handoff_zip_verified": true
+        }
+      ],
+      "workflow_url": "https://github.com/almiyead-rgb/masar-modern-data-engineering/actions/runs/34490330684",
+      "run_id": "fd2185a1e2ee46aaa591ea0b112faeff",
+      "bronze_counts": {
+        "drivers": 6,
+        "gps_events": 216,
+        "trips": 144
+      },
+      "base_aggregate": {
+        "fare_total": "1794.60",
+        "nonnull_fares": 72,
+        "rows": 72
+      },
+      "dbt_phases": [
+        {
+          "phase": "base",
+          "rows": 72,
+          "total_fare_sar": "1794.60",
+          "business_digest": "436a9e8c4f7b17834b9170a77284f99176d913092d73d69d03e457100e6f423e"
+        },
+        {
+          "phase": "rerun",
+          "rows": 72,
+          "total_fare_sar": "1794.60",
+          "business_digest": "436a9e8c4f7b17834b9170a77284f99176d913092d73d69d03e457100e6f423e"
+        },
+        {
+          "phase": "late",
+          "rows": 75,
+          "total_fare_sar": "1875.60",
+          "business_digest": "0d16e2795620ae0c0f54d3fcd52a5b13fb2c2a47cd4d0c42c8ddb195f19bc6e0"
+        },
+        {
+          "phase": "late_replay",
+          "rows": 75,
+          "total_fare_sar": "1875.60",
+          "business_digest": "0d16e2795620ae0c0f54d3fcd52a5b13fb2c2a47cd4d0c42c8ddb195f19bc6e0"
+        }
+      ],
+      "serving_checks": {
+        "ai.zone_hourly_features_schema_and_keys": true,
+        "ai.zone_hourly_labels_schema_and_keys": true,
+        "bi.dim_date_schema_and_keys": true,
+        "bi.dim_driver_schema_and_keys": true,
+        "bi.dim_zone_schema_and_keys": true,
+        "bi.fact_trips_schema_and_keys": true,
+        "events_aggregated_before_join": true,
+        "fact_grain_75": true,
+        "feature_availability_checked": true,
+        "feature_label_keys_aligned": true,
+        "foreign_keys_valid": true,
+        "gold.driver_daily_schema_and_keys": true,
+        "gold.zone_hourly_demand_schema_and_keys": true,
+        "gold_fact_totals_match": true,
+        "group_grains_reconcile": true,
+        "labels_not_fabricated": true
+      }
+    }
+  ]
+}
