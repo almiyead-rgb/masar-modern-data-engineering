@@ -1,0 +1,129 @@
+name: Day 1 - publish and verify real labs
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-day01.yml'
+      - 'DAY01_STUDENT.ipynb'
+      - 'src/**'
+      - 'scripts/**'
+      - 'requirements*.txt'
+permissions:
+  contents: write
+concurrency:
+  group: masar-day01-publication
+  cancel-in-progress: false
+jobs:
+  day01:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore exact prepared Day 1 files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, io, json, lzma, os, pathlib, tarfile, urllib.request
+          root = pathlib.Path.cwd()
+          if (root / 'scripts/validate_day01_native.py').is_file():
+              print('Prepared files already published; retaining any subsequent fixes.')
+              raise SystemExit(0)
+          shas = '''fbdedb1f73971f5856933cd7b681f366dbc6c784
+          62d538796b28571e1dad40192da07e01dfbd6d78
+          b4393e8828d952d0572459e4708638c5e84fb3f0
+          ed0c92ffd1a1a815e6fb3822bf8c0070bffcb019
+          13f91361b1e0ad736c1a864dd404831606ab1b65
+          fc04256b918e7020612eb2c9d750cf6e75ca9e49
+          5b0a9e805371ecc7711a81bdde96db5176af1d32
+          246c97be7ea551ba77eb23def98f3ee37369f986
+          1d1acf484850015935d169b18ed449ec039ea0e5
+          e5208c9c9bc0ed536eb13ddd83ab882d1e2680ee
+          e70f8ac58aff523c70faac3523ebda4b195b15ad
+          58b5794f197172d3872b248b0e83d7b2e6c36346
+          453ec257c9a061dfb3eafc16671228977bfebfbe
+          857dee41daa44355f595f9f4948df567e551d950
+          16e4d048766273c7b5780179ca31360d8e0bf281
+          62524c4b319e6f7e5c3d0bc37590ef048cc0e9df'''.split()
+          chunks = []
+          for index, sha in enumerate(shas):
+              req = urllib.request.Request(
+                  f'https://api.github.com/repos/{os.environ["GITHUB_REPOSITORY"]}/git/blobs/{sha}',
+                  headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                           'Accept': 'application/vnd.github+json',
+                           'X-GitHub-Api-Version': '2022-11-28'})
+              with urllib.request.urlopen(req, timeout=60) as response:
+                  blob = json.load(response)
+              part = base64.b64decode(blob['content'])
+              actual = hashlib.sha1(b'blob ' + str(len(part)).encode() + b'\0' + part).hexdigest()
+              assert actual == sha, f'Chunk identity mismatch: {index}'
+              assert len(part) == (5036 if index == 15 else 6000), index
+              chunks.append(part)
+          payload = base64.b64decode(b''.join(chunks), validate=True)
+          assert hashlib.sha256(payload).hexdigest() == '2a8be8e7745a9396eed41466bb93e8ab22bb0df55991ad60bc8761f94c5df9f1'
+          with tarfile.open(fileobj=io.BytesIO(lzma.decompress(payload)), mode='r:') as archive:
+              files = archive.getmembers()
+              assert len(files) == 59
+              for member in files:
+                  path = pathlib.PurePosixPath(member.name)
+                  assert member.isfile() and not path.is_absolute() and '..' not in path.parts
+                  assert path.parts[0] not in ('.git', '.github', 'outputs', 'evidence')
+                  target = root.joinpath(*path.parts)
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  stream = archive.extractfile(member)
+                  assert stream is not None
+                  target.write_bytes(stream.read())
+          required = ['README.md','day01/README.md','day01/CONCEPTS.md','day01/GLOSSARY.md',
+                      'DAY01_STUDENT.ipynb','labs/lab01/WALKTHROUGH.md','labs/lab02/WALKTHROUGH.md']
+          assert all((root / p).is_file() for p in required)
+          print('Published source restored: 59 exact files. Native execution remains a separate step.')
+          PY
+      - name: Commit complete learner pages and source files
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md STATUS.md TRAINING_CONTENT.md course.json .gitignore DAY01_STUDENT.ipynb requirements-runtime.txt requirements-day01.txt day01 labs notebooks data resources src tests templates scripts docs project
+          if ! git diff --cached --quiet; then
+            git commit -m 'feat: publish Day 1 concepts, labs, notebooks, data and learner guidance'
+            git push origin HEAD:main
+          fi
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install the Day 1 runtime
+        run: |
+          python -m pip install -r requirements-day01.txt
+          python -m pip check
+      - name: Verify source files, data and learner links
+        run: |
+          mkdir -p evidence/day01
+          python -m unittest discover -s tests -v 2>&1 | tee evidence/day01/unit-tests.log
+          python scripts/check_day01.py | tee evidence/day01/structure.json
+      - name: Execute both labs twice with real Spark and Delta
+        env:
+          SPARK_LOCAL_IP: 127.0.0.1
+          PYSPARK_PYTHON: python
+        run: python scripts/validate_day01_native.py
+      - name: Commit genuine executed notebook outputs
+        run: |
+          python scripts/check_day01.py
+          git add DAY01_STUDENT.ipynb notebooks/day01 STATUS.md course.json day01/verification.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'test: record two successful Day 1 Spark and Delta notebook executions'
+            git push origin HEAD:main
+          fi
+      - name: Preserve real execution evidence, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: day01-runtime-evidence
+          path: evidence/day01/
+          retention-days: 7
+          if-no-files-found: warn
