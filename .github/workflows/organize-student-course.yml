@@ -1,0 +1,152 @@
+name: Organize student course navigation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/organize-student-course.yml']
+permissions:
+  contents: write
+concurrency:
+  group: masar-student-navigation
+  cancel-in-progress: false
+jobs:
+  organize:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the student cover and daily resource indexes
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import html, json, re, subprocess
+          from urllib.parse import unquote, urlsplit
+          root = Path.cwd()
+          def panel(en, ar):
+              return ('<table dir="ltr" width="100%"><tr>'
+                  '<td width="50%" valign="top" dir="ltr" lang="en" align="left">'+en+'</td>'
+                  '<td width="50%" valign="top" dir="rtl" lang="ar" align="right">'+ar+'</td></tr></table>\n\n')
+          def link(path, label):
+              return '<a href="'+html.escape(path, quote=True)+'">'+html.escape(label)+'</a>'
+          def rel(target, base):
+              import os
+              return Path(os.path.relpath(target, base)).as_posix()
+          days = {
+            1: ('Foundations and Bronze','الأساسيات وطبقة Bronze',[1,2],
+                'Inspect the three raw sources, preserve deliveries in Delta Bronze, and explain the cost and scan results.',
+                'افحص المصادر الخام الثلاثة، واحفظ سجلات الاستقبال في Bronze باستخدام Delta، وفسّر نتائج التكلفة وقياس الاستعلامات.'),
+            2: ('ELT and Silver','تحويل البيانات وبناء Silver',[3],
+                'Standardize types, cities and timestamps; join the sources without multiplying trips; build Silver and check repeated and late deliveries.',
+                'وحّد الأنواع والمدن والتوقيتات، واربط المصادر دون مضاعفة الرحلات، وابنِ Silver وافحص الإعادة والوصول المتأخر.'),
+            3: ('Delta changes and maintenance','تغييرات Delta والصيانة',[4],
+                'Apply and replay a correction, inspect previous versions, and practise schema changes and maintenance on isolated copies.',
+                'طبّق التصحيح وأعد إرساله، وافحص النسخ السابقة، وتدرّب على تغيّر المخطط والصيانة باستخدام نسخ معزولة.'),
+            4: ('Streaming, quality and governance','التدفق والجودة والحوكمة',[5,6],
+                'Follow events from arrival to storage, distinguish messages from unique events, isolate invalid records and document quality and governance.',
+                'تتبّع الأحداث من وصولها إلى تخزينها، وميّز الرسائل من الأحداث الفريدة، واعزل السجلات المعيبة ووثّق الجودة والحوكمة.'),
+            5: ('Gold, AI/BI and submission','Gold ومخرجات الذكاء الاصطناعي والتقارير والتسليم',[7,8],
+                'Build Gold tables, reconcile totals, prepare time-aware features, and assemble the outputs of the same cumulative project.',
+                'ابنِ جداول Gold وطابق المجاميع وجهّز الخصائص مع مراعاة زمن إتاحة البيانات، ثم اجمع مخرجات المشروع التراكمي نفسه.')
+          }
+          labels = {
+            'CONCEPTS.md':('Concepts and examples','المفاهيم والأمثلة'),
+            'GLOSSARY.md':('Glossary, examples and pronunciation','المصطلحات والأمثلة والنطق'),
+            'PRACTICE.md':('Questions within the labs','أسئلة الفهم ضمن اللابات'),
+            'COMPLETION.md':('Completion and handoff','الاكتمال وحفظ المخرجات'),
+            'SOURCES.md':('Primary references','المراجع الأصلية'),
+            'CHANGE_POLICY.md':('Correction and change rules','قواعد التصحيح والتغيير'),
+            'DATA_CONTRACT.md':('Data contract','عقد البيانات'),
+            'SILVER_CONTRACT.md':('Silver data contract','عقد بيانات Silver'),
+            'DATA_PRODUCTS.md':('Output tables and their contracts','جداول المخرجات وعقودها'),
+            'GOVERNANCE.md':('Governance in the project','الحوكمة في المشروع'),
+            'OBSERVABILITY.md':('Monitoring and interpretation','المراقبة وتفسير المؤشرات')
+          }
+          inventory = {}
+          # Add a hub beside existing Day 1 content; preserve that tested day's entry.
+          for number, (en_title, ar_title, labs, en_goal, ar_goal) in days.items():
+              folder = root / f'day{number:02d}'
+              if not folder.is_dir():
+                  raise SystemExit(f'Missing prepared day directory: {folder.name}. No replacement material has been invented.')
+              en_resources=[]; ar_resources=[]
+              for name, (en_label, ar_label) in labels.items():
+                  if (folder/name).is_file():
+                      en_resources.append('<p>'+link(name,en_label)+'</p>')
+                      ar_resources.append('<p>'+link(name,ar_label)+'</p>')
+              if not (folder/'CONCEPTS.md').is_file() or not (folder/'GLOSSARY.md').is_file():
+                  raise SystemExit(f'Missing existing concepts/glossary for Day {number}; keeping the original course intact.')
+              en_labs=[]; ar_labs=[]
+              for lab in labs:
+                  for filename, en_label, ar_label in [('README.md',f'Lab {lab:02d}: instructions',f'اللاب {lab:02d}: التعليمات'),('WALKTHROUGH.md',f'Lab {lab:02d}: explanation',f'اللاب {lab:02d}: الشرح التطبيقي')]:
+                      target=root/f'labs/lab{lab:02d}'/filename
+                      if not target.is_file():
+                          raise SystemExit(f'Missing prepared lab resource: {target.relative_to(root)}')
+                      en_labs.append('<p>'+link(rel(target,folder),en_label)+'</p>')
+                      ar_labs.append('<p>'+link(rel(target,folder),ar_label)+'</p>')
+              paths=sorted((root/f'notebooks/day{number:02d}').glob('*.ipynb'))
+              combined=root/f'DAY{number:02d}_STUDENT.ipynb'
+              en_nb=[]; ar_nb=[]
+              if combined.is_file():
+                  en_nb.append('<p><strong>'+link(rel(combined,folder),'Combined daily notebook')+'</strong></p>')
+                  ar_nb.append('<p><strong>'+link(rel(combined,folder),'دفتر اليوم الموحد')+'</strong></p>')
+              for notebook in paths:
+                  nb=json.loads(notebook.read_text(encoding='utf-8'))
+                  if nb.get('nbformat') != 4:
+                      raise SystemExit(f'Invalid notebook format: {notebook}')
+                  en_nb.append('<p>'+link(rel(notebook,folder),notebook.stem.replace('_',' '))+'</p>')
+                  ar_nb.append('<p>'+link(rel(notebook,folder),notebook.stem.replace('_',' '))+'</p>')
+              body=panel('<h1>Day '+str(number)+' · '+en_title+'</h1><p>Modern Data Engineering for AI Systems<br>Meaad Al-Marri</p>',
+                         '<h1>اليوم '+str(number)+' · '+ar_title+'</h1><p>هندسة البيانات الحديثة لأنظمة الذكاء الاصطناعي<br>ميعاد المري</p>')
+              body+=panel('<p>'+link('../README.md','Course home')+' · '+link('README.md','Daily guide')+'</p>',
+                          '<p>'+link('../README.md','الرئيسية')+' · '+link('README.md','دليل اليوم')+'</p>')
+              body+=panel('<h2>Your goal</h2><p>'+en_goal+'</p>','<h2>هدفك اليوم</h2><p>'+ar_goal+'</p>')
+              body+=panel('<h2>Read and understand</h2>'+''.join(en_resources),'<h2>اقرأ وافهم</h2>'+''.join(ar_resources))
+              body+=panel('<h2>Apply in the project</h2>'+''.join(en_labs),'<h2>طبّق في المشروع</h2>'+''.join(ar_labs))
+              body+=panel('<h2>Notebook files</h2>'+''.join(en_nb)+'<p>Follow the run order in the daily guide. A reference notebook explains expected results; it does not replace the native lab. Where a combined notebook is supplied, the smaller sections are an alternative route, not extra submissions.</p>',
+                          '<h2>دفاتر التطبيق</h2>'+''.join(ar_nb)+'<p>اتبع ترتيب التنفيذ في دليل اليوم. يوضح الدفتر المرجعي النتائج المتوقعة ولا يستبدل اللاب الأصلي. عند توفر دفتر موحد، تكون المقاطع الأصغر مسارًا بديلًا وليست تسليمات إضافية.</p>')
+              body+=panel('<h2>Retain your work</h2><p>Save your executed notebook, actual results and concise observations. Continue the same project; do not create a new dataset or an additional final assignment.</p><p>'+link('../project/SUBMISSION.md','Project submission')+'</p>',
+                          '<h2>احتفظ بعملك</h2><p>احفظ دفترك المنفذ والنتائج الفعلية وملاحظاتك المختصرة. استكمل المشروع نفسه؛ لا تنشئ مجموعة بيانات جديدة أو تكليفًا نهائيًا إضافيًا.</p><p>'+link('../project/SUBMISSION.md','تسليم المشروع')+'</p>')
+              if (folder/'verification.json').is_file():
+                  body+=panel('<p>'+link('verification.json','Recorded execution evidence')+'</p>', '<p>'+link('verification.json','دليل التنفيذ المسجل')+'</p>')
+              else:
+                  body+=panel('<p>Use the execution record linked from the daily guide to distinguish tested code from material still under validation.</p>',
+                              '<p>ارجع إلى سجل التنفيذ المرتبط بدليل اليوم للتمييز بين الكود المختبَر والمادة التي لم يكتمل التحقق منها.</p>')
+              (folder/'INDEX.md').write_text(body,encoding='utf-8')
+              inventory[str(number)]={'labs':labs,'notebooks':[p.relative_to(root).as_posix() for p in paths], 'index':f'day{number:02d}/INDEX.md'}
+          cover=panel('<h1>Masar</h1><h2>Modern Data Engineering<br>for AI Systems</h2><p><strong>Meaad Al-Marri</strong><br>SDA-DSC-214 · Five days · One cumulative project</p>',
+                      '<h1>مسار</h1><h2>هندسة البيانات الحديثة<br>لأنظمة الذكاء الاصطناعي</h2><p><strong>ميعاد المري</strong><br>SDA-DSC-214 · خمسة أيام · مشروع تراكمي واحد</p>')
+          cover+=panel('<h2>What you will build</h2><p>Build a small lakehouse from the same synthetic trip, driver and location sources. Move from raw storage to clean tables, controlled updates, streaming, quality checks and AI/BI outputs.</p><p>The eight labs are your final project. There is no separate final assignment.</p>',
+                       '<h2>ماذا ستبني؟</h2><p>ابنِ Lakehouse صغيرة باستخدام مصادر الرحلات والسائقين والمواقع الاصطناعية نفسها. انتقل من حفظ البيانات الخام إلى الجداول المنقحة والتحديثات المنضبطة والتدفق وفحوص الجودة ومخرجات الذكاء الاصطناعي والتقارير.</p><p>اللابات الثمانية هي مشروعك النهائي نفسه، ولا يوجد تكليف نهائي منفصل.</p>')
+          cover+=panel('<h2>Start learning</h2><p>'+link('docs/START_HERE.md','Start here')+' · '+link('TRAINING_CONTENT.md','Learning outcomes')+' · '+link('data/DICTIONARY.md','Data dictionary')+'</p>',
+                       '<h2>ابدأ التعلم</h2><p>'+link('docs/START_HERE.md','ابدأ هنا')+' · '+link('TRAINING_CONTENT.md','مخرجات التعلم')+' · '+link('data/DICTIONARY.md','قاموس البيانات')+'</p>')
+          for number,(en_title,ar_title,labs,en_goal,ar_goal) in days.items():
+              p=f'day{number:02d}/INDEX.md'
+              cover+=panel('<h3>'+link(p,'Day '+str(number)+' · '+en_title)+'</h3><p>Labs '+', '.join(f'{n:02d}' for n in labs)+'</p><p>'+en_goal+'</p>',
+                           '<h3>'+link(p,'اليوم '+str(number)+' · '+ar_title)+'</h3><p>اللابات '+', '.join(f'{n:02d}' for n in labs)+'</p><p>'+ar_goal+'</p>')
+          cover+=panel('<h2>Work and document</h2><p>Follow the daily run order. Keep code, data sources and reports in their existing locations; the daily indexes link to them without making duplicate copies. Save actual outputs and explain what you observed.</p><p>'+link('project/SUBMISSION.md','Submission instructions')+' · '+link('docs/GIT_WORKFLOW.md','Git guide')+' · '+link('STATUS.md','Execution evidence')+'</p>',
+                       '<h2>طبّق ووثّق</h2><p>اتبع ترتيب التنفيذ اليومي. احتفظ بالكود والمصادر والتقارير في مواقعها الموجودة؛ تربطها فهارس الأيام دون نسخ مكررة. احفظ المخرجات الفعلية وفسّر ما لاحظته.</p><p>'+link('project/SUBMISSION.md','تعليمات التسليم')+' · '+link('docs/GIT_WORKFLOW.md','دليل Git')+' · '+link('STATUS.md','أدلة التنفيذ')+'</p>')
+          cover+=panel('<h2>Programme credit</h2><p>In your project README, credit the course, Meaad Al-Marri and '+link('https://github.com/SDAIAAcademy','SDAIA Academy')+'. Identify reused sources and state that the data is synthetic. Distinction extensions and repository stars are optional. Follow the organizer\'s announced attendance and submission rules.</p>',
+                       '<h2>نسب البرنامج والمصادر</h2><p>اذكر في README مشروعك اسم الدورة وميعاد المري ورابط '+link('https://github.com/SDAIAAcademy','أكاديمية سدايا')+'. حدد المصادر المعاد استخدامها ووضّح أن البيانات اصطناعية. امتدادات التميز ونجوم المستودع اختيارية. التزم بتعليمات الحضور والتسليم المعلنة من الجهة المنظمة.</p>')
+          (root/'README.md').write_text(cover,encoding='utf-8')
+          changed=['README.md']+[f'day{n:02d}/INDEX.md' for n in days]
+          for name in changed:
+              path=root/name
+              for target in re.findall(r'href="([^"]+)"',path.read_text(encoding='utf-8')):
+                  url=urlsplit(html.unescape(target))
+                  if not url.scheme and url.path:
+                      resolved=(path.parent/unquote(url.path)).resolve()
+                      if not resolved.is_relative_to(root) or not resolved.exists():
+                          raise SystemExit(f'Broken navigation link: {name}: {target}')
+          print(json.dumps({'navigation':'validated','changed_files':changed,'days':inventory,'native_execution_claimed':False},ensure_ascii=False,indent=2))
+          PY
+      - name: Publish validated student navigation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md day01/INDEX.md day02/INDEX.md day03/INDEX.md day04/INDEX.md day05/INDEX.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs: publish student course cover and five daily resource hubs'
+            git push origin HEAD:main
+          fi
