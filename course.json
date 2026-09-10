@@ -20,8 +20,8 @@
   "separate_final_project": false,
   "distinction_required": false,
   "slides_current_scope": false,
-  "remote_repository": "almiyead-rgb/masar-modern-data-engineering",
-  "published": true,
+  "remote_repository": null,
+  "published": false,
   "formal_assessment_policy": "PENDING_CONFIRMATION",
   "outcome_numbering": "TRAINING_CONTENT.md",
   "learning_outcomes": [
@@ -83,7 +83,7 @@
       "question_ar": "ما البيانات التي وصلت؟ لماذا نحفظها؟ وكيف نختار طريقة تشغيل الحوسبة؟",
       "output_en": "Raw source inspection, Bronze tables, architecture notes and cost evidence.",
       "output_ar": "فحص المصادر، وجداول Bronze، وملاحظات القرار المعماري وأدلة التكلفة.",
-      "status": "CONTENT_PUBLISHED_RUNTIME_PENDING"
+      "status": "PARTIAL"
     },
     {
       "day": 2,
@@ -99,7 +99,7 @@
       "question_ar": "كيف نحول المدخلات المكررة والمتأخرة إلى جدول رحلات واحد موثوق؟",
       "output_en": "Typed staging data, conformed Silver and idempotency/backfill evidence.",
       "output_ar": "بيانات مرحلية موحدة الأنواع، وSilver منقحة، وأدلة عدم التكرار والاستكمال المتأخر.",
-      "status": "NOT_PUBLISHED_IN_THIS_STAGE"
+      "status": "PARTIAL"
     },
     {
       "day": 3,
@@ -115,7 +115,7 @@
       "question_ar": "كيف نغير جدولًا بأمان مع الاحتفاظ بتاريخ قابل للتدقيق؟",
       "output_en": "Schema and constraint checks, MERGE evidence, version comparison and safe maintenance notes.",
       "output_ar": "فحوص المخطط والقيود، وأدلة MERGE، ومقارنة النسخ، وتوثيق الصيانة الآمنة.",
-      "status": "NOT_PUBLISHED_IN_THIS_STAGE"
+      "status": "PARTIAL"
     },
     {
       "day": 4,
@@ -133,7 +133,7 @@
       "question_ar": "كيف نستقبل الأحداث باستمرار دون إفساد المخرجات الموثوقة بصمت؟",
       "output_en": "Kafka/Structured Streaming recovery evidence, quality gate, quarantine and governance documentation.",
       "output_ar": "أدلة الاستئناف باستخدام Kafka وStructured Streaming، وبوابة جودة وعزل وتوثيق الحوكمة.",
-      "status": "NOT_PUBLISHED_IN_THIS_STAGE"
+      "status": "PARTIAL"
     },
     {
       "day": 5,
@@ -151,7 +151,7 @@
       "question_ar": "هل ينتج خط قابل لإعادة التشغيل مخرجات متسقة للذكاء الاصطناعي وذكاء الأعمال؟",
       "output_en": "Integrated Mini-Lakehouse, Gold outputs, AI/BI reconciliation and the same cumulative project submission.",
       "output_ar": "Mini-Lakehouse متكاملة، ومخرجات Gold، وتسوية AI وBI، وتسليم المشروع التراكمي نفسه.",
-      "status": "NOT_PUBLISHED_IN_THIS_STAGE"
+      "status": "PARTIAL"
     }
   ],
   "labs": [
@@ -612,8 +612,5 @@
   "runtime_validation_status": "UNIFIED_CANDIDATE_NOT_EXECUTED",
   "runtime_workbench_status": "AUTHORED_NOT_BUILT",
   "native_verification_coordinator": "scripts/verify_native_runtime.py",
-  "student_entrypoint": "MASAR_STUDENT.ipynb",
-  "published_days": [
-    1
-  ]
+  "student_entrypoint": "MASAR_STUDENT.ipynb"
 }
