@@ -1,0 +1,6 @@
+-r requirements-runtime.txt
+nbformat==5.10.4
+nbclient==0.10.2
+ipykernel==6.29.5
+jupyterlab>=4.3,<5
+beautifulsoup4>=4.12,<5
