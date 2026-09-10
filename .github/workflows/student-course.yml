@@ -9,37 +9,23 @@ concurrency:
   group: masar-student-course
   cancel-in-progress: false
 jobs:
-  prepare:
+  source:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
-    outputs:
-      commit: ${{ steps.commit.outputs.sha }}
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Apply learner refinements and validate all sources
-        shell: bash
+      - name: Validate source contracts and learner navigation
         run: |
           python -m pip install nbformat beautifulsoup4
-          python tools/finalize_learner.py
           python scripts/check_repository.py
           python -m unittest discover -s tests -v
-      - name: Save the corrected learner sources
-        id: commit
-        shell: bash
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A -- . ':!.github'
-          if ! git diff --cached --quiet; then
-            git commit -m 'fix: complete native catalog metadata and student-facing daily instructions'
-            git push origin HEAD:main
-          fi
-          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
   notebooks:
-    needs: prepare
+    needs: source
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     defaults:
@@ -47,8 +33,6 @@ jobs:
         shell: bash
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ needs.prepare.outputs.commit }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -64,20 +48,20 @@ jobs:
           python -m pip check
       - name: Start the synthetic-data broker
         run: docker compose -f infrastructure/kafka/compose.yaml up -d --wait
-      - name: Execute five daily notebooks twice with actual engines and dbt
+      - name: Execute five daily notebooks twice with native engines and dbt
         env:
           SPARK_LOCAL_IP: 127.0.0.1
           PYSPARK_PYTHON: python
         run: |
           mkdir -p evidence/student-course
           python -u scripts/execute_student_course.py 2>&1 | tee evidence/student-course/notebook-execution.log
-      - name: Validate source fingerprints and publish actual notebook outputs
+      - name: Validate and publish actual notebook outputs
         run: |
           python scripts/check_repository.py --release
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add day01 day02 day03 day04 day05 docs/VERIFICATION.md docs/verification.json course.json
-          git commit -m 'test: record ten successful student notebook executions and native dbt catalog coverage'
+          git commit -m 'test: record ten successful student notebook executions with complete native catalog coverage'
           git push origin HEAD:main
           git archive --format=zip --output=Masar_Learner_Course.zip HEAD
       - uses: actions/upload-artifact@v4
