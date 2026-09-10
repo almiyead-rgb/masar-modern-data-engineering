@@ -60,7 +60,14 @@ for path in (ROOT/'notebooks/day01').glob('*.ipynb'):
             match=by_id[cell.id]
             assert cell.source==match.source
             cell.outputs=match.outputs;cell.execution_count=match.execution_count
+        elif cell.cell_type=='markdown' and 'ENGINE_NOT_EXECUTED' in cell.source:
+            # Replace an obsolete draft label only after both native executions have passed.
+            lab='lab01' if path.name=='03_bronze_delta.ipynb' else 'lab02'
+            en='<h2>Goal and recorded execution</h2><p>This section preserves the same source cells and actual outputs from the verified <a href="../../DAY01_STUDENT.ipynb">combined Day 1 notebook</a>. It is an alternative section of the same lab, not an extra assignment or a claim of a separate kernel run. Follow <a href="../../labs/'+lab+'/WALKTHROUGH.md">the walkthrough</a> and <a href="../../STATUS.md">the execution record</a>. The scan section requires the successful Bronze workspace from Lab 01.</p>'
+            ar='<h2>الهدف والتنفيذ المسجل</h2><p>يحفظ هذا المقطع الخلايا البرمجية نفسها ومخرجاتها الفعلية من <a href="../../DAY01_STUDENT.ipynb">دفتر اليوم الأول الموحد المتحقق</a>. هو مقطع بديل من اللاب نفسه، وليس تكليفًا إضافيًا أو ادعاء تشغيل مستقل بنواة أخرى. اتبع <a href="../../labs/'+lab+'/WALKTHROUGH.md">الشرح</a> و<a href="../../STATUS.md">سجل التنفيذ</a>. يتطلب مقطع القياس مساحة Bronze الناجحة من اللاب 01.</p>'
+            cell.source='<table dir="ltr" width="100%"><tr><td width="50%" valign="top" dir="ltr" lang="en" align="left">'+en+'</td><td width="50%" valign="top" dir="rtl" lang="ar" align="right">'+ar+'</td></tr></table>'
     old.metadata['masar']={'output_provenance':'identical cells executed in DAY01_STUDENT.ipynb','environment':'GitHub Actions Python 3.11 + Java 17'}
+    nbformat.validate(old)
     nbformat.write(old,path)
 report={'status':'PASSED','scope':'DAY01_ONLY','engine':'Spark 3.5.8 + Delta 3.3.2',
         'python':sys.version.split()[0],'java':subprocess.run(['java','-version'],capture_output=True,text=True).stderr.splitlines()[0],
