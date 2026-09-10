@@ -1,0 +1,99 @@
+name: Recover prepared course content
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/recover-course-content.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover previously uploaded course archives
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, hashlib, io, json, lzma, os, pathlib, tarfile, urllib.request, zipfile
+          shas = '''26ff34ee126dbec628dffe4ec06ce05b3f0c3526
+          1661751a7f5c3807699fddaf4cc7494895d02f82
+          71081ae6ca8e431353194a32bf16531f3ee60732
+          91503bac9482a10b0e6b0687fb5be78b3e917db2
+          7caf269b2df2c55a682d8df10f399d2e42171070
+          6c44855cb2441900ba4e764593bfe962ec7823a8
+          d45228913bdfdac579db4988b2bc72670f41ebdb
+          8449d0572c92eda6a694ab2ccc9b6adecf647584
+          d0768a8e70d5312d303ce2c38969ba016f4834a6
+          e82ac228b62d1d1f8c9a4472414b2e07a8e2762e
+          d3d88d739fea49c9a49a373e488005105467d067
+          7930d0c897f817aa3c49ae3f4fb812f230cfcd1b
+          0295e55cf09c5877658cdfcef9d16f0493500098
+          8e09fcd9749e5f8e9d7d50470f80985fb6914204
+          e7a1be7eb050526a55d91d5402224df2fe61a6d4
+          26a8c1b26e3d30f8312bcfb1c439e27a0dcf17ca'''.split()
+          output = pathlib.Path('course-recovery')
+          output.mkdir(exist_ok=True)
+          report = []
+          parts = []
+          for number, sha in enumerate(shas):
+              request = urllib.request.Request(
+                  f'https://api.github.com/repos/{os.environ["GITHUB_REPOSITORY"]}/git/blobs/{sha}',
+                  headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28'})
+              try:
+                  with urllib.request.urlopen(request, timeout=60) as response:
+                      blob = json.load(response)
+                  raw = base64.b64decode(blob['content'])
+                  actual = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
+                  if actual != sha:
+                      raise ValueError('Blob identity mismatch')
+                  (output / f'part-{number:02}.bin').write_bytes(raw)
+                  parts.append(raw)
+                  entry = {'part': number, 'sha': sha, 'size': len(raw), 'header': raw[:12].hex()}
+                  try:
+                      decoded = lzma.decompress(raw)
+                      (output / f'decoded-{number:02}.bin').write_bytes(decoded)
+                      entry['decoded_size'] = len(decoded)
+                      entry['decoded_header'] = repr(decoded[:160])
+                      try:
+                          obj = json.loads(decoded)
+                          entry['json_type'] = type(obj).__name__
+                          entry['json_keys'] = list(obj)[:8] if isinstance(obj, dict) else []
+                      except (ValueError, UnicodeError):
+                          pass
+                      try:
+                          with tarfile.open(fileobj=io.BytesIO(decoded)) as archive:
+                              entry['tar_files'] = archive.getnames()[:12]
+                      except tarfile.TarError:
+                          pass
+                  except lzma.LZMAError as error:
+                      entry['lzma'] = str(error)
+                  print(json.dumps(entry, ensure_ascii=False))
+                  report.append(entry)
+              except Exception as error:
+                  entry = {'part': number, 'sha': sha, 'error': str(error)}
+                  print(json.dumps(entry))
+                  report.append(entry)
+          if len(parts) == len(shas):
+              combined = b''.join(parts)
+              (output / 'combined.bin').write_bytes(combined)
+              try:
+                  decoded = lzma.decompress(combined)
+                  (output / 'combined-decoded.bin').write_bytes(decoded)
+                  print('COMBINED DECODED', len(decoded), repr(decoded[:160]))
+              except lzma.LZMAError as error:
+                  print('COMBINED:', str(error))
+          (output / 'recovery.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
+          print('Archive recovery only; no claim of Spark/Delta execution.')
+          PY
+      - name: Save recovered content for exact source comparison
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovered-course-content
+          path: course-recovery/
+          retention-days: 1
+          if-no-files-found: error
