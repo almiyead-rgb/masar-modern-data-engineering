@@ -1,54 +1,21 @@
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h1>Day 3 · Explain what changed</h1></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h1>اليوم الثالث · فسّر ما تغير</h1></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h1>Day 3 · Explain your results</h1><p><a href="README.md">Day 3</a> · <a href="STUDENT.ipynb">Notebook</a> · <a href="labs/lab04/WALKTHROUGH.md">Walkthrough</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h1>اليوم الثالث · فسّر نتائجك</h1><p><a href="README.md">اليوم الثالث</a> · <a href="STUDENT.ipynb">الدفتر</a> · <a href="labs/lab04/WALKTHROUGH.md">الشرح العملي</a></p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><a href="../README.md">Course home</a> · <a href="../STATUS.md">Execution record</a></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">سجل التنفيذ</a></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Use your existing Lab 04 notes</h2><p>Answer these questions in <code>LAB04_NOTES.md</code> while inspecting your output. Refer to a value, a check or a history entry where relevant. The questions document the same lab; do not create another project or a separate submission.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>استخدم ملاحظات اللاب 04 القائمة</h2><p>أجب عن الأسئلة داخل <code>LAB04_NOTES.md</code> أثناء فحص مخرجاتك. استشهد بقيمة أو فحص أو عملية من السجل عند الحاجة. توثق الأسئلة اللاب نفسه؛ لا تُنشئ مشروعًا آخر أو تسليمًا منفصلًا.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Practice is part of Lab 04</h2><p>Discuss these while checking the lab outputs and record the relevant observations in LAB04_NOTES.md. There is no separate homework, additional project or new official grading threshold.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>التطبيق جزء من اللاب 04</h2><p>ناقش الأسئلة أثناء فحص مخرجات اللاب، وسجل الملاحظات المناسبة في LAB04_NOTES.md. لا واجب منفصل أو مشروع إضافي أو حد تقييم رسمي جديد.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>1. Two kinds of version</h2><p>Does <code>source_revision=2</code> mean Delta table version 2? Use your captured <code>before.version</code> and <code>after_correction.version</code> to explain what each number identifies.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>١. نوعان من النسخة</h2><p>هل تعني <code>source_revision=2</code> أن نسخة جدول Delta هي 2؟ استخدم <code>before.version</code> و<code>after_correction.version</code> المسجلتين لديك لتفسير ما يحدده كل رقم.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>1. Does source_revision=2 mean Delta version 2? Give one counterexample.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>1. هل تعني source_revision=2 أن نسخة Delta تساوي 2؟ اذكر مثالًا مضادًا.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>2. Reconcile the correction</h2><p>Why do 75 trips remain 75 after the correction? Identify the changed trip and reconcile the change in the total fare with its before/after value.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٢. طابق أثر التصحيح</h2><p>لماذا بقيت الرحلات الـ75 عند العدد نفسه بعد التصحيح؟ حدد الرحلة المتغيرة وطابق الفرق في إجمالي الأجور مع قيمتها قبل التصحيح وبعده.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>2. Why do 75 trips remain 75 after the fare correction, and how much should the total change?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>2. لماذا يبقى عدد الرحلات 75 بعد تصحيح الأجرة؟ وكم يجب أن يتغير المجموع؟</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>3. Reject stale and conflicting values</h2><p>What happens when the old SAR 18.00 value arrives after the SAR 23.00 correction? How is that different from receiving SAR 24.00 with the same revision as the corrected row? Refer to the replay and conflict checks.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٣. ميّز القديم من المتعارض</h2><p>ماذا يحدث عند وصول الأجرة القديمة 18.00 ريالًا بعد تصحيحها إلى 23.00 ريالًا؟ وكيف يختلف ذلك عن وصول 24.00 ريالًا بالمراجعة نفسها للسجل المصحح؟ ارجع إلى فحوص الإعادة والتعارض.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>3. What should happen if the old 18.00 fare arrives after the approved 23.00 correction?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>3. ماذا يحدث عندما تصل الأجرة القديمة 18.00 بعد التصحيح المعتمد 23.00؟</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>4. Interpret the expected failure</h2><p>Does a missing-package exception prove that the negative-fare constraint worked? Identify the expected rejection and the before/after evidence needed to show that neither row in the mixed append was committed.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٤. فسّر الرفض المتوقع</h2><p>هل يثبت خطأ غياب مكتبة أن قيد الأجرة السالبة عمل؟ حدد الرفض المطلوب والدليل قبل المحاولة وبعدها الذي يثبت عدم اعتماد أي من صفي الكتابة المختلطة.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>4. A write raises a missing-package error. Did your negative-fare constraint test pass? What evidence is missing?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>4. أعادت الكتابة خطأ مكتبة مفقودة. هل نجح اختبار قيد الأجرة السالبة؟ ما الدليل الناقص؟</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>5. Preserve the trip count</h2><p>Why does the schema copy start with 74 trips? What would happen if the extended <code>SYN_T0002</code> row were appended to a complete 75-trip copy?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٥. حافظ على عدد الرحلات</h2><p>لماذا تبدأ نسخة تجربة المخطط بـ74 رحلة؟ وماذا يحدث عند إلحاق صف <code>SYN_T0002</code> الموسع بنسخة الرحلات الـ75 كاملةً؟</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>5. Why does the schema sandbox begin with 74 rows rather than 75?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>5. لماذا تبدأ نسخة تجربة المخطط بـ74 صفًا بدل 75؟</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>6. Explain the new field</h2><p>Does <code>surcharge_sar=2.00</code> automatically change <code>fare_sar</code> or the existing fare total? Explain the field’s scope, the 74 null values and the decision needed before using it in a report.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٦. فسّر الحقل الجديد</h2><p>هل تغيّر <code>surcharge_sar=2.00</code> قيمة <code>fare_sar</code> أو إجمالي الأجور تلقائيًا؟ اشرح نطاق الحقل والقيم الفارغة الـ74 والقرار اللازم قبل استخدامه في تقرير.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>6. Is surcharge_sar=2.00 automatically part of the existing fare total? What decision is needed?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>6. هل يصبح surcharge_sar=2.00 جزءًا من مجموع الأجرة الحالي تلقائيًا؟ ما القرار المطلوب؟</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>7. Read the restore history</h2><p>RESTORE returns the recovery copy to 75 rows. Does its version number go backward? Use the actual before/delete/restore history to distinguish reading a previous version from restoring it.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٧. اقرأ سجل الاستعادة</h2><p>يعيد RESTORE نسخة الاستعادة إلى 75 صفًا. هل يتراجع رقم النسخة؟ استخدم سجل ما قبل الحذف وبعد الحذف والاستعادة للتمييز بين قراءة النسخة السابقة واستعادتها.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>7. RESTORE returns 75 rows. Should the table version go backward? Explain using history.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>7. أعاد RESTORE العدد إلى 75. هل يجب أن يعود رقم نسخة الجدول إلى الخلف؟ فسر من السجل.</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>8. Explain a dry run</h2><p>VACUUM DRY RUN lists no candidates. Is that a failed exercise? Does it mean old files were deleted? Refer to <code>dry_run_only</code>, <code>retention_hours</code> and <code>files_deleted_by_vacuum</code> in your report.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>٨. فسّر المعاينة</h2><p>لم تعرض VACUUM DRY RUN أي مرشحين. هل فشل التمرين؟ وهل يعني ذلك حذف ملفات قديمة؟ ارجع إلى <code>dry_run_only</code> و<code>retention_hours</code> و<code>files_deleted_by_vacuum</code> في تقريرك.</p></td></tr></table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>8. VACUUM DRY RUN lists zero files. Is that a failure? Does it prove that old files were deleted?</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>8. عرض VACUUM DRY RUN صفر ملفات. هل هذه نتيجة فاشلة؟ وهل تثبت حذف ملفات قديمة؟</p></td></tr></tbody>
-</table>
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p><a href="COMPLETION.md">Check completion and retain your work</a>.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p><a href="COMPLETION.md">راجع الاكتمال واحتفظ بعملك</a>.</p></td></tr></table>
