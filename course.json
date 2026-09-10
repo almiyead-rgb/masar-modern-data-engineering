@@ -185,13 +185,9 @@
         "أعد استقبال الرحلات دون مسح التاريخ واشرح النمو المقصود في Bronze.",
         "وثق ثلاثة مخاطر جودة على الأقل وميّز العيب المرصود من الخطر المحتمل."
       ],
-      "available": "notebooks/day01/01_source_inspection.ipynb",
-      "missing_en": "The engine implementation and walkthrough are authored, but runtime execution has not been verified.",
-      "missing_ar": "كود المحرك والشرح المتدرج مكتوبان، لكن التنفيذ الفعلي لم يتحقق.",
       "status": "PARTIAL",
-      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
-      "walkthrough": "labs/lab01/WALKTHROUGH.md",
-      "engine_notebook": "notebooks/day01/03_bronze_delta.ipynb"
+      "walkthrough": "day01/labs/lab01/WALKTHROUGH.md",
+      "notebook": "day01/STUDENT.ipynb"
     },
     {
       "id": "02",
@@ -222,13 +218,9 @@
         "قس عمليات Spark الفعلية مع فحص تساوي النتائج وخطط الاستعلام.",
         "سجل الأزمنة المرصودة دون ضمان تسارع على مجموعة صغيرة."
       ],
-      "available": "notebooks/day01/02_cost_model.ipynb",
-      "missing_en": "The engine implementation and walkthrough are authored, but runtime execution has not been verified.",
-      "missing_ar": "كود المحرك والشرح المتدرج مكتوبان، لكن التنفيذ الفعلي لم يتحقق.",
       "status": "PARTIAL",
-      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
-      "walkthrough": "labs/lab02/WALKTHROUGH.md",
-      "engine_notebook": "notebooks/day01/04_spark_scan.ipynb"
+      "walkthrough": "day01/labs/lab02/WALKTHROUGH.md",
+      "notebook": "day01/STUDENT.ipynb"
     },
     {
       "id": "03",
@@ -261,13 +253,9 @@
         "أزل التكرار بمفتاح أعمال وقاعدة أولوية حتمية موثقة.",
         "استقبل دفعة الرحلات المتأخرة الثابتة وأثبت أن الإعادة لا تضاعف النتائج."
       ],
-      "available": "notebooks/day02/01_silver_reference.ipynb",
-      "missing_en": "Native Spark/Delta execution and the dbt adapter demonstration remain unverified.",
-      "missing_ar": "تنفيذ Spark وDelta الأصلي وعرض موصل dbt ما زالا غير متحققين.",
       "status": "PARTIAL",
-      "walkthrough": "labs/lab03/WALKTHROUGH.md",
-      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
-      "engine_notebook": "notebooks/day02/03_incremental_silver.ipynb"
+      "walkthrough": "day02/labs/lab03/WALKTHROUGH.md",
+      "notebook": "day02/STUDENT.ipynb"
     },
     {
       "id": "04",
@@ -300,16 +288,13 @@
         "طبق التصحيح مرتين وقارن المحتوى المنطقي للجدول.",
         "اقرأ النسخ السابقة ونفذ الصيانة والحذف على نسخ تدريبية معزولة فقط."
       ],
-      "available": "notebooks/day03/01_correction_reference.ipynb",
-      "missing_en": "Native Delta transactions and maintenance are authored but not executed.",
-      "missing_ar": "كود معاملات Delta والصيانة مكتوب لكن لم ينفذ بالمحرك.",
       "status": "PARTIAL",
-      "walkthrough": "labs/lab04/WALKTHROUGH.md",
-      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
+      "walkthrough": "day03/labs/lab04/WALKTHROUGH.md",
       "engine_notebooks": [
         "notebooks/day03/02_delta_transactions.ipynb",
         "notebooks/day03/03_safe_maintenance.ipynb"
-      ]
+      ],
+      "notebook": "day03/STUDENT.ipynb"
     },
     {
       "id": "05",
@@ -342,13 +327,9 @@
         "سجل أثر الإيقاف والاستئناف وإعادة وصول الأحداث على النتائج.",
         "اشرح وقت الحدث ووقت المعالجة والتعامل مع التأخر من الأدلة المحفوظة."
       ],
-      "available": "notebooks/day04/01_stream_quality_reference.ipynb",
-      "missing_en": "Native Kafka/Spark/Delta or GX execution and generated engine evidence remain unverified.",
-      "missing_ar": "التنفيذ الأصلي لـKafka وSpark وDelta أوGX وأدلته المولدة ما يزال غير متحقق.",
       "status": "PARTIAL",
-      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
-      "walkthrough": "labs/lab05/WALKTHROUGH.md",
-      "engine_notebook": "notebooks/day04/02_kafka_delta_streaming.ipynb"
+      "walkthrough": "day04/labs/lab05/WALKTHROUGH.md",
+      "notebook": "day04/STUDENT.ipynb"
     },
     {
       "id": "06",
@@ -380,13 +361,9 @@
         "وثق الجودة والحداثة وسلامة التشغيل بالاستناد إلى أوقات السيناريو الثابتة.",
         "وثق تتبع البيانات وملكيتها والوصول والاحتفاظ؛ واستخدم البيانات الاصطناعية فقط."
       ],
-      "available": "notebooks/day04/01_stream_quality_reference.ipynb",
-      "missing_en": "Native Kafka/Spark/Delta or GX execution and generated engine evidence remain unverified.",
-      "missing_ar": "التنفيذ الأصلي لـKafka وSpark وDelta أوGX وأدلته المولدة ما يزال غير متحقق.",
       "status": "PARTIAL",
-      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
-      "walkthrough": "labs/lab06/WALKTHROUGH.md",
-      "engine_notebook": "notebooks/day04/03_quality_gate_gx.ipynb"
+      "walkthrough": "day04/labs/lab06/WALKTHROUGH.md",
+      "notebook": "day04/STUDENT.ipynb"
     },
     {
       "id": "07",
@@ -419,13 +396,9 @@
         "أعد المدخل المنطقي نفسه وسوّ المحتوى لا توقيتات التشغيل المتغيرة.",
         "وثق محاولة تعافٍ واحتفظ بأدلة الأيام بدل إعادة بناء عمل غير موثق."
       ],
-      "available": "notebooks/day05/01_gold_serving_reference.ipynb",
-      "missing_en": "Native execution, integrated runtime validation and final course acceptance remain unverified.",
-      "missing_ar": "التنفيذ الأصلي والتحقق التشغيلي المتكامل والقبول النهائي للدورة ما زالت غير متحققة.",
       "status": "PARTIAL",
-      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
-      "walkthrough": "labs/lab07/WALKTHROUGH.md",
-      "engine_notebook": "notebooks/day05/02_gold_integration.ipynb"
+      "walkthrough": "day05/labs/lab07/WALKTHROUGH.md",
+      "notebook": "day05/STUDENT.ipynb"
     },
     {
       "id": "08",
@@ -458,38 +431,15 @@
         "سوّ أعداد الرحلات والأجور بين الجدول الموثوق ومخرج BI.",
         "سلم المستودع والأدلة المتراكمة وليس تكليفًا نهائيًا منفصلًا."
       ],
-      "available": "notebooks/day05/01_gold_serving_reference.ipynb",
-      "missing_en": "Native execution, integrated runtime validation and final course acceptance remain unverified.",
-      "missing_ar": "التنفيذ الأصلي والتحقق التشغيلي المتكامل والقبول النهائي للدورة ما زالت غير متحققة.",
       "status": "PARTIAL",
-      "implementation_status": "AUTHORED_ENGINE_NOT_EXECUTED",
-      "walkthrough": "labs/lab08/WALKTHROUGH.md",
-      "engine_notebook": "notebooks/day05/03_ai_bi_serving.ipynb"
+      "walkthrough": "day05/labs/lab08/WALKTHROUGH.md",
+      "notebook": "day05/STUDENT.ipynb"
     }
   ],
-  "build_focus": "DAY05_GOLD_AI_BI_AND_INTEGRATION_AUTHORING",
   "dataset_manifest_sha256": "20a7e45bed2980b9394c10e8532da3b9f40f614366bb2df26a88610253e768e3",
   "publication_authorized": false,
-  "day02_dbt_status": "CONNECTION_CONFIGURED_NATIVE_NOT_EXECUTED",
-  "trainer_materials_current_scope": false,
-  "day04_kafka_status": "AUTHORED_NOT_EXECUTED",
-  "day04_gx_status": "AUTHORED_NOT_EXECUTED",
-  "day05_serving_status": "AUTHORED_NATIVE_NOT_EXECUTED",
-  "day05_integration_status": "AUTHORED_NATIVE_NOT_EXECUTED",
-  "integrated_review": {
-    "date": "2026-09-10",
-    "scope": "SOURCE_AND_HELPER_REVIEW",
-    "native_runtime_verified": false,
-    "dbt_runtime_verified": false,
-    "publication_authorized": false,
-    "learner_route": "docs/LEARNER_ROUTE.md",
-    "review": "docs/INTEGRATION_REVIEW.md"
-  },
   "runtime_target_file": "runtime-target.json",
-  "runtime_validation_status": "UNIFIED_CANDIDATE_NOT_EXECUTED",
-  "runtime_workbench_status": "AUTHORED_NOT_BUILT",
-  "native_verification_coordinator": "scripts/verify_native_runtime.py",
-  "student_entrypoint": "MASAR_STUDENT.ipynb",
+  "student_entrypoint": "README.md",
   "published_days": [
     1,
     2,

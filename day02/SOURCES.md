@@ -10,7 +10,7 @@
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Reference boundary</h2><p>Official documentation checked on September 10, 2026. APIs are selected for the existing Spark 3.5.8 / Delta 3.3.2 candidate pair; documentation compatibility does not prove execution. Teaching examples, field rules and expected figures come from the unchanged synthetic course fixture and our own reference calculation.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>حدود الاستناد</h2><p>رُوجع التوثيق الرسمي في 10 سبتمبر 2026. اختيرت الواجهات لمرشح Spark 3.5.8 وDelta 3.3.2 السابق؛ توافق التوثيق لا يثبت التنفيذ. الأمثلة وقواعد الحقول والأرقام المتوقعة مشتقة من بيانات الدورة الاصطناعية الثابتة وحسابنا المرجعي.</p></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Reference boundary</h2><p>Official documentation checked on September 10, 2026. APIs are selected for the existing Spark 3.5.8 / Delta 3.3.3 candidate pair; documentation compatibility does not prove execution. Teaching examples, field rules and expected figures come from the unchanged synthetic course fixture and our own reference calculation.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>حدود الاستناد</h2><p>رُوجع التوثيق الرسمي في 10 سبتمبر 2026. اختيرت الواجهات لمرشح Spark 3.5.8 وDelta 3.3.3 السابق؛ توافق التوثيق لا يثبت التنفيذ. الأمثلة وقواعد الحقول والأرقام المتوقعة مشتقة من بيانات الدورة الاصطناعية الثابتة وحسابنا المرجعي.</p></td></tr></tbody>
 </table>
 
 <table dir="ltr" width="100%">

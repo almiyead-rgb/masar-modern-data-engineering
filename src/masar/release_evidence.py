@@ -22,7 +22,7 @@ def implementation_digest(root: Path) -> str:
     """Hash runtime sources, SQL, dbt inputs and pins, not outputs or status flags."""
     root = Path(root).resolve()
     selected = []
-    for folder in ('src', 'scripts', 'config', 'sql', 'day02/dbt', 'infrastructure'):
+    for folder in ('src', 'scripts', 'config', 'sql', 'day05/sql', 'day02/dbt', 'infrastructure'):
         for p in (root / folder).rglob('*'):
             if (p.is_file() and (p.suffix in {'.py', '.sql', '.yml', '.yaml', '.json', '.txt', '.sh'} or p.name == 'Dockerfile')
                     and not any(x in {'target', 'logs', 'dbt_packages', '__pycache__'} for x in p.parts)

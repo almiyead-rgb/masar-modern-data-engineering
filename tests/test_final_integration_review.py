@@ -146,8 +146,8 @@ class FileEvidenceReviewTests(unittest.TestCase):
     def test_verified_flags_do_not_replace_evidence(self):
         cfg=deepcopy(json.loads((ROOT/'course.json').read_text()))
         for x in cfg['labs']:x['status']='VERIFIED'
-        for x in cfg['notebooks']:
-            if x['kind']=='engine':x['execution_status']='VERIFIED'
+        cfg['notebook_execution_status']='VERIFIED'
+        cfg['published_days']=[1,2,3,4,5]
         for k in ('day02_dbt_status','day04_kafka_status','day04_gx_status'):cfg[k]='VERIFIED'
         self.assertTrue(checker.release_issues(self.root,cfg))
     def test_evidence_absolute_path_rejected(self):

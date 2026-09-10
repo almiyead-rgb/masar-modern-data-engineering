@@ -1,4 +1,4 @@
 # Unified target: Python 3.11 + Java 17; candidate, not an executed lockfile.
 pyspark==3.5.8
-delta-spark==3.3.2
+delta-spark==3.3.3
 py4j==0.10.9.9

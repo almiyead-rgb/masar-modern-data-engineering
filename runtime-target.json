@@ -5,7 +5,7 @@
   "scala_binary": "2.12",
   "packages": {
     "pyspark": "3.5.8",
-    "delta-spark": "3.3.2",
+    "delta-spark": "3.3.3",
     "py4j": "0.10.9.9",
     "dbt-core": "1.9.8",
     "dbt-spark": "1.9.1",

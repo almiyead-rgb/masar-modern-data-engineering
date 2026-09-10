@@ -151,9 +151,9 @@ class Day04ConfigurationTests(unittest.TestCase):
         self.assertIn('future.get(timeout=45)',s)
     def test_native_notebooks_will_be_registered(self):
         cfg=json.loads((ROOT/'course.json').read_text())
-        day04=[x for x in cfg['notebooks'] if '/day04/' in x['path']]
-        self.assertEqual(len(day04),3)
+        day04=[x for x in cfg['learner_notebooks'] if x.startswith('day04/')]
+        self.assertEqual(day04,['day04/STUDENT.ipynb'])
     def test_policies_match_business_fields(self):
         cfg=json.loads((ROOT/'config/day04_policy.json').read_text());self.assertEqual(cfg['schema_fields'],list(BUSINESS_FIELDS));self.assertEqual(cfg['expected_trip_rows'],75)
     def test_student_only_scope_preserved(self):
-        cfg=json.loads((ROOT/'course.json').read_text());self.assertIs(cfg['trainer_materials_current_scope'],False);self.assertIs(cfg['published'],False)
+        cfg=json.loads((ROOT/'course.json').read_text());self.assertFalse(cfg.get('trainer_materials_current_scope',False));self.assertTrue(cfg['published']);self.assertFalse((ROOT/'INSTRUCTOR_PACKAGE.md').exists())

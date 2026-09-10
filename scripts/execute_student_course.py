@@ -117,7 +117,8 @@ if __name__ == '__main__':
         evidence = {'day':day, 'status':'PASSED', 'independent_course_runs':2,
             'verified_at_utc':verified, 'workflow_url':RUN_URL,
             'dataset_manifest_sha256':DATASET_MANIFEST_SHA256,
-            'checks':results[0]['days'][day-1], 'colab_host_tested':False}
+            'checks':results[0]['days'][day-1], 'colab_host_tested':False,
+            'code_sha256':hashlib.sha256(json.dumps([c.source for c in nb.cells if c.cell_type=='code'],ensure_ascii=False).encode()).hexdigest()}
         save(ROOT/f'day{day:02}/verification.json', evidence)
     summary = {'status':'PASSED', 'scope':'FIVE_STUDENT_NOTEBOOKS_WITH_NATIVE_ENGINES_AND_DBT',
         'independent_course_runs':2, 'notebook_executions':10, 'workflow_url':RUN_URL,
@@ -131,8 +132,8 @@ if __name__ == '__main__':
     text = bi('<h1>Execution record</h1>','<h1>سجل التنفيذ</h1>')
     text += bi('<p>The five daily student notebooks completed in order in two independent workspaces, with a fresh kernel for each day. The notebooks contain the real outputs from the first complete run.</p>',
         '<p>اكتملت دفاتر الأيام الخمسة بالترتيب في مساحتي عمل مستقلتين، وبنواة جديدة لكل يوم. تحتوي الدفاتر على المخرجات الفعلية من التشغيل الكامل الأول.</p>')
-    text += bi('<p>Native components exercised: Spark 3.5.8, Delta 3.3.2, Kafka 4.0.2, Great Expectations 1.7.0 and dbt-spark 1.9.1. Python 3.11 and Java 17 were used on GitHub Actions.</p>',
-        '<p>المكونات المنفذة فعليًا: Spark 3.5.8 وDelta 3.3.2 وKafka 4.0.2 وGreat Expectations 1.7.0 وdbt-spark 1.9.1، باستخدام Python 3.11 وJava 17 على GitHub Actions.</p>')
+    text += bi('<p>Native components exercised: Spark 3.5.8, Delta 3.3.3, Kafka 4.0.2, Great Expectations 1.7.0 and dbt-spark 1.9.1. Python 3.11 and Java 17 were used on GitHub Actions.</p>',
+        '<p>المكونات المنفذة فعليًا: Spark 3.5.8 وDelta 3.3.3 وKafka 4.0.2 وGreat Expectations 1.7.0 وdbt-spark 1.9.1، باستخدام Python 3.11 وJava 17 على GitHub Actions.</p>')
     text += bi('<p><a href="'+RUN_URL+'">Actual execution logs</a> · <a href="verification.json">Machine-readable verification</a>. Positive timing samples vary by machine and are not performance guarantees. Colab hosting and distributed production scale were not separately tested.</p>',
         '<p><a href="'+RUN_URL+'">سجلات التنفيذ الفعلية</a> · <a href="verification.json">التحقق القابل للفحص</a>. تختلف أزمنة القياس بحسب الجهاز ولا تمثل ضمان أداء. لم تُختبر استضافة Colab أو أحمال الإنتاج الموزعة بصورة مستقلة.</p>')
     text += bi('<p>Run the notebook in order, retain your results, and explain any difference using the lab checks. <a href="../README.md">Return to the course</a>.</p>',

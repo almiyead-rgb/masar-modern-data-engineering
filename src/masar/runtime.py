@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-PINNED = {"pyspark": "3.5.8", "delta-spark": "3.3.2", "py4j": "0.10.9.9"}
+PINNED = {"pyspark": "3.5.8", "delta-spark": "3.3.3", "py4j": "0.10.9.9"}
 
 class EnvironmentUnavailable(RuntimeError):
     pass
@@ -40,8 +40,8 @@ def inspect_environment() -> dict:
         pass
     if major != 17:
         problems.append("This unified course runtime requires Java 17; Java 21 is not the course target")
-    if sys.version_info[:2] < (3, 10):
-        problems.append("Day 1 requires Python 3.10 or newer; CI verification uses Python 3.11")
+    if sys.version_info[:2] != (3, 11):
+        problems.append("This complete course requires Python 3.11; use the documented virtual environment")
     return {"scope": "DEPENDENCY_PREFLIGHT_ONLY", "python": sys.version.split()[0],
             "java": line, "java_major": major, "packages": packages,
             "status": "BLOCKED_DEPENDENCIES" if problems else "DEPENDENCIES_PRESENT_ENGINE_NOT_TESTED",
@@ -67,7 +67,7 @@ def start_spark(work: Path, *, kafka: bool = False):
         raise RuntimeError("An active Spark session exists; stop it explicitly before this lab")
     os.environ.setdefault("SPARK_LOCAL_IP", "127.0.0.1")
     os.environ["PYSPARK_PYTHON"] = sys.executable
-    builder = (SparkSession.builder.master("local[2]").appName("Masar-Day01")
+    builder = (SparkSession.builder.master("local[2]").appName("Masar-Course")
         .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
         .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
         .config("spark.sql.session.timeZone", "UTC")

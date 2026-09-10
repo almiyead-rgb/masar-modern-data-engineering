@@ -119,7 +119,7 @@ class LocalLifecycleTests(unittest.TestCase):
 class PackagingContractTests(unittest.TestCase):
     def test_day01_sources_point_to_current_student_notebook(self):
         text=(ROOT/'day01/SOURCES.md').read_text()
-        self.assertIn('../notebooks/day01/02_cost_model.ipynb',text)
+        self.assertIn('STUDENT.ipynb',text)
         for old in ['INSTRUCTOR_PACKAGE.md','NEXT_CHAT_HANDOFF_AR.md','../notebooks/02_cost_and_local_benchmark.ipynb','Slides cite','instructor evidence']:
             self.assertNotIn(old,text)
     def test_build_requires_real_smoke_not_only_pip(self):
@@ -141,12 +141,10 @@ class PackagingContractTests(unittest.TestCase):
             p=folder/'Dockerfile';p.write_text('FROM example:v1')
             first=implementation_digest(r);p.write_text('FROM example:v2')
             self.assertNotEqual(first,implementation_digest(r))
-    def test_coordinator_never_changes_course_acceptance_flags(self):
-        text=(ROOT/'scripts/verify_native_runtime.py').read_text()
-        self.assertIn('for number in (1,2)',text)
-        self.assertIn('execute_engine_notebooks.py',text)
-        self.assertIn("'teaching_approved':False",text)
-        self.assertNotIn("write_json(ROOT/'course.json'",text)
+    def test_coordinator_requires_actual_independent_notebook_runs(self):
+        text=(ROOT/'scripts/execute_student_course.py').read_text()
+        for required in ('read_stage_report', 'run_course(1), run_course(2)', 'NotebookClient', 'allow_errors=False', 'code_sha256'):
+            self.assertIn(required,text)
         self.assertNotIn('git push',text)
 
 if __name__=='__main__':unittest.main()
