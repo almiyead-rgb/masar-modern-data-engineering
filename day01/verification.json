@@ -1,0 +1,24 @@
+{
+  "status": "PASSED",
+  "scope": "DAY01_ONLY",
+  "engine": "Spark 3.5.8 + Delta 3.3.2",
+  "python": "3.11.16",
+  "java": "openjdk version \"17.0.20.1\" 2026-08-18",
+  "verified_at_utc": "2026-09-10T12:37:49.733845+00:00",
+  "independent_runs": 2,
+  "workflow_url": "https://github.com/almiyead-rgb/masar-modern-data-engineering/actions/runs/34477614890",
+  "counts": {
+    "drivers": 6,
+    "gps_events": 216,
+    "trips": 144
+  },
+  "business_trips": 72,
+  "aggregate": {
+    "fare_total": "1794.60",
+    "nonnull_fares": 72,
+    "rows": 72
+  },
+  "colab_host_tested": false,
+  "days_2_to_5_tested": false,
+  "runtime_seconds_comparable_across_runs": false
+}

@@ -83,7 +83,7 @@
       "question_ar": "ما البيانات التي وصلت؟ لماذا نحفظها؟ وكيف نختار طريقة تشغيل الحوسبة؟",
       "output_en": "Raw source inspection, Bronze tables, architecture notes and cost evidence.",
       "output_ar": "فحص المصادر، وجداول Bronze، وملاحظات القرار المعماري وأدلة التكلفة.",
-      "status": "PARTIAL"
+      "status": "PUBLISHED_NATIVE_VERIFIED"
     },
     {
       "day": 2,
@@ -612,5 +612,8 @@
   "runtime_validation_status": "UNIFIED_CANDIDATE_NOT_EXECUTED",
   "runtime_workbench_status": "AUTHORED_NOT_BUILT",
   "native_verification_coordinator": "scripts/verify_native_runtime.py",
-  "student_entrypoint": "MASAR_STUDENT.ipynb"
+  "student_entrypoint": "MASAR_STUDENT.ipynb",
+  "published_days": [
+    1
+  ]
 }
