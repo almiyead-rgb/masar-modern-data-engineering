@@ -14,16 +14,14 @@ spark-warehouse/
 metastore_db/
 derby.log
 .DS_Store
-# Instructor material must live OUTSIDE this repository, even before the first commit.
 instructor_only/
 authoring_private/
 INSTRUCTOR_PACKAGE.md
 *PRIVATE*
-# Presentations are deferred in the current scope.
 *.pptx
 
 # dbt-generated files and local profiles are not course source.
-examples/dbt_masar/target/
-examples/dbt_masar/logs/
-examples/dbt_masar/dbt_packages/
-examples/dbt_masar/profiles.yml
+day02/dbt/target/
+day02/dbt/logs/
+day02/dbt/dbt_packages/
+day02/dbt/profiles.yml

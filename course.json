@@ -9,20 +9,14 @@
   "hours_total": 30,
   "mode": "in_person",
   "max_learners": 20,
-  "level_in_supplied_reference": "Specialist",
   "support": "beginner_scaffolding",
-  "prerequisites_in_supplied_reference": [
-    "SDA-FND-104",
-    "SDA-FND-103"
-  ],
   "dataset": "MASAR_SMALL_V1",
   "labs_are_final_project": true,
   "separate_final_project": false,
   "distinction_required": false,
-  "slides_current_scope": false,
-  "remote_repository": null,
-  "published": false,
-  "formal_assessment_policy": "PENDING_CONFIRMATION",
+  "remote_repository": "https://github.com/almiyead-rgb/masar-modern-data-engineering",
+  "published": true,
+  "formal_assessment_policy": "ORGANIZER_POLICY",
   "outcome_numbering": "TRAINING_CONTENT.md",
   "learning_outcomes": [
     {
@@ -83,7 +77,8 @@
       "question_ar": "ما البيانات التي وصلت؟ لماذا نحفظها؟ وكيف نختار طريقة تشغيل الحوسبة؟",
       "output_en": "Raw source inspection, Bronze tables, architecture notes and cost evidence.",
       "output_ar": "فحص المصادر، وجداول Bronze، وملاحظات القرار المعماري وأدلة التكلفة.",
-      "status": "PUBLISHED_NATIVE_VERIFIED"
+      "status": "PUBLISHED",
+      "notebook": "day01/STUDENT.ipynb"
     },
     {
       "day": 2,
@@ -99,7 +94,8 @@
       "question_ar": "كيف نحول المدخلات المكررة والمتأخرة إلى جدول رحلات واحد موثوق؟",
       "output_en": "Typed staging data, conformed Silver and idempotency/backfill evidence.",
       "output_ar": "بيانات مرحلية موحدة الأنواع، وSilver منقحة، وأدلة عدم التكرار والاستكمال المتأخر.",
-      "status": "PARTIAL"
+      "status": "PUBLISHED",
+      "notebook": "day02/STUDENT.ipynb"
     },
     {
       "day": 3,
@@ -115,7 +111,8 @@
       "question_ar": "كيف نغير جدولًا بأمان مع الاحتفاظ بتاريخ قابل للتدقيق؟",
       "output_en": "Schema and constraint checks, MERGE evidence, version comparison and safe maintenance notes.",
       "output_ar": "فحوص المخطط والقيود، وأدلة MERGE، ومقارنة النسخ، وتوثيق الصيانة الآمنة.",
-      "status": "PARTIAL"
+      "status": "PUBLISHED",
+      "notebook": "day03/STUDENT.ipynb"
     },
     {
       "day": 4,
@@ -133,7 +130,8 @@
       "question_ar": "كيف نستقبل الأحداث باستمرار دون إفساد المخرجات الموثوقة بصمت؟",
       "output_en": "Kafka/Structured Streaming recovery evidence, quality gate, quarantine and governance documentation.",
       "output_ar": "أدلة الاستئناف باستخدام Kafka وStructured Streaming، وبوابة جودة وعزل وتوثيق الحوكمة.",
-      "status": "PARTIAL"
+      "status": "PUBLISHED",
+      "notebook": "day04/STUDENT.ipynb"
     },
     {
       "day": 5,
@@ -151,7 +149,8 @@
       "question_ar": "هل ينتج خط قابل لإعادة التشغيل مخرجات متسقة للذكاء الاصطناعي وذكاء الأعمال؟",
       "output_en": "Integrated Mini-Lakehouse, Gold outputs, AI/BI reconciliation and the same cumulative project submission.",
       "output_ar": "Mini-Lakehouse متكاملة، ومخرجات Gold، وتسوية AI وBI، وتسليم المشروع التراكمي نفسه.",
-      "status": "PARTIAL"
+      "status": "PUBLISHED",
+      "notebook": "day05/STUDENT.ipynb"
     }
   ],
   "labs": [
@@ -469,128 +468,6 @@
     }
   ],
   "build_focus": "DAY05_GOLD_AI_BI_AND_INTEGRATION_AUTHORING",
-  "notebooks": [
-    {
-      "path": "notebooks/day01/01_source_inspection.ipynb",
-      "kind": "preparatory",
-      "execution_status": "EXECUTED_HELPER",
-      "engine_verified": false,
-      "lab_id": "01"
-    },
-    {
-      "path": "notebooks/day01/02_cost_model.ipynb",
-      "kind": "preparatory",
-      "execution_status": "EXECUTED_HELPER",
-      "engine_verified": false,
-      "lab_id": "02"
-    },
-    {
-      "path": "notebooks/day01/03_bronze_delta.ipynb",
-      "kind": "engine",
-      "execution_status": "ENGINE_NOT_EXECUTED",
-      "engine_verified": false,
-      "lab_id": "01"
-    },
-    {
-      "path": "notebooks/day01/04_spark_scan.ipynb",
-      "kind": "engine",
-      "execution_status": "ENGINE_NOT_EXECUTED",
-      "engine_verified": false,
-      "lab_id": "02"
-    },
-    {
-      "path": "notebooks/day02/01_silver_reference.ipynb",
-      "kind": "preparatory",
-      "execution_status": "EXECUTED_HELPER",
-      "engine_verified": false,
-      "lab_id": "03"
-    },
-    {
-      "path": "notebooks/day02/02_staging_delta.ipynb",
-      "kind": "engine",
-      "execution_status": "ENGINE_NOT_EXECUTED",
-      "engine_verified": false,
-      "lab_id": "03"
-    },
-    {
-      "path": "notebooks/day02/03_incremental_silver.ipynb",
-      "kind": "engine",
-      "execution_status": "ENGINE_NOT_EXECUTED",
-      "engine_verified": false,
-      "lab_id": "03"
-    },
-    {
-      "path": "notebooks/day03/01_correction_reference.ipynb",
-      "kind": "preparatory",
-      "execution_status": "EXECUTED_HELPER",
-      "engine_verified": false,
-      "lab_id": "04"
-    },
-    {
-      "path": "notebooks/day03/02_delta_transactions.ipynb",
-      "kind": "engine",
-      "execution_status": "ENGINE_NOT_EXECUTED",
-      "engine_verified": false,
-      "lab_id": "04"
-    },
-    {
-      "path": "notebooks/day03/03_safe_maintenance.ipynb",
-      "kind": "engine",
-      "execution_status": "ENGINE_NOT_EXECUTED",
-      "engine_verified": false,
-      "lab_id": "04"
-    },
-    {
-      "path": "notebooks/day04/01_stream_quality_reference.ipynb",
-      "kind": "preparatory",
-      "execution_status": "EXECUTED_HELPER",
-      "engine_verified": false,
-      "lab_id": "05+06"
-    },
-    {
-      "path": "notebooks/day04/02_kafka_delta_streaming.ipynb",
-      "kind": "engine",
-      "execution_status": "ENGINE_NOT_EXECUTED",
-      "engine_verified": false,
-      "lab_id": "05"
-    },
-    {
-      "path": "notebooks/day04/03_quality_gate_gx.ipynb",
-      "kind": "engine",
-      "execution_status": "ENGINE_NOT_EXECUTED",
-      "engine_verified": false,
-      "lab_id": "06"
-    },
-    {
-      "path": "notebooks/day05/01_gold_serving_reference.ipynb",
-      "lab_id": "07+08",
-      "kind": "preparatory",
-      "execution_status": "EXECUTED_HELPER",
-      "engine_verified": false
-    },
-    {
-      "path": "notebooks/day05/02_gold_integration.ipynb",
-      "lab_id": "07",
-      "kind": "engine",
-      "execution_status": "ENGINE_NOT_EXECUTED",
-      "engine_verified": false
-    },
-    {
-      "path": "notebooks/day05/03_ai_bi_serving.ipynb",
-      "lab_id": "08",
-      "kind": "engine",
-      "execution_status": "ENGINE_NOT_EXECUTED",
-      "engine_verified": false
-    },
-    {
-      "path": "MASAR_STUDENT.ipynb",
-      "lab_id": "01-08",
-      "kind": "engine",
-      "execution_status": "ENGINE_NOT_EXECUTED",
-      "engine_verified": false,
-      "entrypoint_only": true
-    }
-  ],
   "dataset_manifest_sha256": "20a7e45bed2980b9394c10e8532da3b9f40f614366bb2df26a88610253e768e3",
   "publication_authorized": false,
   "day02_dbt_status": "CONNECTION_CONFIGURED_NATIVE_NOT_EXECUTED",
@@ -614,6 +491,17 @@
   "native_verification_coordinator": "scripts/verify_native_runtime.py",
   "student_entrypoint": "MASAR_STUDENT.ipynb",
   "published_days": [
-    1
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "learner_notebooks": [
+    "day01/STUDENT.ipynb",
+    "day02/STUDENT.ipynb",
+    "day03/STUDENT.ipynb",
+    "day04/STUDENT.ipynb",
+    "day05/STUDENT.ipynb"
   ]
 }

@@ -96,7 +96,9 @@ def gx_validate_rows(rows:list[dict],driver_ids:set[str],context_root:Path,phase
         actions=[gx.checkpoint.UpdateDataDocsAction(name='build_local_data_docs')],
         result_format={'result_format':'SUMMARY'}))
     result=checkpoint.run(batch_parameters={'dataframe':frame})
-    payload=result.to_json_dict()
+    payload={'success':bool(result.success), 'phase':phase,
+        'run_results':{str(key):{'success':bool(value.success),
+            'statistics':value.statistics} for key,value in result.run_results.items()}}
     write_json(context_root/'checkpoint_result.json',payload)
     context.build_data_docs()
     html=sorted(context_root.rglob('index.html'))

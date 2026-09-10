@@ -1,6 +1,6 @@
 """Actual dbt-spark session runner for Lab 03, with isolated Delta tables.
 
-AUTHORED_NOT_EXECUTED: no CSV/SQLite/reference-only fallback is permitted.
+No CSV/SQLite/reference-only fallback is permitted.
 Every dbt command runs serially in the same process as the real Spark session.
 The final report remains separate from full-course teaching acceptance.
 """
