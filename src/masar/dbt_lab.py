@@ -250,7 +250,7 @@ def run_dbt_lab(root: Path, *, include_correction: bool = False,
         report['source_copy'] = _copy_bronze(spark, source, original, work)
         # The project and its profile are copied, not modified in the source tree.
         project = workspace_path(work, 'dbt/project')
-        shutil.copytree(root / 'examples/dbt_masar', project,
+        shutil.copytree(root / 'day02/dbt', project,
                         ignore=shutil.ignore_patterns('target', 'logs', 'dbt_packages', '__pycache__'))
         bronze_schema = identifier('masar_bronze_' + identity[:16])
         target_schema = identifier('masar_dbt_' + identity[:16])

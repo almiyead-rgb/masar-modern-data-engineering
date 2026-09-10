@@ -5,17 +5,12 @@
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p><a href="../README.md">Course home</a> · <a href="../STATUS.md">Readiness</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">حالة الجاهزية</a></p></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p><a href="../README.md">Course home</a> · <a href="../STATUS.md">Execution record</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">سجل التنفيذ</a></p></td></tr></tbody>
 </table>
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Candidate environment, not a success claim</h2><p>Retain the existing Spark 3.5.8 / Delta 3.3.2 pair. Day 4 adds Kafka broker 4.0.2, kafka-python 2.2.15, GX 1.7.0 and Pandas 2.2.3. These candidate pins are not a fully resolved dependency lock. No pip install, Docker startup or Maven resolution succeeded in the authoring session; test the complete environment before class.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>بيئة مرشحة وليست إثبات نجاح</h2><p>نحافظ على Spark 3.5.8 وDelta 3.3.2. يضيف اليوم الرابع وسيط Kafka 4.0.2 وkafka-python 2.2.15 وGX 1.7.0 وPandas 2.2.3. الإصدارات مرشحة وليست قفلًا كاملًا للتبعيات. لم ينجح تثبيت الحزم أو بدء Docker أو حل Maven في جلسة التأليف؛ يجب اختبار البيئة كاملة قبل التدريب.</p></td></tr></tbody>
-</table>
-
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Provision before teaching</h2><p>Use a dedicated virtual environment (Python 3.11 is the preferred classroom target), Java 17, and Docker Engine with Compose. The source-reference notebook uses the standard library and does not need the services. Actual native notebooks need the full preceding project state.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>جهز قبل التدريب</h2><p>استخدم بيئة افتراضية مستقلة؛ Python 3.11 هو الهدف المفضل للقاعة، مع Java 17 وDocker Engine وCompose. لا يحتاج الدفتر المرجعي إلى الخدمات، لأنه يستخدم المكتبة القياسية؛ أما الدفاتر الأصلية فتحتاج حالة المشروع السابق كاملة.</p></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Prepare your environment</h2><p>Use a dedicated virtual environment (Python 3.11 is the preferred classroom target), Java 17, and Docker Engine with Compose. The source-reference notebook uses the standard library and does not need the services. Actual native notebooks need the full preceding project state.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>جهز قبل التدريب</h2><p>استخدم بيئة افتراضية مستقلة؛ Python 3.11 هو الهدف المفضل للقاعة، مع Java 17 وDocker Engine وCompose. لا يحتاج الدفتر المرجعي إلى الخدمات، لأنه يستخدم المكتبة القياسية؛ أما الدفاتر الأصلية فتحتاج حالة المشروع السابق كاملة.</p></td></tr></tbody>
 </table>
 
 ```bash

@@ -22,11 +22,11 @@ def implementation_digest(root: Path) -> str:
     """Hash runtime sources, SQL, dbt inputs and pins, not outputs or status flags."""
     root = Path(root).resolve()
     selected = []
-    for folder in ('src', 'scripts', 'config', 'sql', 'examples/dbt_masar', 'infrastructure'):
+    for folder in ('src', 'scripts', 'config', 'sql', 'day02/dbt', 'infrastructure'):
         for p in (root / folder).rglob('*'):
             if (p.is_file() and (p.suffix in {'.py', '.sql', '.yml', '.yaml', '.json', '.txt', '.sh'} or p.name == 'Dockerfile')
                     and not any(x in {'target', 'logs', 'dbt_packages', '__pycache__'} for x in p.parts)
-                    and (p.name != 'profiles.yml' or p.parent == root / 'examples/dbt_masar/profiles')):
+                    and (p.name != 'profiles.yml' or p.parent == root / 'day02/dbt/profiles')):
                 selected.append(p)
     selected.extend(root.glob('requirements*.txt'))
     if (root / '.dockerignore').is_file():
@@ -214,7 +214,7 @@ def dbt_evidence_issues(root: Path) -> list[str]:
         ids = [n.get('unique_id') for n in observed]
         if len(ids) != len(set(ids)) or any(n not in nodes for n in ids):
             raise ValueError('dbt result nodes are missing or repeated')
-        project = Path(root) / 'examples/dbt_masar'
+        project = Path(root) / 'day02/dbt'
         for folder, kind in [('models', 'model'), ('tests', 'test')]:
             required = {p.stem for p in (project / folder).rglob('*.sql')}
             actual = {nodes[n].get('name') for n in ids if nodes[n].get('resource_type') == kind}

@@ -5,12 +5,7 @@
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><a href="../README.md">Course home</a> · <a href="../STATUS.md">Readiness</a></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">حالة الجاهزية</a></td></tr></tbody>
-</table>
-
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Build status: PARTIAL</h2><p>The business-value reference is executed. Native Spark/Delta notebooks are authored but <strong>ENGINE_NOT_EXECUTED</strong>. They are not approved for live teaching. Required engine evidence is still missing.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>حالة البناء: جزئية</h2><p>نُفذ مرجع قيم الأعمال. أما دفترا Spark وDelta فكُتبا وحالتهما <strong>ENGINE_NOT_EXECUTED</strong>؛ لم يُعتمدا للتطبيق المباشر، وما يزال دليل تنفيذ المحرك مطلوبًا.</p></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><a href="../README.md">Course home</a> · <a href="../STATUS.md">Execution record</a></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">سجل التنفيذ</a></td></tr></tbody>
 </table>
 
 <table dir="ltr" width="100%">

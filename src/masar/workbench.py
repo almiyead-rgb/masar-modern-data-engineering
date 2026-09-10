@@ -42,7 +42,7 @@ def source_files(root: Path) -> list[Path]:
                 or 'PRIVATE' in name or name == 'INSTRUCTOR_PACKAGE.md'
                 or p.suffix.lower() in {'.pyc', '.pyo', '.pem', '.key', '.pptx'}):
                 continue
-            if p == root / 'examples/dbt_masar/profiles.yml':
+            if p == root / 'day02/dbt/profiles.yml':
                 continue
             if p.is_symlink():
                 raise ValueError('Source files cannot be symlinks')

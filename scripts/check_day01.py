@@ -11,7 +11,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from masar.sources import verify_manifest
 
 verify_manifest(ROOT / "data/masar-small-v1")
-required = ["DAY01_STUDENT.ipynb", "README.md", "course.json",
+required = ["day01/STUDENT.ipynb", "README.md", "course.json",
             "resources/Masar_Cost_Model.xlsx", "docs/START_HERE.md", "docs/SETUP.md",
             "docs/TROUBLESHOOTING.md", "docs/GIT_WORKFLOW.md",
             "project/README.md", "project/SUBMISSION.md"]
@@ -47,7 +47,7 @@ def check_links(path, text):
 
 for path in sorted(set(markdown)):
     check_links(path, path.read_text(encoding="utf-8"))
-notebooks = [ROOT / "DAY01_STUDENT.ipynb", *sorted((ROOT / "notebooks/day01").glob("*.ipynb"))]
+notebooks = [ROOT / "day01/STUDENT.ipynb", *sorted((ROOT / "notebooks/day01").glob("*.ipynb"))]
 for path in notebooks:
     notebook = nbformat.read(path, as_version=4)
     nbformat.validate(notebook)

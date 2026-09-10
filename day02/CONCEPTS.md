@@ -5,7 +5,7 @@
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><a href="../README.md">Course home</a> · <a href="../STATUS.md">Readiness</a></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">حالة الجاهزية</a></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><a href="../README.md">Course home</a> · <a href="../STATUS.md">Execution record</a></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">سجل التنفيذ</a></td></tr></tbody>
 </table>
 
 <table dir="ltr" width="100%">
@@ -70,7 +70,7 @@
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>13 · Freshness needs a clock definition</h2><p>Event time says when the trip occurred. _ingested_at says when this lab actually ingested a receipt. A synthetic historical fixture should not be declared broken simply because its events are months old today. Native dbt freshness against arrival timestamps and a deterministic teaching comparison against scenario_schedule are distinct tests. No real-time freshness service has been verified in this build.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>١٣ · حداثة البيانات تحتاج تعريفًا للساعة</h2><p>وقت الحدث يصف وقت وقوع الرحلة، و_ingested_at يصف وقت استقبال النسخة فعليًا في اللاب. لا نعتبر البيانات التدريبية التاريخية معيبة لمجرد أن أحداثها قديمة الآن. فحص حداثة dbt الحقيقي وفق توقيت الوصول مختلف عن مقارنة تعليمية حتمية بجدول scenario_schedule. لم تتحقق خدمة حداثة لحظية في هذا البناء.</p></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>13 · Freshness needs a clock definition</h2><p>Event time says when the trip occurred. _ingested_at says when this lab actually ingested a receipt. A synthetic historical fixture should not be declared broken simply because its events are months old today. Native dbt freshness against arrival timestamps and a deterministic teaching comparison against scenario_schedule are distinct tests. </p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>١٣ · حداثة البيانات تحتاج تعريفًا للساعة</h2><p>وقت الحدث يصف وقت وقوع الرحلة، و_ingested_at يصف وقت استقبال النسخة فعليًا في اللاب. لا نعتبر البيانات التدريبية التاريخية معيبة لمجرد أن أحداثها قديمة الآن. فحص حداثة dbt الحقيقي وفق توقيت الوصول مختلف عن مقارنة تعليمية حتمية بجدول scenario_schedule. </p></td></tr></tbody>
 </table>
 
 <table dir="ltr" width="100%">
@@ -80,7 +80,7 @@
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><a href="SOURCES.md">Official sources for Spark, Delta and dbt</a> · <a href="../labs/lab03/WALKTHROUGH.md">Apply this in Lab 03</a></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><a href="SOURCES.md">المصادر الرسمية لـSpark وDelta وdbt</a> · <a href="../labs/lab03/WALKTHROUGH.md">التطبيق في اللاب 03</a></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><a href="SOURCES.md">Official sources for Spark, Delta and dbt</a> · <a href="labs/lab03/WALKTHROUGH.md">Apply this in Lab 03</a></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><a href="SOURCES.md">المصادر الرسمية لـSpark وDelta وdbt</a> · <a href="labs/lab03/WALKTHROUGH.md">التطبيق في اللاب 03</a></td></tr></tbody>
 </table>
 
 <table dir="ltr" width="100%">

@@ -230,7 +230,7 @@ def run_serving_lab(spark,source:Path,work:Path) -> dict:
     fact_meta=release['tables']['bi.fact_trips']
     fact=spark.read.format('delta').option('versionAsOf',fact_meta['version']).load(str(workspace_path(work,fact_meta['path'])))
     fact.createOrReplaceTempView('masar_day05_fact')
-    query_path = Path(source).resolve().parents[1] / 'sql/day05/bi_zone_summary.sql'
+    query_path = Path(source).resolve().parents[1] / 'day05/sql/bi_zone_summary.sql'
     bi=spark.sql(query_path.read_text(encoding='utf-8'))
     bi_summary=[{'zone_key':r.zone_key,'trip_count':r.trip_count,'total_fare_sar':str(r.total_fare_sar)} for r in bi.collect()]
     from decimal import Decimal

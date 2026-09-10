@@ -5,12 +5,12 @@
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p><a href="../README.md">Course home</a> · <a href="../STATUS.md">Readiness</a> · <a href="../day05/README.md">Day 5</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">الجاهزية</a> · <a href="../day05/README.md">اليوم الخامس</a></p></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p><a href="../README.md">Course home</a> · <a href="../STATUS.md">Execution record</a> · <a href="README.md">Day 5</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">الجاهزية</a> · <a href="README.md">اليوم الخامس</a></p></td></tr></tbody>
 </table>
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>BI: start from the fact</h2><p>Join fact_trips to dim_zone, dim_driver and dim_date using their unique keys. These dimensions filter the measures; raw GPS does not join directly into fare sums. The native notebook executes <a href="../sql/day05/bi_zone_summary.sql">the same read-only BI query</a> on the pinned fact version.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>BI: ابدأ بالوقائع</h2><p>اربط fact_trips بأبعاد المنطقة والسائق والتاريخ بمفاتيحها الفريدة. ترشح الأبعاد المقاييس، ولا يربط GPS الخام مباشرة بمجاميع الأجور. ينفذ الدفتر الأصلي <a href="../sql/day05/bi_zone_summary.sql">استعلام BI للقراءة فقط</a> على نسخة الوقائع الثابتة.</p></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>BI: start from the fact</h2><p>Join fact_trips to dim_zone, dim_driver and dim_date using their unique keys. These dimensions filter the measures; raw GPS does not join directly into fare sums. The native notebook executes <a href="sql/bi_zone_summary.sql">the same read-only BI query</a> on the pinned fact version.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>BI: ابدأ بالوقائع</h2><p>اربط fact_trips بأبعاد المنطقة والسائق والتاريخ بمفاتيحها الفريدة. ترشح الأبعاد المقاييس، ولا يربط GPS الخام مباشرة بمجاميع الأجور. ينفذ الدفتر الأصلي <a href="sql/bi_zone_summary.sql">استعلام BI للقراءة فقط</a> على نسخة الوقائع الثابتة.</p></td></tr></tbody>
 </table>
 
 <table dir="ltr" width="100%">

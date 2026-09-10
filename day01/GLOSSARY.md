@@ -1,6 +1,6 @@
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p><a href="../README.md">Course home</a> · <a href="../docs/START_HERE.md">Start here</a> · <a href="../STATUS.md">Readiness</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p><a href="../README.md">الرئيسية</a> · <a href="../docs/START_HERE.md">ابدأ هنا</a> · <a href="../STATUS.md">حالة الجاهزية</a></p></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p><a href="../README.md">Course home</a> · <a href="../docs/START_HERE.md">Start here</a> · <a href="../STATUS.md">Execution record</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p><a href="../README.md">الرئيسية</a> · <a href="../docs/START_HERE.md">ابدأ هنا</a> · <a href="../STATUS.md">سجل التنفيذ</a></p></td></tr></tbody>
 </table>
 
 <table dir="ltr" width="100%"><thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead><tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Day 1 glossary</h2></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>مصطلحات اليوم الأول</h2></td></tr></tbody></table>

@@ -5,7 +5,7 @@
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><a href="../README.md">Course home</a> · <a href="../STATUS.md">Readiness</a></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">حالة الجاهزية</a></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><a href="../README.md">Course home</a> · <a href="../STATUS.md">Execution record</a></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">سجل التنفيذ</a></td></tr></tbody>
 </table>
 
 <table dir="ltr" width="100%">
@@ -60,5 +60,5 @@
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Source-derived expectations</h2><p>The approved synthetic files remain unchanged. Exact row counts and fare calculations come from <a href="../evidence/day03_reference.json">the executed reference evidence</a>, not an external travel dataset. Scenario revision precedence and isolation rules are explicit teaching-design decisions.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>التوقعات المستمدة من المصدر</h2><p>تظل الملفات الاصطناعية المعتمدة دون تغيير. تؤخذ الأعداد وحسابات الأجرة من <a href="../evidence/day03_reference.json">دليل المرجع المنفذ</a>، لا من بيانات نقل خارجية. وتعد أولوية مراجعات السيناريو وقواعد العزل قرارات تصميم تعليمي صريحة.</p></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Source-derived expectations</h2><p>The approved synthetic files remain unchanged. Exact row counts and fare calculations come from <a href="../docs/VERIFICATION.md">the executed reference evidence</a>, not an external travel dataset. Scenario revision precedence and isolation rules are explicit teaching-design decisions.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>التوقعات المستمدة من المصدر</h2><p>تظل الملفات الاصطناعية المعتمدة دون تغيير. تؤخذ الأعداد وحسابات الأجرة من <a href="../docs/VERIFICATION.md">دليل المرجع المنفذ</a>، لا من بيانات نقل خارجية. وتعد أولوية مراجعات السيناريو وقواعد العزل قرارات تصميم تعليمي صريحة.</p></td></tr></tbody>
 </table>

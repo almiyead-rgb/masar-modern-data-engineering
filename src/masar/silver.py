@@ -1,4 +1,4 @@
-"""Native Spark/Delta implementation of Lab 03; engine execution is pending.
+"""Native Spark/Delta implementation of Lab 03.
 
 Small single-writer teaching pipeline. It reads actual Day 1 Delta tables and
 never falls back to CSV transformations or a mock engine. Day 2 is insert-only;
@@ -36,7 +36,7 @@ def _timestamp(column):
 def _number(name: str):
     # SQL TRY_CAST is available in Spark 3.5; Column.try_cast is a Spark 4 API.
     # Only these fixed identifiers are accepted; no user SQL is interpolated.
-    if name not in {"fare_sar", "distance_km"}:
+    if not isinstance(name, str) or name not in {"fare_sar", "distance_km", "surcharge_sar"}:
         raise ValueError("Unsupported numeric source field")
     from pyspark.sql import functions as F
     return F.when(F.trim(F.col(name)).rlike(NUMBER_RE),

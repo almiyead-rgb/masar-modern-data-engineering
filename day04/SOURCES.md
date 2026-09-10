@@ -5,7 +5,7 @@
 
 <table dir="ltr" width="100%">
 <thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p><a href="../README.md">Course home</a> · <a href="../STATUS.md">Readiness</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">حالة الجاهزية</a></p></td></tr></tbody>
+<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p><a href="../README.md">Course home</a> · <a href="../STATUS.md">Execution record</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p><a href="../README.md">الرئيسية</a> · <a href="../STATUS.md">سجل التنفيذ</a></p></td></tr></tbody>
 </table>
 
 <table dir="ltr" width="100%">
@@ -78,7 +78,4 @@
 <tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>S13 · Kafka 4.0 · Producer acknowledgments and idempotence</h2><p><a href="https://kafka.apache.org/40/configuration/producer-configs/">Open official reference</a></p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>S13 · Kafka: تأكيد الاستلام وعدم تكرار الإرسال</h2><p><a href="https://kafka.apache.org/40/configuration/producer-configs/">فتح المرجع الرسمي</a></p></td></tr></tbody>
 </table>
 
-<table dir="ltr" width="100%">
-<thead><tr><th width="50%" dir="ltr" lang="en" align="left">English</th><th width="50%" dir="rtl" lang="ar" align="right">العربية</th></tr></thead>
-<tbody><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>What is authored here</h2><p>Counts, phase sequence, thresholds, whole-batch policy and exercises are Masar teaching choices derived from the unchanged synthetic fixtures. They are not measured production guarantees, vendor promises or official assessment policies. The governance exercise is not a legal compliance certificate.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>ما الذي صُمم لهذا التدريب؟</h2><p>الأعداد وترتيب المراحل والعتبات وسياسة رفض الدفعة والأسئلة خيارات تعليمية لمشروع مسار مستمدة من ملفاته الاصطناعية الثابتة؛ ليست ضمانات إنتاجية أو وعود مورّد أو شروط تقييم رسمية. ولا يمنح تمرين الحوكمة شهادة التزام نظامي.</p></td></tr></tbody>
-</table>
+

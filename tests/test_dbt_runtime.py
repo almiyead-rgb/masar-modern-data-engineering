@@ -166,20 +166,20 @@ class DbtArtifactContractTests(unittest.TestCase):
 
 class DbtModelDesignTests(unittest.TestCase):
     def test_same_six_models_and_seven_singular_tests(self):
-        base=ROOT/'examples/dbt_masar'
+        base=ROOT/'day02/dbt'
         self.assertEqual({p.stem for p in (base/'models').rglob('*.sql')},dbt_lab.MODEL_NAMES)
         self.assertEqual({p.stem for p in (base/'tests').glob('*.sql')},dbt_lab.ALL_TEST_NAMES)
     def test_lookback_uses_arrival_clock_and_explicit_reprocess(self):
-        text=(ROOT/'examples/dbt_masar/models/silver/silver_trips.sql').read_text()
+        text=(ROOT/'day02/dbt/models/silver/silver_trips.sql').read_text()
         self.assertIn('max(_ingested_at)',text);self.assertIn('interval 3 days',text)
         self.assertIn("var('reprocess_all', false)",text)
         self.assertIn('s.source_revision > t.source_revision',text)
         self.assertNotIn('where trip_date_local',text)
     def test_ranking_precedes_incremental_filter(self):
-        text=(ROOT/'examples/dbt_masar/models/intermediate/int_trip_candidates.sql').read_text()
+        text=(ROOT/'day02/dbt/models/intermediate/int_trip_candidates.sql').read_text()
         self.assertIn('source_revision desc',text);self.assertNotIn('is_incremental()',text)
     def test_profile_has_no_credentials_and_only_one_thread(self):
-        text=(ROOT/'examples/dbt_masar/profiles/profiles.yml').read_text()
+        text=(ROOT/'day02/dbt/profiles/profiles.yml').read_text()
         for value in ['method: session','threads: 1','catalogImplementation: in-memory']:
             self.assertIn(value,text)
         for value in ['password:','token:','endpoint:']:self.assertNotIn(value,text)

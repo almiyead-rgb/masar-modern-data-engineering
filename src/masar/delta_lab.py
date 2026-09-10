@@ -1,6 +1,5 @@
 """Native Lab 04: revision-aware corrections and isolated Delta maintenance.
 
-AUTHORED, ENGINE NOT EXECUTED in the course build environment.
 Requires the actual completed Day 2 Delta workspace. No Python/CSV fallback.
 Only the authorized correction changes trusted Silver; every destructive probe
 and schema/maintenance exercise uses a new independently written Delta copy.
@@ -97,9 +96,9 @@ def _incoming(spark, source: Path, work: Path, filename: str, revision: int, *, 
         receipt.withColumn('_ingested_at', F.current_timestamp()).write.format('delta').mode('errorifexists').save(str(target))
     trips = raw.select(F.trim('trip_id').alias('trip_id'), F.trim('driver_id').alias('driver_id'),
         _city(F.col('city')).alias('city'), _timestamp(F.col('start_ts')).alias('start_utc'),
-        _timestamp(F.col('end_ts')).alias('end_utc'), _number(F.col('fare_sar')).alias('fare_sar'),
-        _number(F.col('distance_km')).alias('distance_km'),
-        *([_number(F.col('surcharge_sar')).alias('surcharge_sar')] if filename == 'schema_change.csv' else []))
+        _timestamp(F.col('end_ts')).alias('end_utc'), _number('fare_sar').alias('fare_sar'),
+        _number('distance_km').alias('distance_km'),
+        *([_number('surcharge_sar').alias('surcharge_sar')] if filename == 'schema_change.csv' else []))
     trips = (trips.withColumn('duration_seconds', F.col('end_utc').cast('long') - F.col('start_utc').cast('long'))
              .withColumn('trip_date_local', F.to_date(F.from_utc_timestamp('start_utc', 'Asia/Riyadh')))
              .withColumn('source_revision', F.lit(revision)))
