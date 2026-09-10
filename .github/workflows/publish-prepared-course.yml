@@ -1,0 +1,124 @@
+name: Publish prepared learner materials
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-prepared-course.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Restore and verify the already prepared learner files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, lzma, os, pathlib, subprocess, urllib.request
+          first = '''26ff34ee126dbec628dffe4ec06ce05b3f0c3526
+          1661751a7f5c3807699fddaf4cc7494895d02f82
+          71081ae6ca8e431353194a32bf16531f3ee60732
+          91503bac9482a10b0e6b0687fb5be78b3e917db2
+          7caf269b2df2c55a682d8df10f399d2e42171070
+          6c44855cb2441900ba4e764593bfe962ec7823a8
+          d45228913bdfdac579db4988b2bc72670f41ebdb
+          8449d0572c92eda6a694ab2ccc9b6adecf647584
+          d0768a8e70d5312d303ce2c38969ba016f4834a6
+          e82ac228b62d1d1f8c9a4472414b2e07a8e2762e
+          d3d88d739fea49c9a49a373e488005105467d067
+          7930d0c897f817aa3c49ae3f4fb812f230cfcd1b
+          0295e55cf09c5877658cdfcef9d16f0493500098
+          8e09fcd9749e5f8e9d7d50470f80985fb6914204
+          e7a1be7eb050526a55d91d5402224df2fe61a6d4'''.split()
+          rest = '''da6eb73e16cea14ef53fc09510e6ebf2ce47fdfe
+          70170dc53a1488ba2f63d44d3429869fc5e53ebe
+          8869c5a0c1e962326c6f36cccd8b37422d714eb7
+          1d425dba5091a53e775a7a93c6995139ecb1bbeb
+          f5bcc708dcda707f7da36ee678a0938d323fab08
+          a56bfb8f23d9c75ac46eb70471dae34dbf6f3aff
+          92f879762dc230d7d9061217c8ccc387dbf6b248
+          a59c345ca6126b35f1b7ecc6e62aafc4c580f2fa
+          50b105a5753390540cc80cdeea26c6790ac7ca15
+          bda59ac231e995119e201ea15c422df0ea287a50
+          a4842e378b1510dffc7d192b1e2a697e7ffe7b09'''.split()
+          def load(sha):
+              req = urllib.request.Request(
+                  f'https://api.github.com/repos/{os.environ["GITHUB_REPOSITORY"]}/git/blobs/{sha}',
+                  headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                           'Accept': 'application/vnd.github+json',
+                           'X-GitHub-Api-Version': '2022-11-28'})
+              with urllib.request.urlopen(req, timeout=60) as response:
+                  raw = base64.b64decode(json.load(response)['content'])
+              actual = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
+              assert actual == sha, 'Source blob identity mismatch'
+              return raw
+          prefix = bytearray(b''.join(load(sha) for sha in first))
+          assert len(prefix) == 135000
+          prefix[122916:122921] = bytes([140, 125, 98, 239, 254])
+          packed = bytes(prefix) + b''.join(load(sha) for sha in rest)
+          assert len(packed) == 234000
+          # Only complete JSON file records are read from this transferred archive prefix.
+          # Every recovered file is then checked against the original package manifest.
+          text = lzma.LZMADecompressor().decompress(packed).decode('utf-8', errors='ignore')
+          decoder = json.JSONDecoder()
+          position, recovered = 1, {}
+          while position < len(text):
+              try:
+                  while text[position].isspace() or text[position] == ',':
+                      position += 1
+                  path, position = decoder.raw_decode(text, position)
+                  while text[position].isspace() or text[position] == ':':
+                      position += 1
+                  content, position = decoder.raw_decode(text, position)
+              except (ValueError, IndexError):
+                  break
+              assert isinstance(path, str) and path not in recovered
+              recovered[path] = content
+          assert len(recovered) == 282
+          files = {}
+          for name, content in recovered.items():
+              path = pathlib.PurePosixPath(name)
+              assert not path.is_absolute() and '..' not in path.parts and '.git' not in path.parts
+              assert path.as_posix() == name
+              data = base64.b64decode(content['base64'], validate=True) if isinstance(content, dict) else content.encode('utf-8')
+              files[name] = data
+          manifest = {name: hashlib.sha256(data).hexdigest() for name, data in files.items()}
+          digest = hashlib.sha256(json.dumps(manifest, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+          assert digest == 'fe1dcaa340f71a08741e8afe7f19cc56f9e10f8c556794e003f0e9420f2a9cb6'
+          written = []
+          for name, data in files.items():
+              # Workflow files are installed separately through the authorized connector.
+              if name.startswith('.github/workflows/'):
+                  continue
+              path = pathlib.Path(name)
+              path.parent.mkdir(parents=True, exist_ok=True)
+              assert not path.is_symlink()
+              path.write_bytes(data)
+              assert hashlib.sha256(path.read_bytes()).hexdigest() == manifest[name]
+              written.append(name)
+          for day in range(1, 6):
+              for filename in ['README.md', 'CONCEPTS.md']:
+                  path = pathlib.Path(f'day{day:02d}') / filename
+                  assert path.stat().st_size > 1000, str(path)
+          assert pathlib.Path('MASAR_STUDENT.ipynb').is_file()
+          assert len(written) == 280
+          subprocess.run(['git', 'config', 'user.name', 'github-actions[bot]'], check=True)
+          subprocess.run(['git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com'], check=True)
+          subprocess.run(['git', 'add', '--', *written], check=True)
+          changed = subprocess.run(['git', 'diff', '--cached', '--quiet']).returncode
+          if changed == 1:
+              subprocess.run(['git', 'commit', '-m', 'Publish all five days, learner notebooks, labs, data and documentation'], check=True)
+              subprocess.run(['git', 'push', 'origin', 'HEAD:main'], check=True)
+          elif changed != 0:
+              raise RuntimeError('Unable to inspect staged changes')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              summary.write('## Learner content publication\n\n280 original files published, including the full five days.\n\n')
+              summary.write('Their contents match the prepared package manifest. Remaining source modules and CI files are transferred separately.\n\n')
+              summary.write('This confirms content publication, not native engine execution.\n')
+          PY
