@@ -1,5 +1,5 @@
 {
-  "scope": "UNIFIED_RUNTIME_CANDIDATE",
+  "scope": "LEARNER_RUNTIME_SPECIFICATION",
   "python": "3.11",
   "java_major": 17,
   "scala_binary": "2.12",
@@ -13,15 +13,8 @@
     "pandas": "2.2.3",
     "kafka-python": "2.2.15"
   },
-  "transitive_lock_verified": false,
-  "native_execution_verified": false,
-  "reason": "Use the stable dbt-spark session extra without violating its pyspark<4 constraint. Preserve the original Spark 3.5 course target.",
-  "retired_candidate": {
-    "pyspark": "4.0.1",
-    "delta-spark": "4.0.1",
-    "reason": "Incompatible with the chosen stable dbt-spark session extra."
-  },
   "container_recipe": "infrastructure/runtime/Dockerfile",
   "container_build_verified": false,
-  "offline_execution_verified": false
+  "offline_execution_verified": false,
+  "execution_record": "docs/verification.json"
 }

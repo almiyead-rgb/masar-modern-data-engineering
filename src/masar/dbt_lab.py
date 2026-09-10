@@ -6,7 +6,8 @@ The final report remains separate from full-course teaching acceptance.
 """
 from __future__ import annotations
 
-from contextlib import contextmanager, redirect_stdout, redirect_stderr
+from contextlib import contextmanager, redirect_stdout, redirect_stderr, nullcontext
+from masar.dbt_catalog import structured_spark_catalog
 from datetime import datetime, timezone
 import importlib.metadata
 import json
@@ -192,7 +193,7 @@ def _invoke(project: Path, work: Path, phase: str, command: list[str], seen: set
         '--target-path', str(target), '--vars', json.dumps({'reprocess_all': reprocess_all})]
     # Never use shell=True; all arguments and output paths are bounded.
     with (folder / 'console.log').open('w', encoding='utf-8') as log:
-        with redirect_stdout(log), redirect_stderr(log):
+        with redirect_stdout(log), redirect_stderr(log), (structured_spark_catalog() if docs else nullcontext()):
             outcome = dbtRunner().invoke(arguments)
     if outcome.success is not True or outcome.exception is not None:
         raise RuntimeError('dbt command failed: ' + phase + '; inspect its saved console/dbt artifacts')
@@ -201,7 +202,12 @@ def _invoke(project: Path, work: Path, phase: str, command: list[str], seen: set
         nodes = catalog.get('nodes', {})
         if not {f'model.{PROJECT}.{n}' for n in MODEL_NAMES} <= set(nodes):
             raise ValueError('Generated dbt catalog does not cover the required models')
-        checked = {'catalog_sha256': digest_file(target / 'catalog.json')}
+        required_sources = {f'source.{PROJECT}.bronze.{n}' for n in SOURCE_NAMES}
+        if not required_sources <= set(catalog.get('sources', {})):
+            raise ValueError('Generated dbt catalog does not cover the three actual sources')
+        checked = {'catalog_sha256': digest_file(target / 'catalog.json'),
+                   'models_documented': len(nodes), 'sources_documented': len(catalog['sources']),
+                   'metadata_method': 'native DESCRIBE TABLE EXTENDED'}
     else:
         checked = validate_dbt_artifacts(target, models=models, tests=tests, freshness=freshness)
         if checked['invocation_id'] in seen:

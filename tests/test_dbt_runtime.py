@@ -30,7 +30,7 @@ class UnifiedTargetTests(unittest.TestCase):
         for name,version in {**runtime.PINNED,**dbt_lab.DBT_PINS}.items():
             self.assertEqual(target['packages'][name],version)
         self.assertLess(int(runtime.PINNED['pyspark'].split('.')[0]),4)
-        self.assertFalse(target['native_execution_verified'])
+        self.assertEqual(target['execution_record'],'docs/verification.json')
     def test_requirements_do_not_silently_select_preview_adapter(self):
         text=(ROOT/'requirements-dbt.txt').read_text()
         self.assertIn('dbt-spark[session]==1.9.1',text)

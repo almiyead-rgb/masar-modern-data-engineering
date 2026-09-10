@@ -25,3 +25,6 @@ day02/dbt/target/
 day02/dbt/logs/
 day02/dbt/dbt_packages/
 day02/dbt/profiles.yml
+
+# Generated validation logs and notebook attempts
+evidence/
