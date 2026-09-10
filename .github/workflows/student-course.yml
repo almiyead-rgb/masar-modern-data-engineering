@@ -19,13 +19,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Validate and finalize source compatibility
+      - name: Apply the maintained runtime and validate all learner paths
         shell: bash
         run: |
           python -m pip install nbformat beautifulsoup4
           python tools/prepare_native_compat.py
-          python scripts/check_student_course.py
-      - name: Save the reviewed learner sources
+          python tools/finalize_runtime.py
+          python scripts/check_repository.py
+          python -m unittest discover -s tests -v
+      - name: Save corrected runtime and current course tests
         id: commit
         shell: bash
         run: |
@@ -33,7 +35,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A -- . ':!.github'
           if ! git diff --cached --quiet; then
-            git commit -m 'fix: align GX result serialization and published learner metadata'
+            git commit -m 'fix: apply Delta 3.3.3 and validate the current five-day learning paths'
             git push origin HEAD:main
           fi
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
@@ -127,14 +129,15 @@ jobs:
         run: |
           mkdir -p evidence/student-course
           python -u scripts/execute_student_course.py 2>&1 | tee evidence/student-course/notebook-execution.log
-      - name: Validate links and publish genuine notebook outputs
+      - name: Validate source fingerprints and publish actual notebook outputs
         run: |
-          python scripts/check_student_course.py
+          python scripts/check_repository.py --release
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add day01 day02 day03 day04 day05 docs/VERIFICATION.md docs/verification.json course.json
-          git commit -m 'test: record ten successful notebook executions across two independent course runs'
+          git commit -m 'test: record ten successful notebook executions with Delta 3.3.3'
           git push origin HEAD:main
+          git archive --format=zip --output=Masar_Learner_Course.zip HEAD
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -142,6 +145,12 @@ jobs:
           path: evidence/student-course/
           retention-days: 7
           if-no-files-found: warn
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: executed-learner-course
+          path: Masar_Learner_Course.zip
+          retention-days: 7
       - name: Stop the broker
         if: always()
         run: docker compose -f infrastructure/kafka/compose.yaml down
