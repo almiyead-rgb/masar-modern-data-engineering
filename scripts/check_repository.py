@@ -48,11 +48,17 @@ def inspect(root:Path=ROOT)->dict:
     except Exception as exc:
         layout={};problems.append(str(exc))
     cfg=json.loads((root/'course.json').read_text())
-    checks={'days':5,'hours_total':30,'labs_total':8,'cumulative_labs_are_final_project':True,
-            'extra_final_project':False,'distinction_required':False,'paid_services_required':False}
+    checks={'days':5,'hours_total':30,'labs_are_final_project':True,
+            'separate_final_project':False,'distinction_required':False}
     for field,expected in checks.items():
         if cfg.get(field)!=expected:
             problems.append(f'Course contract changed: {field}')
+    if len(cfg.get('labs',[]))!=8:
+        problems.append('The cumulative project must contain eight labs')
+    if cfg.get('paid_services_required',False):
+        problems.append('A paid service was made compulsory')
+    if cfg.get('extra_final_project',False):
+        problems.append('An extra project was made compulsory')
     if cfg.get('learner_notebooks')!=[f'day{d:02}/STUDENT.ipynb' for d in range(1,6)]:
         problems.append('Daily notebook registry differs from learning path')
     for forbidden in ('INSTRUCTOR_PACKAGE.md','instructor_only','MASAR_STUDENT.ipynb','DAY01_STUDENT.ipynb'):
