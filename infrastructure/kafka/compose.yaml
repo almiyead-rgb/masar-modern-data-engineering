@@ -1,4 +1,4 @@
-# Local synthetic-data classroom broker; NOT a secured production deployment.
+# Local synthetic-data classroom broker; not a secured production deployment.
 # Keep storage across stop/start. Do not use down -v during checkpoint exercises.
 name: masar-day04
 services:
@@ -20,11 +20,11 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: "1"
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
       KAFKA_LOG_RETENTION_HOURS: "168"
-      KAFKA_LOG_DIRS: "/tmp/kraft-combined-logs"
+      KAFKA_LOG_DIRS: "/var/lib/kafka/data"
       KAFKA_HEAP_OPTS: "-Xms256m -Xmx512m"
       CLUSTER_ID: "MkU3OEVBNTcwNTJENDM2Qk"
     volumes:
-      - kafka-data:/tmp/kraft-combined-logs
+      - kafka-data:/var/lib/kafka/data
     healthcheck:
       test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:29092 --list >/dev/null 2>&1"]
       interval: 5s
