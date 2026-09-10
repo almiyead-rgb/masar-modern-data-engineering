@@ -4,55 +4,23 @@ on:
   push:
     paths: ['.github/workflows/verify-course-native.yml']
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: masar-course-native
   cancel-in-progress: false
 jobs:
   native:
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    timeout-minutes: 30
     defaults:
       run:
         shell: bash
     steps:
       - uses: actions/checkout@v4
-      - name: Restore missing original modules
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          python - <<'PY'
-          import base64, hashlib, json, lzma, os, pathlib, urllib.request
-          shas = ['c39b78266f051a436219aa5bffcda61ba6b324a3', 'cad99aa3d20dfa2d834b99c6ea5653d95976739a', '6350b0cef76d2c9b2adc08bd642578357cb75969']
-          parts = []
-          for sha in shas:
-              request = urllib.request.Request(f'https://api.github.com/repos/{os.environ["GITHUB_REPOSITORY"]}/git/blobs/{sha}', headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
-              with urllib.request.urlopen(request, timeout=60) as response:
-                  part = base64.b64decode(json.load(response)['content'])
-              assert hashlib.sha1(b'blob ' + str(len(part)).encode() + b'\0' + part).hexdigest() == sha
-              parts.append(part)
-          packed = base64.b64decode(b''.join(parts), validate=True)
-          assert hashlib.sha256(packed).hexdigest() == 'f4355a505cdc0e7d7d54bfcc82bb509d1fcb6933271e85c4440424e382d6af14'
-          modules = json.loads(lzma.decompress(packed))
-          assert len(modules) == 14
-          for name, content in modules.items():
-              path = pathlib.Path(name)
-              assert path.parent == pathlib.Path('src/masar') and path.suffix == '.py'
-              if not path.exists():
-                  compile(content, name, 'exec')
-                  path.write_text(content, encoding='utf-8')
-          print('Original modules restored; subsequent code fixes preserved.')
-          PY
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add src/masar
-          if ! git diff --cached --quiet; then
-            git commit -m 'fix: restore the original Silver, Delta, streaming, quality and serving modules'
-            git push origin HEAD:main
-          fi
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: pip
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -79,15 +47,11 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import shutil
-          for path in Path('outputs').rglob('*.json'):
-              if '_delta_log' not in path.parts:
+          for path in Path('outputs').rglob('*'):
+              if path.is_file() and path.suffix in {'.json', '.log'} and '_delta_log' not in path.parts:
                   target = Path('evidence/native-course') / path
                   target.parent.mkdir(parents=True, exist_ok=True)
                   shutil.copy2(path, target)
-          for path in Path('outputs').rglob('*.log'):
-              target = Path('evidence/native-course') / path
-              target.parent.mkdir(parents=True, exist_ok=True)
-              shutil.copy2(path, target)
           PY
       - uses: actions/upload-artifact@v4
         if: always()
